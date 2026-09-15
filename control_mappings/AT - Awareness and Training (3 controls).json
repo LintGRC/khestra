@@ -1,0 +1,203 @@
+{
+  "family": "AT",
+  "name": "Awareness and Training",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Insider Threat Program Policy",
+      "Security Awareness Training Policy"
+    ],
+    "evidence_types": [
+      "Change Management Records",
+      "System Use Notification Banner Configuration",
+      "Training Completion and Curriculum Records",
+      "Training Policy Documentation"
+    ],
+    "teams": [
+      "Security Training",
+      "Human Resources"
+    ],
+    "asset_types": [
+      "Training Platform",
+      "Learning Management System"
+    ],
+    "subcontractor_types": [
+      "Training Providers",
+      "Security Awareness Vendors"
+    ],
+    "risk_types": [
+      "Insider Threat",
+      "Social Engineering",
+      "Policy Non-Compliance"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "AT.L2-3.2.1": {
+      "title": "Literacy Training and Awareness",
+      "objectives": [
+        "Security literacy training is provided to system users as part of initial training for new users",
+        "Security literacy training is provided to system users annually (every 12 months) or following significant changesafter initial training",
+        "Security literacy training is provided to system users when required by system changes or following annually (every 12 months) or following significant changes",
+        "Security literacy training is provided to system users on recognizing indicators of insider threat",
+        "Security literacy training is provided to system users on reporting indicators of insider threat",
+        "Security literacy training is provided to system users on recognizing indicators of social engineering",
+        "Security literacy training is provided to system users on reporting indicators of social engineering",
+        "Security literacy training is provided to system users on recognizing indicators of social mining",
+        "Security literacy training is provided to system users on reporting indicators of social mining",
+        "Security literacy training content is updated the Authorizing Official (AO) or Information System Security Manager (ISSM)",
+        "Security literacy training content is updated following the Information System Security Officer (ISSO) or designated System Administrator under ISSM oversight"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Security Awareness Training Policy"
+        ],
+        "evidence": [
+          "Change Management Records",
+          "Training Policy Documentation"
+        ],
+        "teams": [
+          "Security Training",
+          "Human Resources"
+        ],
+        "assets": [
+          "Training Platform",
+          "Learning Management System"
+        ],
+        "subcontractors": [
+          "Training Providers",
+          "Security Awareness Vendors"
+        ],
+        "risks": [
+          "Insider Threat",
+          "Social Engineering",
+          "Policy Non-Compliance"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AT.L2-3.2.2": {
+      "title": "Role-Based Training",
+      "objectives": [
+        "Role-based security training is provided to organizational personnel before authorizing access to the system or CUI",
+        "Role-based security training is provided to organizational personnel before performing assigned duties",
+        "Role-based security training is provided to organizational personnel the DoD-approved system use notification bannerafter initial training",
+        "Role-based security training is provided to organizational personnel when required by system changes or following before authentication is completed (at every login prompt)",
+        "Role-based security training content is updated each login session",
+        "Role-based security training content is updated following all users accessing systems that store, process, or transmit CUI"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Security Awareness Training Policy"
+        ],
+        "evidence": [
+          "System Use Notification Banner Configuration",
+          "Training Policy Documentation"
+        ],
+        "teams": [
+          "Security Training",
+          "Human Resources"
+        ],
+        "assets": [
+          "Training Platform",
+          "Learning Management System"
+        ],
+        "subcontractors": [
+          "Training Providers",
+          "Security Awareness Vendors"
+        ],
+        "risks": [
+          "Policy Non-Compliance",
+          "Insider Threat",
+          "Social Engineering"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AT.L2-3.2.3": {
+      "title": "Provide Security Awareness Training on Recognizing and Reporting Potential Indicators of Insider Threat",
+      "objectives": [
+        "Provide security awareness training on recognizing and reporting potential indicators of insider threat."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Security Awareness Training Policy"
+        ],
+        "evidence": [
+          "Training Completion and Curriculum Records",
+          "Training Policy Documentation"
+        ],
+        "teams": [
+          "Security Training",
+          "Human Resources"
+        ],
+        "assets": [
+          "Training Platform",
+          "Learning Management System"
+        ],
+        "subcontractors": [
+          "Training Providers",
+          "Security Awareness Vendors"
+        ],
+        "risks": [
+          "Social Engineering",
+          "Policy Non-Compliance",
+          "Insider Threat"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    }
+  }
+}

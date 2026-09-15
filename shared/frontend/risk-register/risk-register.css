@@ -1,0 +1,308 @@
+/* Risk Register — Heatmap styles (shared across all apps) */
+
+/* ── Grid layout ────────────────────────────────────── */
+.heat-grid {
+  display: grid;
+  grid-template-columns: 18px 62px repeat(4, 1fr);
+  grid-template-rows: auto auto repeat(4, minmax(36px, auto));
+  gap: 6px;
+  width: clamp(340px, 62%, 500px);
+  margin: 0.5rem auto 0;
+}
+
+/* Axis labels */
+.heat-axis-y {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.6;
+  grid-row: 3 / 7;
+  grid-column: 1;
+  padding: 0.2rem 0;
+}
+
+.heat-axis-x {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.6;
+  text-align: center;
+  grid-column: 3 / 7;
+  grid-row: 1;
+  padding-bottom: 0.4rem;
+}
+
+/* Column headers (values) */
+.heat-col-value {
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 0.1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.heat-col-value .heat-col-num {
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+/* Row headers (values) */
+.heat-row-value {
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: right;
+  padding: 0 0.4rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.heat-row-value .heat-row-num {
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+/* Data cells */
+.heat-cell {
+  aspect-ratio: 1 / 1;
+  min-height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.15s, opacity 0.2s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem;
+  container-type: inline-size;
+}
+
+.heat-cell:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.heat-cell:active {
+  transform: translateY(0);
+}
+
+/* Severity flat colors */
+.heat-cell-critical {
+  background: #dc2626;
+}
+.heat-cell-high {
+  background: #ea580c;
+}
+.heat-cell-medium {
+  background: #eab308;
+}
+.heat-cell-low {
+  background: #16a34a;
+}
+.heat-cell-empty {
+  cursor: default;
+}
+.heat-cell-empty:hover {
+  box-shadow: none;
+  transform: none;
+}
+.heat-cell-active {
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.25), inset 0 0 8px rgba(0,0,0,0.15);
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] .heat-cell-critical { background: #b91c1c; }
+[data-theme="dark"] .heat-cell-high    { background: #c2410c; }
+[data-theme="dark"] .heat-cell-medium  { background: #a16207; }
+[data-theme="dark"] .heat-cell-low     { background: #15803d; }
+
+/* Badge indicators */
+.heat-cell-badge {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.heat-cell-badge.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.heat-cell-badge.pill {
+  min-width: 1rem;
+  height: 1rem;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  font-size: clamp(9px, 4cqi, 18px);
+  font-weight: 700;
+  line-height: 1rem;
+}
+
+/* ── Legend ──────────────────────────────────────────── */
+.heat-legend {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.6rem;
+  color: var(--muted);
+}
+
+.heat-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+
+.heat-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  display: inline-block;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.heat-swatch-critical { background: #dc2626; }
+.heat-swatch-high    { background: #ea580c; }
+.heat-swatch-medium  { background: #eab308; }
+.heat-swatch-low     { background: #16a34a; }
+
+[data-theme="dark"] .heat-swatch-critical { background: #b91c1c; }
+[data-theme="dark"] .heat-swatch-high    { background: #c2410c; }
+[data-theme="dark"] .heat-swatch-medium  { background: #a16207; }
+[data-theme="dark"] .heat-swatch-low     { background: #15803d; }
+
+[data-theme="dark"] .filter-menu {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+}
+[data-theme="dark"] .filter-menu-item:hover {
+  background: rgba(255,255,255,0.08);
+}
+[data-theme="dark"] .filter-menu-item-active {
+  background: rgba(255,255,255,0.12);
+}
+
+/* ── Toolbar ─────────────────────────────────────────── */
+.risk-toolbar {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.risk-search {
+  flex: 1;
+  min-width: 180px;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.risk-search:focus {
+  border-color: var(--primary);
+}
+
+.risk-sort-group {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.risk-sort-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-right: 0.25rem;
+  white-space: nowrap;
+}
+
+.risk-toolbar-divider {
+  width: 1px;
+  height: 1.25rem;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* Filter dropdown */
+.filter-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.filter-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  min-width: 160px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  padding: 0.25rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.filter-menu-item {
+  padding: 0.4rem 0.75rem;
+  text-align: left;
+  font-size: 0.8rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text);
+  white-space: nowrap;
+}
+.filter-menu-item:hover {
+  background: var(--hover-bg, rgba(0,0,0,0.05));
+}
+.filter-menu-item-active {
+  font-weight: 600;
+  background: var(--primary-soft, rgba(0,0,0,0.08));
+}
+
+#risk-list {
+  min-height: 40vh;
+}
+#risk-list .panel-body {
+  min-height: 20vh;
+}

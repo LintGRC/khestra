@@ -1,0 +1,13 @@
+[project]
+name = "security_headers"
+version = "0.1.0"
+description = "Security headers middleware for Khestra"
+requires-python = ">=3.9"
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["security_headers*"]

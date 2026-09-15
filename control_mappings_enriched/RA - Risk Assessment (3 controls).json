@@ -1,0 +1,250 @@
+{
+  "family": "RA",
+  "name": "Risk Assessment",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Risk Assessment Policy",
+      "Vulnerability Management Policy"
+    ],
+    "evidence_types": [
+      "Risk Assessment Reports",
+      "Risk Register Documentation",
+      "Risk and Vulnerability Assessment Reports",
+      "Vulnerability Remediation Records"
+    ],
+    "teams": [
+      "Risk Management",
+      "Vulnerability Management"
+    ],
+    "asset_types": [
+      "Vulnerability Scanners",
+      "Risk Register",
+      "Asset Inventory"
+    ],
+    "subcontractor_types": [
+      "Penetration Testing Firms",
+      "Vulnerability Scanning Services"
+    ],
+    "risk_types": [
+      "Unmitigated Vulnerability",
+      "Unknown Security Risk",
+      "Incomplete Risk Assessment"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "RA.L2-3.11.1": {
+      "title": "Risk Assessment",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Risk Assessment Policy"
+        ],
+        "evidence": [
+          "Risk Assessment Reports",
+          "Risk Register Documentation"
+        ],
+        "teams": [
+          "Risk Management",
+          "Vulnerability Management"
+        ],
+        "assets": [
+          "Vulnerability Scanners",
+          "Risk Register",
+          "Asset Inventory"
+        ],
+        "subcontractors": [
+          "Penetration Testing Firms",
+          "Vulnerability Scanning Services"
+        ],
+        "risks": [
+          "Unmitigated Vulnerability",
+          "Unknown Security Risk",
+          "Incomplete Risk Assessment"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Risk Assessment Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Risk Assessment Records",
+          "action": "attach",
+          "source": "artifacts.md#D24"
+        },
+        {
+          "name": "Penetration Test Reports",
+          "action": "attach",
+          "source": "artifacts.md#D33"
+        }
+      ],
+      "evidence_hints": [
+        "Risk assessment methodology and procedure documents",
+        "Threat identification and analysis records",
+        "Risk assessment report and executive summary",
+        "Risk assessment review and approval records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Risk Register"
+      ]
+    },
+    "RA.L2-3.11.2": {
+      "title": "Vulnerability Monitoring and Scanning",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Vulnerability Management Policy"
+        ],
+        "evidence": [
+          "Risk and Vulnerability Assessment Reports",
+          "Risk Register Documentation"
+        ],
+        "teams": [
+          "Risk Management",
+          "Vulnerability Management"
+        ],
+        "assets": [
+          "Vulnerability Scanners",
+          "Risk Register",
+          "Asset Inventory"
+        ],
+        "subcontractors": [
+          "Penetration Testing Firms",
+          "Vulnerability Scanning Services"
+        ],
+        "risks": [
+          "Incomplete Risk Assessment",
+          "Unmitigated Vulnerability",
+          "Unknown Security Risk"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Risk Assessment Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Vulnerability Scan Reports",
+          "action": "attach",
+          "source": "artifacts.md#D25"
+        }
+      ],
+      "evidence_hints": [
+        "Vulnerability scanning tool configuration records",
+        "Authenticated vulnerability scan reports",
+        "Vulnerability false positive analysis records",
+        "Asset discovery and inventory scan records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "RA.L2-3.11.3": {
+      "title": "Remediate Vulnerabilities in Accordance with Risk Assessments",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Risk Assessment Policy"
+        ],
+        "evidence": [
+          "Vulnerability Remediation Records",
+          "Risk Register Documentation"
+        ],
+        "teams": [
+          "Risk Management",
+          "Vulnerability Management"
+        ],
+        "assets": [
+          "Vulnerability Scanners",
+          "Risk Register",
+          "Asset Inventory"
+        ],
+        "subcontractors": [
+          "Penetration Testing Firms",
+          "Vulnerability Scanning Services"
+        ],
+        "risks": [
+          "Unknown Security Risk",
+          "Incomplete Risk Assessment",
+          "Unmitigated Vulnerability"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Risk Assessment Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Vulnerability Scan Reports",
+          "action": "attach",
+          "source": "artifacts.md#D25"
+        }
+      ],
+      "evidence_hints": [
+        "Vulnerability remediation SLA and prioritization records",
+        "Remediation verification and validation reports",
+        "Remediation deferral and risk acceptance records",
+        "Patch management schedule and compliance reports"
+      ],
+      "structured_objects": [
+        "Asset Inventory",
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    }
+  }
+}

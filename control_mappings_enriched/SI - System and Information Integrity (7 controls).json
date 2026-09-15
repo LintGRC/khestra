@@ -1,0 +1,493 @@
+{
+  "family": "SI",
+  "name": "System and Information Integrity",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Flaw Remediation Policy",
+      "System and Information Integrity Policy"
+    ],
+    "evidence_types": [
+      "Malicious Code Protection Configuration",
+      "Malicious Code Protection Records",
+      "Malware Signature Update Records",
+      "Periodic Scan Reports",
+      "Security Alert Management Records",
+      "System Integrity and Flaw Remediation Records",
+      "Unauthorized Use Detection Records"
+    ],
+    "teams": [
+      "Security Operations",
+      "Vulnerability Management"
+    ],
+    "asset_types": [
+      "Endpoint Systems",
+      "Servers",
+      "Network Infrastructure"
+    ],
+    "subcontractor_types": [
+      "Managed Security Service Provider",
+      "Cloud Service Providers"
+    ],
+    "risk_types": [
+      "Malware Infection",
+      "System Compromise",
+      "Integrity Violation"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "SI.L2-3.14.1": {
+      "title": "Flaw Remediation",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System and Information Integrity Policy"
+        ],
+        "evidence": [
+          "System Integrity and Flaw Remediation Records",
+          "Malicious Code Protection Records"
+        ],
+        "teams": [
+          "Security Operations",
+          "Vulnerability Management"
+        ],
+        "assets": [
+          "Endpoint Systems",
+          "Servers",
+          "Network Infrastructure"
+        ],
+        "subcontractors": [
+          "Managed Security Service Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Malware Infection",
+          "System Compromise",
+          "Integrity Violation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "System and Information Integrity Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Flaw Remediation Logs",
+          "action": "attach",
+          "source": "artifacts.md#D30"
+        }
+      ],
+      "evidence_hints": [
+        "Patch management process and schedule documentation",
+        "Vulnerability disclosure and tracking records",
+        "Security advisory monitoring and response records",
+        "Remediation testing and validation records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "SI.L2-3.14.2": {
+      "title": "Malicious Code Protection",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Flaw Remediation Policy"
+        ],
+        "evidence": [
+          "Malicious Code Protection Configuration",
+          "Malicious Code Protection Records"
+        ],
+        "teams": [
+          "Security Operations",
+          "Vulnerability Management"
+        ],
+        "assets": [
+          "Endpoint Systems",
+          "Servers",
+          "Network Infrastructure"
+        ],
+        "subcontractors": [
+          "Managed Security Service Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Integrity Violation",
+          "Malware Infection",
+          "System Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "System and Information Integrity Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Malware Detection / EDR Logs",
+          "action": "attach",
+          "source": "artifacts.md#D31"
+        }
+      ],
+      "evidence_hints": [
+        "Endpoint protection platform configuration exports",
+        "Anti-malware signature update schedule and records",
+        "Malware detection and quarantine incident records",
+        "Exclusion and exception justification records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "SI.L2-3.14.3": {
+      "title": "Security Alerts, Advisories, and Directives",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System and Information Integrity Policy"
+        ],
+        "evidence": [
+          "Security Alert Management Records",
+          "Malicious Code Protection Records"
+        ],
+        "teams": [
+          "Security Operations",
+          "Vulnerability Management"
+        ],
+        "assets": [
+          "Endpoint Systems",
+          "Servers",
+          "Network Infrastructure"
+        ],
+        "subcontractors": [
+          "Managed Security Service Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "System Compromise",
+          "Integrity Violation",
+          "Malware Infection"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "System and Information Integrity Policy",
+      "evidence_artifacts": [
+        {
+          "name": "System Monitoring Evidence",
+          "action": "attach",
+          "source": "artifacts.md#D32"
+        }
+      ],
+      "evidence_hints": [
+        "Security advisory subscription and receipt records",
+        "Alert triage and response workflow documentation",
+        "Advisory impact analysis and action records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "SI.L2-3.14.4": {
+      "title": "Update Malicious Code Protection Mechanisms When New Releases Are Available",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Flaw Remediation Policy"
+        ],
+        "evidence": [
+          "Malware Signature Update Records",
+          "Malicious Code Protection Records"
+        ],
+        "teams": [
+          "Security Operations",
+          "Vulnerability Management"
+        ],
+        "assets": [
+          "Endpoint Systems",
+          "Servers",
+          "Network Infrastructure"
+        ],
+        "subcontractors": [
+          "Managed Security Service Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Malware Infection",
+          "System Compromise",
+          "Integrity Violation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "System and Information Integrity Policy",
+      "evidence_artifacts": [
+        {
+          "name": "System Monitoring Evidence",
+          "action": "attach",
+          "source": "artifacts.md#D32"
+        }
+      ],
+      "evidence_hints": [
+        "Anti-malware definition update log records",
+        "Update failure investigation and remediation records",
+        "Offline system update procedure documentation"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "SI.L2-3.14.5": {
+      "title": "Perform Periodic Scans of Organizational Systems and Real-Time Scans of Files from External Sources",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System and Information Integrity Policy"
+        ],
+        "evidence": [
+          "Periodic Scan Reports",
+          "Malicious Code Protection Records"
+        ],
+        "teams": [
+          "Security Operations",
+          "Vulnerability Management"
+        ],
+        "assets": [
+          "Endpoint Systems",
+          "Servers",
+          "Network Infrastructure"
+        ],
+        "subcontractors": [
+          "Managed Security Service Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Integrity Violation",
+          "Malware Infection",
+          "System Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "System and Information Integrity Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Flaw Remediation Logs",
+          "action": "attach",
+          "source": "artifacts.md#D30"
+        }
+      ],
+      "evidence_hints": [
+        "Scheduled scan configuration and schedule records",
+        "Real-time scan engine configuration exports",
+        "Scan exception and exclusion justification records",
+        "Scan results and remediation tracking reports"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "SI.L2-3.14.6": {
+      "title": "System Monitoring",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Flaw Remediation Policy"
+        ],
+        "evidence": [
+          "Unauthorized Use Detection Records",
+          "Malicious Code Protection Records"
+        ],
+        "teams": [
+          "Security Operations",
+          "Vulnerability Management"
+        ],
+        "assets": [
+          "Endpoint Systems",
+          "Servers",
+          "Network Infrastructure"
+        ],
+        "subcontractors": [
+          "Managed Security Service Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "System Compromise",
+          "Integrity Violation",
+          "Malware Infection"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "System and Information Integrity Policy",
+      "evidence_hints": [
+        "Network and system monitoring tool configuration records",
+        "Indicators of compromise detection rules",
+        "Anomaly detection baseline and tuning records",
+        "Monitoring alert response and investigation records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "SI.L2-3.14.7": {
+      "title": "Identify Unauthorized Use of Organizational Systems",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System and Information Integrity Policy"
+        ],
+        "evidence": [
+          "Unauthorized Use Detection Records",
+          "Malicious Code Protection Records"
+        ],
+        "teams": [
+          "Security Operations",
+          "Vulnerability Management"
+        ],
+        "assets": [
+          "Endpoint Systems",
+          "Servers",
+          "Network Infrastructure"
+        ],
+        "subcontractors": [
+          "Managed Security Service Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Malware Infection",
+          "System Compromise",
+          "Integrity Violation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "System and Information Integrity Policy",
+      "evidence_artifacts": [
+        {
+          "name": "System Monitoring Evidence",
+          "action": "attach",
+          "source": "artifacts.md#D32"
+        }
+      ],
+      "evidence_hints": [
+        "Unauthorized use detection rule configuration records",
+        "Anomalous activity investigation and response records",
+        "User behavior analytics configuration records",
+        "Insider threat program integration records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    }
+  }
+}

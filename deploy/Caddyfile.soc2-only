@@ -1,0 +1,44 @@
+# Caddyfile for the SOC 2 Only deployment — no CMMC backend.
+# Global infra (collectors, evidence) → global-api; SOC 2 framework → soc2-api.
+{$DOMAIN} {
+    root * /srv/ui
+
+    encode gzip
+
+    @asset_files path /assets/*
+    header @asset_files Cache-Control "public, max-age=31536000, immutable"
+
+    @spa_shell {
+        not path /api/*
+        not path /assets/*
+    }
+    header @spa_shell Cache-Control "public, max-age=60"
+
+    handle /assets/* {
+        file_server
+    }
+
+    handle_path /api/core/* {
+        rewrite * /api{path}
+        reverse_proxy global-api:8086
+    }
+
+    handle /api/evidence-hub* {
+        reverse_proxy global-api:8086
+    }
+
+    handle_path /api/soc2/* {
+        rewrite * /api{path}
+        reverse_proxy soc2-api:8082
+    }
+
+    # Unprefixed /api/* (health probes, legacy) → SOC 2
+    handle /api/* {
+        reverse_proxy soc2-api:8082
+    }
+
+    handle {
+        try_files {path} /index.html
+        file_server
+    }
+}

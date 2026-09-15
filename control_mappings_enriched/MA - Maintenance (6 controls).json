@@ -1,0 +1,408 @@
+{
+  "family": "MA",
+  "name": "Maintenance",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Equipment Sanitization Policy",
+      "System Maintenance Policy"
+    ],
+    "evidence_types": [
+      "Equipment Sanitization Records",
+      "MFA Implementation Records",
+      "Maintenance Personnel Authorization Records",
+      "Maintenance Records and Authorization",
+      "Maintenance Tool Authorization Records"
+    ],
+    "teams": [
+      "System Administrators",
+      "Facilities Management"
+    ],
+    "asset_types": [
+      "Servers",
+      "Workstations",
+      "Network Infrastructure"
+    ],
+    "subcontractor_types": [
+      "Hardware Vendors",
+      "Cloud Providers"
+    ],
+    "risk_types": [
+      "Unauthorized Maintenance Access",
+      "Equipment Compromise",
+      "CUI Exposure During Maintenance"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "MA.L2-3.7.1": {
+      "title": "Perform Maintenance on Organizational Systems",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System Maintenance Policy"
+        ],
+        "evidence": [
+          "Maintenance Records and Authorization",
+          "Equipment Sanitization Records"
+        ],
+        "teams": [
+          "System Administrators",
+          "Facilities Management"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Infrastructure"
+        ],
+        "subcontractors": [
+          "Hardware Vendors",
+          "Cloud Providers"
+        ],
+        "risks": [
+          "Unauthorized Maintenance Access",
+          "Equipment Compromise",
+          "CUI Exposure During Maintenance"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Maintenance Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Maintenance Records",
+          "action": "attach",
+          "source": "artifacts.md#D18"
+        }
+      ],
+      "evidence_hints": [
+        "Maintenance schedule and window documentation",
+        "Maintenance activity log and completion records",
+        "Maintenance personnel access approval records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "MA.L2-3.7.2": {
+      "title": "Provide Controls on the Tools, Techniques, Mechanisms, and Personnel Used to Conduct System Maintenance",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Equipment Sanitization Policy"
+        ],
+        "evidence": [
+          "Maintenance Records and Authorization",
+          "Equipment Sanitization Records"
+        ],
+        "teams": [
+          "System Administrators",
+          "Facilities Management"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Infrastructure"
+        ],
+        "subcontractors": [
+          "Hardware Vendors",
+          "Cloud Providers"
+        ],
+        "risks": [
+          "CUI Exposure During Maintenance",
+          "Unauthorized Maintenance Access",
+          "Equipment Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Maintenance Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Maintenance Records",
+          "action": "attach",
+          "source": "artifacts.md#D18"
+        }
+      ],
+      "evidence_hints": [
+        "Authorized maintenance tool inventory records",
+        "Maintenance tool media scanning and verification records",
+        "Remote maintenance session monitoring logs"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "MA.L2-3.7.3": {
+      "title": "Ensure Equipment Removed for Off-Site Maintenance Is Sanitized of Any CUI",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System Maintenance Policy"
+        ],
+        "evidence": [
+          "Equipment Sanitization Records"
+        ],
+        "teams": [
+          "System Administrators",
+          "Facilities Management"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Infrastructure"
+        ],
+        "subcontractors": [
+          "Hardware Vendors",
+          "Cloud Providers"
+        ],
+        "risks": [
+          "Equipment Compromise",
+          "CUI Exposure During Maintenance",
+          "Unauthorized Maintenance Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Maintenance Policy",
+      "evidence_hints": [
+        "Equipment sanitization procedure records",
+        "Off-site maintenance authorization and chain of custody",
+        "Post-maintenance integrity verification records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "MA.L2-3.7.4": {
+      "title": "Maintenance Tools",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Equipment Sanitization Policy"
+        ],
+        "evidence": [
+          "Maintenance Tool Authorization Records",
+          "Equipment Sanitization Records"
+        ],
+        "teams": [
+          "System Administrators",
+          "Facilities Management"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Infrastructure"
+        ],
+        "subcontractors": [
+          "Hardware Vendors",
+          "Cloud Providers"
+        ],
+        "risks": [
+          "Unauthorized Maintenance Access",
+          "Equipment Compromise",
+          "CUI Exposure During Maintenance"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Maintenance Policy",
+      "evidence_hints": [
+        "Approved maintenance tool list and version records",
+        "Tool deployment and update records",
+        "Tool exception and justification documentation"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "MA.L2-3.7.5": {
+      "title": "Nonlocal Maintenance",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System Maintenance Policy"
+        ],
+        "evidence": [
+          "MFA Implementation Records",
+          "Equipment Sanitization Records"
+        ],
+        "teams": [
+          "System Administrators",
+          "Facilities Management"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Infrastructure"
+        ],
+        "subcontractors": [
+          "Hardware Vendors",
+          "Cloud Providers"
+        ],
+        "risks": [
+          "CUI Exposure During Maintenance",
+          "Unauthorized Maintenance Access",
+          "Equipment Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Maintenance Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Maintenance Records",
+          "action": "attach",
+          "source": "artifacts.md#D18"
+        }
+      ],
+      "evidence_hints": [
+        "Remote maintenance session recording and audit logs",
+        "Nonlocal maintenance authorization and approval records",
+        "Remote maintenance connection topology documentation"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "MA.L2-3.7.6": {
+      "title": "Maintenance Personnel",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Equipment Sanitization Policy"
+        ],
+        "evidence": [
+          "Maintenance Personnel Authorization Records",
+          "Equipment Sanitization Records"
+        ],
+        "teams": [
+          "System Administrators",
+          "Facilities Management"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Infrastructure"
+        ],
+        "subcontractors": [
+          "Hardware Vendors",
+          "Cloud Providers"
+        ],
+        "risks": [
+          "Equipment Compromise",
+          "CUI Exposure During Maintenance",
+          "Unauthorized Maintenance Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Maintenance Policy",
+      "evidence_hints": [
+        "Maintenance personnel clearance and authorization records",
+        "Escort and supervision records for uncleared personnel",
+        "Vendor maintenance agreement and access records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    }
+  }
+}

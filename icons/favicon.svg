@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Khestra">
+  <rect width="32" height="32" rx="7" fill="#1a3a5c"/>
+  <circle cx="16" cy="16" r="12" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+  <polygon points="16,4 20,16 16,18 12,16" fill="#ffffff"/>
+  <polygon points="16,28 20,16 16,14 12,16" fill="#ffffff" opacity="0.5"/>
+</svg>

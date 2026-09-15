@@ -1,0 +1,2 @@
+# Use platform/requirements.txt — kept for backwards compatibility
+-r ../requirements.txt

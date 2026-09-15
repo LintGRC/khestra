@@ -1,0 +1,148 @@
+{
+  "family": "PS",
+  "name": "Personnel Security",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Background Screening Policy",
+      "Personnel Security Policy"
+    ],
+    "evidence_types": [
+      "Background Check Documentation",
+      "Personnel Screening Records",
+      "Personnel Termination Records"
+    ],
+    "teams": [
+      "Human Resources",
+      "Security Office"
+    ],
+    "asset_types": [
+      "HR Systems",
+      "Personnel Records Systems"
+    ],
+    "subcontractor_types": [
+      "Background Check Services",
+      "Staffing Agencies"
+    ],
+    "risk_types": [
+      "Insider Threat",
+      "Unauthorized Personnel Access",
+      "Background Check Failure"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "PS.L2-3.9.1": {
+      "title": "Personnel Screening",
+      "objectives": [
+        "Individuals are screened prior to authorizing access to the system",
+        "Individuals are rescreened in accordance with the following conditions: every 5 years for all personnel with CUI access, and immediately upon: credible derogatory information, significant change in duties, arrest or criminal charge, or adverse financial change indicating insider threat risk"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Personnel Security Policy"
+        ],
+        "evidence": [
+          "Personnel Screening Records",
+          "Background Check Documentation"
+        ],
+        "teams": [
+          "Human Resources",
+          "Security Office"
+        ],
+        "assets": [
+          "HR Systems",
+          "Personnel Records Systems"
+        ],
+        "subcontractors": [
+          "Background Check Services",
+          "Staffing Agencies"
+        ],
+        "risks": [
+          "Insider Threat",
+          "Unauthorized Personnel Access",
+          "Background Check Failure"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "PS.L2-3.9.2": {
+      "title": "Personnel Termination and Transfer",
+      "objectives": [
+        "Upon termination of individual employment, system access is disabled within exit interview covering CUI obligations and NDA; retrieval of all credentials and property at separation; acknowledgment that CUI confidentiality obligations survive employment (minimum 2 years post-employment)",
+        "Upon termination of individual employment, authenticators associated with the individual are terminated or revoked",
+        "Upon termination of individual employment, credentials associated with the individual are terminated or revoked",
+        "Upon termination of individual employment, security-related system property is retrieved",
+        "Upon individual reassignment or transfer to other positions in the organization, access authorization is modified to correspond with any changes in operational need",
+        "Upon individual reassignment or transfer to other positions in the organization, the ongoing operational need for current logical and physical access authorizations to the system and facility is reviewed",
+        "Upon individual reassignment or transfer to other positions in the organization, the ongoing operational need for current logical and physical access authorizations to the system and facility is confirmed"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Background Screening Policy"
+        ],
+        "evidence": [
+          "Personnel Termination Records",
+          "Background Check Documentation"
+        ],
+        "teams": [
+          "Human Resources",
+          "Security Office"
+        ],
+        "assets": [
+          "HR Systems",
+          "Personnel Records Systems"
+        ],
+        "subcontractors": [
+          "Background Check Services",
+          "Staffing Agencies"
+        ],
+        "risks": [
+          "Background Check Failure",
+          "Insider Threat",
+          "Unauthorized Personnel Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    }
+  }
+}

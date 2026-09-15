@@ -1,0 +1,816 @@
+{
+  "family": "SC",
+  "name": "System and Communications Protection",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Encryption Policy",
+      "Network Security Policy",
+      "Remote Access Policy",
+      "System Development Policy",
+      "System and Communications Protection Policy"
+    ],
+    "evidence_types": [
+      "Account Inactivity Configuration",
+      "Collaborative Device Configuration",
+      "Data-at-Rest Encryption Configuration",
+      "Encryption Configuration Records",
+      "Encryption Configuration and Certificate Records",
+      "External System Connection Authorization",
+      "Mobile Code Execution Policy",
+      "Network Architecture and Security Configuration",
+      "Personnel Transfer Records",
+      "Public Content Review Records",
+      "Remote Access Configuration",
+      "System Architecture Documentation",
+      "System Separation Architecture",
+      "VoIP Security Configuration"
+    ],
+    "teams": [
+      "Network Security",
+      "Security Architecture"
+    ],
+    "asset_types": [
+      "Firewalls",
+      "Network Infrastructure",
+      "Encryption Systems"
+    ],
+    "subcontractor_types": [
+      "Cloud Providers",
+      "Managed Security Service Providers"
+    ],
+    "risk_types": [
+      "Data Exfiltration",
+      "Man-in-the-Middle Attack",
+      "Network Breach"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "SC.L2-3.13.1": {
+      "title": "Boundary Protection",
+      "objectives": [
+        "Communications at external managed interfaces to the system are monitored",
+        "Communications at external managed interfaces to the system are controlled",
+        "Communications at key internal managed interfaces within the system are monitored",
+        "Communications at key internal managed interfaces within the system are controlled",
+        "Subnetworks are implemented for publicly accessible system components that are physically or logically separated from internal networks",
+        "External system connections are only made through managed interfaces that consist of boundary protection devices arranged in accordance with an organizational security architecture"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Network Security Policy"
+        ],
+        "evidence": [
+          "External System Connection Authorization"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Data Exfiltration",
+          "Man-in-the-Middle Attack",
+          "Network Breach"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "SC.L2-3.13.2": {
+      "title": "Employ Architectural Designs, Software Development Techniques, and Systems Engineering Principles That Promote Effective Information Security",
+      "objectives": [
+        "Employ architectural designs, software development techniques, and systems engineering principles that promote effective information security within organizational systems."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System Development Policy"
+        ],
+        "evidence": [
+          "System Architecture Documentation"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Network Breach",
+          "Data Exfiltration",
+          "Man-in-the-Middle Attack"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "SC.L2-3.13.3": {
+      "title": "Separate User Functionality from System Management Functionality",
+      "objectives": [
+        "Separate user functionality from system management functionality."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System and Communications Protection Policy"
+        ],
+        "evidence": [
+          "System Separation Architecture"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Man-in-the-Middle Attack",
+          "Network Breach",
+          "Data Exfiltration"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "SC.L2-3.13.4": {
+      "title": "Information in Shared System Resources",
+      "objectives": [
+        "Unauthorized information transfer via shared system resources is prevented",
+        "Unintended information transfer via shared system resources is prevented"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System and Communications Protection Policy"
+        ],
+        "evidence": [
+          "System Architecture Documentation"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Data Exfiltration",
+          "Man-in-the-Middle Attack",
+          "Network Breach"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "SC.L2-3.13.5": {
+      "title": "Implement Subnetworks for Publicly Accessible System Components That Are Physically or Logically Separated from Internal Networks",
+      "objectives": [
+        "Implement subnetworks for publicly accessible system components that are physically or logically separated from internal networks."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Network Security Policy"
+        ],
+        "evidence": [
+          "Network Architecture and Security Configuration"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Network Breach",
+          "Data Exfiltration",
+          "Man-in-the-Middle Attack"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "SC.L2-3.13.6": {
+      "title": "Network Communications \u2013 Deny by Default \u2013 Allow by Exception",
+      "objectives": [
+        "Network communications traffic is denied by default",
+        "Network communications traffic is allowed by exception"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Network Security Policy"
+        ],
+        "evidence": [
+          "Network Architecture and Security Configuration"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Man-in-the-Middle Attack",
+          "Network Breach",
+          "Data Exfiltration"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "SC.L2-3.13.7": {
+      "title": "Prevent Remote Devices from Simultaneously Establishing Non-Remote Connections with Organizational Systems and Communicating via Some Other Connection to Resources in External Networks (Split Tunneling)",
+      "objectives": [
+        "Prevent remote devices from simultaneously establishing non-remote connections with organizational systems and communicating via some other connection to resources in external networks (i.e., split tunneling)."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Remote Access Policy"
+        ],
+        "evidence": [
+          "Remote Access Configuration"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Data Exfiltration",
+          "Man-in-the-Middle Attack",
+          "Network Breach"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "SC.L2-3.13.8": {
+      "title": "Transmission and Storage Confidentiality",
+      "objectives": [
+        "Cryptographic mechanisms are implemented to prevent the unauthorized disclosure of CUI during transmission",
+        "Cryptographic mechanisms are implemented to prevent the unauthorized disclosure of CUI while in storage"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Encryption Policy"
+        ],
+        "evidence": [
+          "Encryption Configuration and Certificate Records",
+          "Encryption Configuration Records"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Network Breach",
+          "Data Exfiltration",
+          "Man-in-the-Middle Attack"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "SC.L2-3.13.9": {
+      "title": "Network Disconnect",
+      "objectives": [
+        "The network connection associated with a communications session is terminated at the end of the session or after a defined period of inactivity"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Network Security Policy"
+        ],
+        "evidence": [
+          "Network Architecture and Security Configuration"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Man-in-the-Middle Attack",
+          "Network Breach",
+          "Data Exfiltration"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "SC.L2-3.13.10": {
+      "title": "Cryptographic Key Establishment and Management",
+      "objectives": [
+        "Cryptographic keys are established in the system in accordance with key management requirements",
+        "Cryptographic keys are managed in the system in accordance with key management requirements"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Encryption Policy"
+        ],
+        "evidence": [
+          "Encryption Configuration Records"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Data Exfiltration",
+          "Man-in-the-Middle Attack",
+          "Network Breach"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "SC.L2-3.13.11": {
+      "title": "Cryptographic Protection",
+      "objectives": [
+        "The following types of cryptography are implemented to protect the confidentiality of CUI: FIPS 140-2 or 140-3 validated cryptographic modules; RSA 2048-bit minimum; AES-128 minimum (AES-256 preferred); key lifecycle managed per NIST SP 800-57 Part 1; documented key custodian roles required"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Encryption Policy"
+        ],
+        "evidence": [
+          "Encryption Configuration Records"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Network Breach",
+          "Data Exfiltration",
+          "Man-in-the-Middle Attack"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "SC.L2-3.13.12": {
+      "title": "Collaborative Computing Devices and Applications",
+      "objectives": [
+        "The remote activation of collaborative computing devices and applications is prohibited with the following exceptions: all systems in CUI environments including video conferencing endpoints, webcams, microphones, smartboard systems, and screen sharing tools",
+        "An explicit indication of use is provided to users who are physically present at the devices"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System and Communications Protection Policy"
+        ],
+        "evidence": [
+          "Collaborative Device Configuration"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Man-in-the-Middle Attack",
+          "Network Breach",
+          "Data Exfiltration"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "SC.L2-3.13.13": {
+      "title": "Mobile Code",
+      "objectives": [
+        "The use of mobile code is authorized",
+        "The use of mobile code is monitored",
+        "The use of mobile code is controlled",
+        "Acceptable mobile code is defined",
+        "Acceptable mobile code technologies are defined"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System and Communications Protection Policy"
+        ],
+        "evidence": [
+          "Mobile Code Execution Policy"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Data Exfiltration",
+          "Man-in-the-Middle Attack",
+          "Network Breach"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "SC.L2-3.13.14": {
+      "title": "Control and Monitor the Use of Voice over Internet Protocol (VoIP) Technologies",
+      "objectives": [
+        "Control and monitor the use of Voice over Internet Protocol (VoIP) technologies."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System and Communications Protection Policy"
+        ],
+        "evidence": [
+          "VoIP Security Configuration"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Network Breach",
+          "Data Exfiltration",
+          "Man-in-the-Middle Attack"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "SC.L2-3.13.15": {
+      "title": "Session Authenticity",
+      "objectives": [
+        "The authenticity of communications sessions is protected"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System and Communications Protection Policy"
+        ],
+        "evidence": [
+          "Network Architecture and Security Configuration"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Man-in-the-Middle Attack",
+          "Network Breach",
+          "Data Exfiltration"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "SC.L2-3.13.16": {
+      "title": "Protect the Confidentiality of CUI at Rest",
+      "objectives": [
+        "Protect the confidentiality of CUI at rest."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Encryption Policy"
+        ],
+        "evidence": [
+          "Data-at-Rest Encryption Configuration",
+          "Encryption Configuration Records"
+        ],
+        "teams": [
+          "Network Security",
+          "Security Architecture"
+        ],
+        "assets": [
+          "Firewalls",
+          "Network Infrastructure",
+          "Encryption Systems"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Security Service Providers"
+        ],
+        "risks": [
+          "Data Exfiltration",
+          "Man-in-the-Middle Attack",
+          "Network Breach"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    }
+  }
+}

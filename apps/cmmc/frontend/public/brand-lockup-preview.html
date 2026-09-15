@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khestra — logo lockup comparison</title>
+    <style type="text/css">
+      :root {
+        --navy: #1a3a5c;
+        --teal: #2aa39a;
+        --teal-bright: #34c6bb;
+        --teal-soft: rgba(42, 163, 154, 0.22);
+        --sidebar-text: #b8cdd9;
+        --text: #0f1b22;
+        --muted: #5f7280;
+        --border: #dfe7ec;
+        --bg: #f0f7fa;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+      }
+
+      .page-header {
+        padding: 2rem 2rem 1rem;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+
+      .page-header h1 {
+        margin: 0 0 0.35rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+
+      .page-header p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .badge {
+        display: inline-block;
+        margin-left: 0.35rem;
+        padding: 0.1rem 0.45rem;
+        font-size: 0.62rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        border-radius: 4px;
+        background: #e3eff5;
+        color: #1a6b8e;
+        vertical-align: middle;
+      }
+
+      .board {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0.5rem 2rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.65rem;
+      }
+
+      .strip-row {
+        display: grid;
+        grid-template-columns: 7.5rem 1fr;
+        align-items: stretch;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .strip-meta {
+        padding: 1rem 0.85rem;
+        border-right: 1px solid var(--border);
+        background: #fafcfd;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.2rem;
+      }
+
+      .strip-letter {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text);
+        line-height: 1;
+      }
+
+      .strip-name {
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--muted);
+        line-height: 1.35;
+      }
+
+      .navy-strip {
+        padding: 1.25rem 1.35rem;
+        background: var(--navy);
+        display: flex;
+        align-items: center;
+        min-height: 3.25rem;
+      }
+
+      .wm {
+        font-family: Inter, system-ui, sans-serif;
+        font-size: 0.82rem;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      .lockup-a {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+      }
+
+      .mark-bar {
+        flex-shrink: 0;
+        width: 0.45rem;
+        height: 1.35rem;
+        border-radius: 2px;
+        background: linear-gradient(180deg, var(--teal) 0%, #1a6b8e 100%);
+        box-shadow: 0 0 10px rgba(42, 163, 154, 0.35);
+      }
+
+      .word-full {
+        letter-spacing: 0.2em;
+      }
+
+      .lockup-b {
+        display: inline-flex;
+        align-items: baseline;
+      }
+
+      .k-accent {
+        color: var(--teal);
+        letter-spacing: 0.04em;
+      }
+
+      .k-base {
+        letter-spacing: 0.22em;
+      }
+
+      .lockup-c {
+        display: inline-flex;
+        align-items: baseline;
+      }
+
+      .c-tight {
+        letter-spacing: 0.04em;
+      }
+
+      .h-glow {
+        color: var(--teal-bright);
+        text-shadow: 0 0 10px rgba(52, 198, 187, 0.6);
+        letter-spacing: 0.04em;
+      }
+
+      .c-wide {
+        letter-spacing: 0.22em;
+      }
+
+      .lockup-e {
+        display: inline-flex;
+        align-items: baseline;
+        letter-spacing: 0.2em;
+      }
+
+      .h-underline {
+        position: relative;
+        display: inline-block;
+      }
+
+      .h-underline::after {
+        content: "";
+        position: absolute;
+        left: 0.05em;
+        right: 0.05em;
+        bottom: -3px;
+        height: 2px;
+        background: var(--teal);
+        border-radius: 1px;
+      }
+
+      .lockup-i {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .mark-tab {
+        flex-shrink: 0;
+        width: 0.48rem;
+        height: 0.95rem;
+        margin-top: 0.02rem;
+        border-radius: 3px 3px 0 0;
+        background: linear-gradient(180deg, var(--teal) 0%, #1a6b8e 100%);
+        box-shadow: 0 0 8px rgba(42, 163, 154, 0.3);
+      }
+
+      .lockup-m {
+        display: inline-flex;
+        align-items: baseline;
+        letter-spacing: 0.2em;
+      }
+
+      .m-dim {
+        opacity: 0.5;
+      }
+
+      .lockup-p {
+        display: inline-block;
+        border-bottom: 2px solid var(--teal);
+        padding-bottom: 0.18rem;
+      }
+
+      .lockup-q {
+        letter-spacing: 0.2em;
+      }
+
+      .h-calm {
+        color: var(--teal);
+      }
+
+      .lockup-r {
+        letter-spacing: 0.2em;
+      }
+
+      .h-pill {
+        color: #fff;
+        background: var(--teal-soft);
+        border: 1px solid rgba(42, 163, 154, 0.45);
+        border-radius: 3px;
+        padding: 0.05em 0.14em 0.02em;
+        margin: 0 0.02em;
+        box-shadow: inset 0 0 0 1px rgba(52, 198, 187, 0.12);
+      }
+
+      .lockup-s {
+        letter-spacing: 0.2em;
+      }
+
+      .s-dot {
+        color: var(--teal);
+        letter-spacing: 0;
+        margin: 0 0.12em;
+        font-weight: 800;
+      }
+
+      .lockup-t {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+      }
+
+      .lockup-u {
+        letter-spacing: 0.2em;
+      }
+
+      .h-frame {
+        color: #fff;
+        border: 1.5px solid var(--teal);
+        border-radius: 2px;
+        padding: 0.02em 0.1em 0;
+        margin: 0 0.04em;
+        line-height: 1.1;
+      }
+
+      .lockup-v {
+        display: inline-flex;
+        align-items: baseline;
+      }
+
+      .v-kh {
+        letter-spacing: 0.07em;
+      }
+
+      .v-tail {
+        letter-spacing: 0.24em;
+      }
+
+      .lockup-w {
+        letter-spacing: 0.2em;
+      }
+
+      .h-gate {
+        position: relative;
+        display: inline-block;
+        color: var(--teal);
+        padding: 0 0.18em;
+      }
+
+      .h-gate::before,
+      .h-gate::after {
+        content: "";
+        position: absolute;
+        top: 0.05em;
+        bottom: 0.05em;
+        width: 1.5px;
+        background: var(--teal);
+        border-radius: 1px;
+        opacity: 0.85;
+      }
+
+      .h-gate::before {
+        left: 0;
+      }
+
+      .h-gate::after {
+        right: 0;
+      }
+
+      .lockup-x {
+        display: inline-flex;
+        align-items: baseline;
+      }
+
+      .x-kh {
+        color: var(--teal);
+        letter-spacing: 0.08em;
+      }
+
+      .x-tail {
+        letter-spacing: 0.22em;
+      }
+
+      .lockup-y {
+        letter-spacing: 0.2em;
+      }
+
+      .h-overline {
+        position: relative;
+        display: inline-block;
+      }
+
+      .h-overline::before {
+        content: "";
+        position: absolute;
+        left: 0.05em;
+        right: 0.05em;
+        top: -4px;
+        height: 2px;
+        background: var(--teal);
+        border-radius: 1px;
+      }
+
+      .h-glow-even {
+        color: var(--teal-bright);
+        text-shadow: 0 0 10px rgba(52, 198, 187, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Khestra — strip lockups</h1>
+      <p>Navy <code>#1a3a5c</code> · alphabetical · sidebar is <strong>word only</strong>; bar (A) for favicon/ads</p>
+    </header>
+
+    <main class="board">
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">A</span>
+          <span class="strip-name">Teal bar</span>
+        </div>
+        <div class="navy-strip">
+          <div class="lockup-a wm">
+            <div class="mark-bar" aria-hidden="true"></div>
+            <span class="word-full">Khestra</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">B</span>
+          <span class="strip-name">Teal K</span>
+        </div>
+        <div class="navy-strip">
+          <span class="lockup-b wm" aria-label="Khestra">
+            <span class="k-accent">K</span><span class="k-base">hestra</span>
+          </span>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">C</span>
+          <span class="strip-name">Glowing H</span>
+        </div>
+        <div class="navy-strip">
+          <span class="lockup-c wm" aria-label="Khestra">
+            <span class="c-tight">K</span><span class="h-glow">H</span><span class="c-wide">ESTRA</span>
+          </span>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">E</span>
+          <span class="strip-name">H underline</span>
+        </div>
+        <div class="navy-strip">
+          <span class="lockup-e wm" aria-label="Khestra">
+            <span>K</span><span class="h-underline">H</span><span>ESTRA</span>
+          </span>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">I</span>
+          <span class="strip-name">Index tab</span>
+        </div>
+        <div class="navy-strip">
+          <div class="lockup-i wm">
+            <div class="mark-tab" aria-hidden="true"></div>
+            <span class="word-full">Khestra</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">M</span>
+          <span class="strip-name">Dimmed H</span>
+        </div>
+        <div class="navy-strip">
+          <span class="lockup-m wm" aria-label="Khestra">
+            <span>K</span><span class="m-dim">H</span><span>ESTRA</span>
+          </span>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">P</span>
+          <span class="strip-name">Baseline</span>
+        </div>
+        <div class="navy-strip">
+          <span class="lockup-p wm"><span class="word-full">Khestra</span></span>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">Q</span>
+          <span class="strip-name">Calm H · even track</span>
+        </div>
+        <div class="navy-strip">
+          <span class="lockup-q wm" aria-label="Khestra">K<span class="h-calm">H</span>ESTRA</span>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">R</span>
+          <span class="strip-name">H pill</span>
+        </div>
+        <div class="navy-strip">
+          <span class="lockup-r wm" aria-label="Khestra">K<span class="h-pill">H</span>ESTRA</span>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">S</span>
+          <span class="strip-name">Interpunct</span>
+        </div>
+        <div class="navy-strip">
+          <span class="lockup-s wm" aria-label="Khestra">K<span class="s-dot">·</span>hestra</span>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">T</span>
+          <span class="strip-name">Bar + calm H</span>
+        </div>
+        <div class="navy-strip">
+          <div class="lockup-t wm">
+            <div class="mark-bar" aria-hidden="true"></div>
+            <span class="lockup-q" aria-hidden="true">K<span class="h-calm">H</span>ESTRA</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">U</span>
+          <span class="strip-name">H frame</span>
+        </div>
+        <div class="navy-strip">
+          <span class="lockup-u wm" aria-label="Khestra">K<span class="h-frame">H</span>ESTRA</span>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">V</span>
+          <span class="strip-name">Rhythm split</span>
+        </div>
+        <div class="navy-strip">
+          <span class="lockup-v wm" aria-label="Khestra">
+            <span class="v-kh">KH</span><span class="v-tail">ESTRA</span>
+          </span>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">W</span>
+          <span class="strip-name">H gate</span>
+        </div>
+        <div class="navy-strip">
+          <span class="lockup-w wm" aria-label="Khestra">K<span class="h-gate">H</span>ESTRA</span>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">X</span>
+          <span class="strip-name">Kh pair</span>
+        </div>
+        <div class="navy-strip">
+          <span class="lockup-x wm" aria-label="Khestra">
+            <span class="x-kh">Kh</span><span class="x-tail">estra</span>
+          </span>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">Y</span>
+          <span class="strip-name">H overline</span>
+        </div>
+        <div class="navy-strip">
+          <span class="lockup-y wm" aria-label="Khestra">K<span class="h-overline">H</span>ESTRA</span>
+        </div>
+      </article>
+
+      <article class="strip-row">
+        <div class="strip-meta">
+          <span class="strip-letter">Z</span>
+          <span class="strip-name">Glow H · even track</span>
+        </div>
+        <div class="navy-strip">
+          <span class="lockup-q wm" aria-label="Khestra">K<span class="h-glow-even">H</span>ESTRA</span>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,677 @@
+{
+  "family": "IA",
+  "name": "Identification and Authentication",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Credential Management Policy",
+      "Identification and Authentication Policy"
+    ],
+    "evidence_types": [
+      "Account Inactivity Configuration",
+      "Authentication Policy Documentation",
+      "Authentication System and Identity Records",
+      "MFA Implementation Records",
+      "Password Encryption Configuration",
+      "Privileged Account Management Records",
+      "Temporary Password Configuration"
+    ],
+    "teams": [
+      "Identity Management",
+      "Authentication Services"
+    ],
+    "asset_types": [
+      "Identity Platforms",
+      "Authentication Systems",
+      "User Directories"
+    ],
+    "subcontractor_types": [
+      "Identity Provider",
+      "Authentication Service Vendors"
+    ],
+    "risk_types": [
+      "Credential Theft",
+      "Authentication Bypass",
+      "Identity Spoofing"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "IA.L2-3.5.1": {
+      "title": "User Identification and Authentication",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Identification and Authentication Policy"
+        ],
+        "evidence": [
+          "Authentication System and Identity Records",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Credential Theft",
+          "Authentication Bypass",
+          "Identity Spoofing"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Identification and Authentication Policy",
+      "evidence_hints": [
+        "User identity proofing and verification process records",
+        "Unique identifier assignment and management records",
+        "Group and service account authorization records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "IA.L2-3.5.2": {
+      "title": "Device Identification and Authentication",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Credential Management Policy"
+        ],
+        "evidence": [
+          "MFA Implementation Records",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Identity Spoofing",
+          "Credential Theft",
+          "Authentication Bypass"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Identification and Authentication Policy",
+      "evidence_hints": [
+        "Device certificate issuance and management records",
+        "MAC address authentication bypass configuration",
+        "Network access control device profiling records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "IA.L2-3.5.3": {
+      "title": "Multi-Factor Authentication",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Identification and Authentication Policy"
+        ],
+        "evidence": [
+          "Privileged Account Management Records",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Authentication Bypass",
+          "Identity Spoofing",
+          "Credential Theft"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Identification and Authentication Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Authentication Methods / MFA",
+          "action": "attach",
+          "source": "artifacts.md#D11"
+        }
+      ],
+      "evidence_hints": [
+        "MFA token enrollment and lifecycle records",
+        "MFA configuration for local and console access",
+        "Local privilege escalation MFA enforcement records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "IA.L2-3.5.4": {
+      "title": "Replay-Resistant Authentication",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Credential Management Policy"
+        ],
+        "evidence": [
+          "Privileged Account Management Records",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Credential Theft",
+          "Authentication Bypass",
+          "Identity Spoofing"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Identification and Authentication Policy",
+      "evidence_hints": [
+        "Kerberos configuration and domain trust records",
+        "NTLM restriction and auditing configuration records",
+        "Authentication protocol security assessment records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "IA.L2-3.5.5": {
+      "title": "Identifier Management",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Identification and Authentication Policy"
+        ],
+        "evidence": [
+          "Temporary Password Configuration",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Identity Spoofing",
+          "Credential Theft",
+          "Authentication Bypass"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Identification and Authentication Policy",
+      "evidence_hints": [
+        "Account identifier lifecycle and reuse policy records",
+        "Disabled account reactivation approval records",
+        "Identifier uniqueness verification records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "IA.L2-3.5.6": {
+      "title": "Disable Identifier After a Defined Period of Inactivity",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Credential Management Policy"
+        ],
+        "evidence": [
+          "Account Inactivity Configuration",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Authentication Bypass",
+          "Identity Spoofing",
+          "Credential Theft"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Identification and Authentication Policy",
+      "evidence_hints": [
+        "Inactive account detection and disablement reports",
+        "Inactivity threshold configuration exports",
+        "Automated account disablement workflow records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "IA.L2-3.5.7": {
+      "title": "Password Management",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Identification and Authentication Policy"
+        ],
+        "evidence": [
+          "Authentication System and Identity Records",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Credential Theft",
+          "Authentication Bypass",
+          "Identity Spoofing"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Identification and Authentication Policy",
+      "evidence_hints": [
+        "Password expiration policy GPO configuration exports",
+        "Forced password change enforcement records",
+        "Password history and reuse prevention configuration"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "IA.L2-3.5.8": {
+      "title": "Implement Replay-Resistant Authentication Mechanisms for Network Access to Non-Privileged Accounts",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Credential Management Policy"
+        ],
+        "evidence": [
+          "Privileged Account Management Records",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Identity Spoofing",
+          "Credential Theft",
+          "Authentication Bypass"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Identification and Authentication Policy",
+      "evidence_hints": [
+        "RADIUS/TACACS+ server configuration exports",
+        "MFA integration with VPN and remote access",
+        "Federation and SSO trust configuration records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "IA.L2-3.5.9": {
+      "title": "Allow Temporary Password Use for System Logons with an Immediate Change to a Permanent Password",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Identification and Authentication Policy"
+        ],
+        "evidence": [
+          "Temporary Password Configuration",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Authentication Bypass",
+          "Identity Spoofing",
+          "Credential Theft"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Identification and Authentication Policy",
+      "evidence_hints": [
+        "Temporary password generation and distribution records",
+        "First-login password change enforcement records",
+        "Temporary credential revocation and expiry records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "IA.L2-3.5.10": {
+      "title": "Store and Transmit Only Cryptographically-Protected Passwords",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Credential Management Policy"
+        ],
+        "evidence": [
+          "Password Encryption Configuration",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Credential Theft",
+          "Authentication Bypass",
+          "Identity Spoofing"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Identification and Authentication Policy",
+      "evidence_hints": [
+        "Password hashing algorithm and salt configuration records",
+        "Password storage security review and validation reports",
+        "Password transmission encryption configuration records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "IA.L2-3.5.11": {
+      "title": "Authentication Feedback",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Identification and Authentication Policy"
+        ],
+        "evidence": [
+          "Authentication System and Identity Records",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Identity Spoofing",
+          "Credential Theft",
+          "Authentication Bypass"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Identification and Authentication Policy",
+      "evidence_hints": [
+        "Authentication feedback obfuscation configuration records",
+        "Login error message standardization documentation",
+        "Authentication failure response consistency verification"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1145 @@
+{
+  "family": "AC",
+  "name": "Access Control",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Access Control Policy",
+      "Account Management Policy",
+      "Encryption Policy",
+      "External System Use Policy",
+      "Information Flow Control Policy",
+      "Mobile Device Policy",
+      "Network Security Policy",
+      "Remote Access Policy",
+      "Wireless Access Policy"
+    ],
+    "evidence_types": [
+      "Access Control Lists and Authorization Records",
+      "Access Control Policy and Enforcement Documentation",
+      "Account Inactivity Configuration",
+      "Account Lockout Configuration",
+      "Account Review Records",
+      "Audit Log Records and Configuration",
+      "Device Lock and Session Configuration",
+      "Encryption Configuration and Certificate Records",
+      "External System Connection Authorization",
+      "Information Flow Control Documentation",
+      "Mobile Device Management Configuration",
+      "Network Access Control Configuration",
+      "Privileged Access Review Records",
+      "Privileged Account Management Records",
+      "Public Content Review Records",
+      "Remote Execution Authorization Records",
+      "Separation of Duties Documentation",
+      "System Use Notification Banner Configuration",
+      "Wireless Security Configuration"
+    ],
+    "teams": [
+      "Identity and Access Management",
+      "Security Operations"
+    ],
+    "asset_types": [
+      "Identity Systems",
+      "Authentication Servers",
+      "User Directories"
+    ],
+    "subcontractor_types": [
+      "Identity Provider",
+      "Cloud Service Providers"
+    ],
+    "risk_types": [
+      "Unauthorized Access",
+      "Privilege Escalation",
+      "Account Compromise"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "AC.L2-3.1.1": {
+      "title": "Account Management",
+      "objectives": [
+        "System accounts are created in accordance with organizational policy, procedures, prerequisites, and criteria",
+        "System accounts are enabled in accordance with organizational policy, procedures, prerequisites, and criteria",
+        "System accounts are modified in accordance with organizational policy, procedures, prerequisites, and criteria",
+        "System accounts are disabled in accordance with organizational policy, procedures, prerequisites, and criteria",
+        "System accounts are removed in accordance with organizational policy, procedures, prerequisites, and criteria",
+        "System account types allowed are defined",
+        "System account types prohibited are defined",
+        "Authorized users of the system are specified",
+        "Group and role memberships are specified",
+        "Access authorizations (i.e., privileges) for each account are specified",
+        "Access to the system is authorized based on a valid access authorization",
+        "Access to the system is authorized based on intended system usage",
+        "The use of system accounts is monitored",
+        "System accounts are disabled when the accounts have expired",
+        "System accounts are disabled when the accounts have been inactive for 35 days",
+        "System accounts are disabled when the accounts are no longer associated with a user or individual",
+        "System accounts are disabled when the accounts violate organizational policy",
+        "Account managers and designated personnel or roles are notified within 24 hours when accounts are no longer required",
+        "Account managers and designated personnel or roles are notified within 8 business hours (same day) when users are terminated or transferred",
+        "Account managers and designated personnel or roles are notified within 24 hours when system usage or the need-to-know changes for an individual",
+        "System accounts are disabled when significant risks associated with individuals are discovered",
+        "Users are required to log out of the system after a defined period of expected inactivity or when the following circumstances occur: the user leaves the workstation unattended or the session ends"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Account Management Policy"
+        ],
+        "evidence": [
+          "Account Inactivity Configuration",
+          "Account Review Records"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.2": {
+      "title": "Access Enforcement",
+      "objectives": [
+        "Approved authorizations for logical access to CUI are enforced in accordance with applicable access control policies",
+        "Approved authorizations for logical access to system resources are enforced in accordance with applicable access control policies"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Access Control Lists and Authorization Records"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Account Compromise",
+          "Unauthorized Access",
+          "Privilege Escalation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.3": {
+      "title": "Information Flow Enforcement",
+      "objectives": [
+        "Approved authorizations are enforced for controlling the flow of CUI within the system",
+        "Approved authorizations are enforced for controlling the flow of CUI between connected systems"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Information Flow Control Policy"
+        ],
+        "evidence": [
+          "Information Flow Control Documentation"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Privilege Escalation",
+          "Account Compromise",
+          "Unauthorized Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.4": {
+      "title": "Separation of Duties",
+      "objectives": [
+        "Duties of individuals requiring separation are identified",
+        "System access authorizations to support separation of duties are defined"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Separation of Duties Documentation"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.5": {
+      "title": "Least Privilege",
+      "objectives": [
+        "System access for users (or processes acting on behalf of users) is authorized only when necessary to accomplish assigned organizational tasks",
+        "Access to quarterly (every 90 days)is authorized",
+        "Access to the System Owner or Information System Security Manager (ISSM)is authorized",
+        "The privileges assigned to roles or classes of users are reviewed system administration, security administration, audit log access, account management, and configuration management functionsto validate the need for such privileges",
+        "Privileges are reassigned or removed, as necessary"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Audit Log Records and Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Account Compromise",
+          "Unauthorized Access",
+          "Privilege Escalation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.6": {
+      "title": "Least Privilege \u2013 Privileged Accounts",
+      "objectives": [
+        "Privileged accounts on the system are restricted to all administrative functions including system configuration changes, user account management, audit log access, software installation, and security tool management",
+        "Users (or roles) with privileged accounts are required to use non-privileged accounts when accessing non-security functions or non-security information"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Privileged Account Management Records",
+          "Account Review Records"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Privilege Escalation",
+          "Account Compromise",
+          "Unauthorized Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.7": {
+      "title": "Least Privilege \u2013 Privileged Functions",
+      "objectives": [
+        "The execution of privileged functions is logged",
+        "Non-privileged users are prevented from executing privileged functions"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Privileged Access Review Records"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.8": {
+      "title": "Unsuccessful Logon Attempts",
+      "objectives": [
+        "A limit of consecutive invalid logon attempts by a user during a defined period is enforced",
+        "The account is locked for a defined period (or until unlocked by an administrator) when the maximum number of unsuccessful attempts is exceeded"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Account Lockout Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Account Compromise",
+          "Unauthorized Access",
+          "Privilege Escalation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.9": {
+      "title": "System Use Notification",
+      "objectives": [
+        "A system use notification message with privacy and security notices consistent with applicable CUI rules is displayed before granting access to the system"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "System Use Notification Banner Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Privilege Escalation",
+          "Account Compromise",
+          "Unauthorized Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.10": {
+      "title": "Device Lock",
+      "objectives": [
+        "Access to the system is prevented by initiating a device lock after a defined period of inactivity",
+        "Information previously visible on the display is concealed via device lock with a publicly viewable image",
+        "The device lock is retained until the user reestablishes access using established identification and authentication procedures"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Device Lock and Session Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.11": {
+      "title": "Session Termination",
+      "objectives": [
+        "A user session is terminated automatically after session time limit expiration, detection of anomalous activity, explicit user logoff, or end of a defined work period"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Access Control Policy and Enforcement Documentation"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Account Compromise",
+          "Unauthorized Access",
+          "Privilege Escalation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.12": {
+      "title": "Remote Access",
+      "objectives": [
+        "Types of allowable remote system access are defined",
+        "Usage restrictions are established for each type of allowable remote system access",
+        "Configuration requirements are established for each type of allowable remote system access",
+        "Connection requirements are established for each type of allowable remote system access",
+        "Each type of remote system access is authorized prior to establishing such connections",
+        "Remote access to the system is routed through authorized access control points",
+        "Remote access to the system is routed through managed access control points",
+        "Remote execution of privileged commands is authorized",
+        "Remote access to security-relevant information is authorized"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Remote Access Policy"
+        ],
+        "evidence": [
+          "Network Access Control Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Privilege Escalation",
+          "Account Compromise",
+          "Unauthorized Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.13": {
+      "title": "Employ Cryptographic Mechanisms to Protect the Confidentiality of Remote Access Sessions",
+      "objectives": [
+        "Employ cryptographic mechanisms to protect the confidentiality of remote access sessions."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Encryption Policy"
+        ],
+        "evidence": [
+          "Encryption Configuration and Certificate Records"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.14": {
+      "title": "Route Remote Access via Managed Access Control Points",
+      "objectives": [
+        "Route remote access via managed access control points."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Network Security Policy"
+        ],
+        "evidence": [
+          "Network Access Control Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Account Compromise",
+          "Unauthorized Access",
+          "Privilege Escalation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.15": {
+      "title": "Authorize Remote Execution of Privileged Commands and Remote Access to Security-Relevant Information",
+      "objectives": [
+        "Authorize remote execution of privileged commands and remote access to security-relevant information."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Remote Access Policy"
+        ],
+        "evidence": [
+          "Remote Execution Authorization Records"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Privilege Escalation",
+          "Account Compromise",
+          "Unauthorized Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.16": {
+      "title": "Wireless Access",
+      "objectives": [
+        "Each type of wireless access to the system is defined",
+        "Usage restrictions are established for each type of wireless access to the system",
+        "Configuration requirements are established for each type of wireless access to the system",
+        "Connection requirements are established for each type of wireless access to the system",
+        "Each type of wireless access to the system is authorized prior to establishing such connections",
+        "Wireless networking capabilities not intended for use are disabled prior to issuance and deployment",
+        "Wireless access to the system is protected using authentication",
+        "Wireless access to the system is protected using encryption"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Wireless Access Policy"
+        ],
+        "evidence": [
+          "Wireless Security Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.17": {
+      "title": "Protect Wireless Access Using Authentication and Encryption",
+      "objectives": [
+        "Protect wireless access using authentication and encryption."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Wireless Access Policy"
+        ],
+        "evidence": [
+          "Wireless Security Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Account Compromise",
+          "Unauthorized Access",
+          "Privilege Escalation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.18": {
+      "title": "Access Control for Mobile Devices",
+      "objectives": [
+        "Usage restrictions are established for mobile devices",
+        "Configuration requirements are established for mobile devices",
+        "Connection requirements are established for mobile devices",
+        "The connection of mobile devices to the system is authorized",
+        "Full-device or container-based encryption is implemented to protect the confidentiality of CUI on mobile devices"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Mobile Device Policy"
+        ],
+        "evidence": [
+          "Mobile Device Management Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Privilege Escalation",
+          "Account Compromise",
+          "Unauthorized Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.19": {
+      "title": "Encrypt CUI on Mobile Devices and Mobile Computing Platforms",
+      "objectives": [
+        "Encrypt CUI on mobile devices and mobile computing platforms."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Encryption Policy"
+        ],
+        "evidence": [
+          "Mobile Device Management Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.20": {
+      "title": "Use of External Systems",
+      "objectives": [
+        "The following security requirements to be satisfied on external systems prior to allowing the use of or access to those systems by authorized individuals are established: all systems that store, process, or transmit CUI and all remote access connections used to access CUI",
+        "The use of external systems is prohibited unless the systems are specifically authorized",
+        "Authorized individuals are permitted to use external systems to access the organizational system or to process, store, or transmit CUI only after verifying that the security requirements on the external systems as specified in the organization\u2019s system security plans have been satisfied",
+        "The use of organization-controlled portable storage devices by authorized individuals on external systems is restricted",
+        "Authorized individuals are permitted to use external systems to access the organizational system or to process, store, or transmit CUI only after retaining approved system connection or processing agreements with the organizational entity hosting the external systems"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "External System Use Policy"
+        ],
+        "evidence": [
+          "External System Connection Authorization"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Account Compromise",
+          "Unauthorized Access",
+          "Privilege Escalation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.21": {
+      "title": "Limit Use of Portable Storage Devices on External Systems",
+      "objectives": [
+        "Limit use of organizational portable storage devices on external systems."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "External System Use Policy"
+        ],
+        "evidence": [
+          "External System Connection Authorization"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Privilege Escalation",
+          "Account Compromise",
+          "Unauthorized Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AC.L2-3.1.22": {
+      "title": "Publicly Accessible Content",
+      "objectives": [
+        "Authorized individuals are trained to ensure that publicly accessible information does not contain CUI",
+        "The content on publicly accessible systems is reviewed for CUI",
+        "CUI is removed from publicly accessible systems, if discovered"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "External System Use Policy"
+        ],
+        "evidence": [
+          "Public Content Review Records"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    }
+  }
+}

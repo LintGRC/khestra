@@ -1,0 +1,249 @@
+{
+  "family": "AT",
+  "name": "Awareness and Training",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Insider Threat Program Policy",
+      "Security Awareness Training Policy"
+    ],
+    "evidence_types": [
+      "Change Management Records",
+      "System Use Notification Banner Configuration",
+      "Training Completion and Curriculum Records",
+      "Training Policy Documentation"
+    ],
+    "teams": [
+      "Security Training",
+      "Human Resources"
+    ],
+    "asset_types": [
+      "Training Platform",
+      "Learning Management System"
+    ],
+    "subcontractor_types": [
+      "Training Providers",
+      "Security Awareness Vendors"
+    ],
+    "risk_types": [
+      "Insider Threat",
+      "Social Engineering",
+      "Policy Non-Compliance"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "AT.L2-3.2.1": {
+      "title": "Literacy Training and Awareness",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Security Awareness Training Policy"
+        ],
+        "evidence": [
+          "Change Management Records",
+          "Training Policy Documentation"
+        ],
+        "teams": [
+          "Security Training",
+          "Human Resources"
+        ],
+        "assets": [
+          "Training Platform",
+          "Learning Management System"
+        ],
+        "subcontractors": [
+          "Training Providers",
+          "Security Awareness Vendors"
+        ],
+        "risks": [
+          "Insider Threat",
+          "Social Engineering",
+          "Policy Non-Compliance"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Awareness and Training Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Security Awareness Training Records",
+          "action": "attach",
+          "source": "artifacts.md#D5"
+        }
+      ],
+      "evidence_hints": [
+        "Training curriculum and syllabus documentation",
+        "Training completion certificate repository exports",
+        "Phishing simulation campaign results and metrics",
+        "Annual training schedule and delivery records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel",
+        "Training"
+      ]
+    },
+    "AT.L2-3.2.2": {
+      "title": "Role-Based Training",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Security Awareness Training Policy"
+        ],
+        "evidence": [
+          "System Use Notification Banner Configuration",
+          "Training Policy Documentation"
+        ],
+        "teams": [
+          "Security Training",
+          "Human Resources"
+        ],
+        "assets": [
+          "Training Platform",
+          "Learning Management System"
+        ],
+        "subcontractors": [
+          "Training Providers",
+          "Security Awareness Vendors"
+        ],
+        "risks": [
+          "Policy Non-Compliance",
+          "Insider Threat",
+          "Social Engineering"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Awareness and Training Policy",
+      "evidence_artifacts": [
+        {
+          "name": "RACI / Role Matrix",
+          "action": "reference",
+          "source": "artifacts.md#D2"
+        },
+        {
+          "name": "Security Awareness Training Records",
+          "action": "attach",
+          "source": "artifacts.md#D5"
+        }
+      ],
+      "evidence_hints": [
+        "Role-specific training matrix and assignment records",
+        "Specialized training completion records by role",
+        "Training gap analysis and remediation records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel",
+        "Training"
+      ]
+    },
+    "AT.L2-3.2.3": {
+      "title": "Provide Security Awareness Training on Recognizing and Reporting Potential Indicators of Insider Threat",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Security Awareness Training Policy"
+        ],
+        "evidence": [
+          "Training Completion and Curriculum Records",
+          "Training Policy Documentation"
+        ],
+        "teams": [
+          "Security Training",
+          "Human Resources"
+        ],
+        "assets": [
+          "Training Platform",
+          "Learning Management System"
+        ],
+        "subcontractors": [
+          "Training Providers",
+          "Security Awareness Vendors"
+        ],
+        "risks": [
+          "Social Engineering",
+          "Policy Non-Compliance",
+          "Insider Threat"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Awareness and Training Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Security Awareness Training Records",
+          "action": "attach",
+          "source": "artifacts.md#D5"
+        }
+      ],
+      "evidence_hints": [
+        "Insider threat awareness training materials",
+        "Incident reporting procedure documentation",
+        "Insider threat indicator recognition materials",
+        "Training effectiveness assessment records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel",
+        "Training"
+      ]
+    }
+  }
+}

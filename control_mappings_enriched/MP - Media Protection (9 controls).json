@@ -1,0 +1,593 @@
+{
+  "family": "MP",
+  "name": "Media Protection",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Backup and Recovery Policy",
+      "Data Handling Policy",
+      "Media Protection Policy",
+      "Media Sanitization Policy"
+    ],
+    "evidence_types": [
+      "Encryption Configuration and Certificate Records",
+      "Media Protection and Handling Records",
+      "Media Transport Authorization Records",
+      "Portable Storage Device Configuration"
+    ],
+    "teams": [
+      "Data Protection",
+      "Media Management"
+    ],
+    "asset_types": [
+      "Removable Media",
+      "Media Storage Systems",
+      "Backup Systems"
+    ],
+    "subcontractor_types": [
+      "Media Destruction Services",
+      "Cloud Storage Providers"
+    ],
+    "risk_types": [
+      "Data Loss",
+      "Media Theft or Exposure",
+      "Improper Sanitization"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "MP.L2-3.8.1": {
+      "title": "Media Storage",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Media Protection Policy"
+        ],
+        "evidence": [
+          "Media Protection and Handling Records",
+          "Media Transport Authorization Records"
+        ],
+        "teams": [
+          "Data Protection",
+          "Media Management"
+        ],
+        "assets": [
+          "Removable Media",
+          "Media Storage Systems",
+          "Backup Systems"
+        ],
+        "subcontractors": [
+          "Media Destruction Services",
+          "Cloud Storage Providers"
+        ],
+        "risks": [
+          "Data Loss",
+          "Media Theft or Exposure",
+          "Improper Sanitization"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Media Protection Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Data Flow Diagram",
+          "action": "reference",
+          "source": "artifacts.md#D4"
+        }
+      ],
+      "evidence_hints": [
+        "Media storage facility security configuration records",
+        "Environmental control monitoring for media storage",
+        "Media storage access log and review records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "MP.L2-3.8.2": {
+      "title": "Media Access",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Data Handling Policy"
+        ],
+        "evidence": [
+          "Media Protection and Handling Records",
+          "Media Transport Authorization Records"
+        ],
+        "teams": [
+          "Data Protection",
+          "Media Management"
+        ],
+        "assets": [
+          "Removable Media",
+          "Media Storage Systems",
+          "Backup Systems"
+        ],
+        "subcontractors": [
+          "Media Destruction Services",
+          "Cloud Storage Providers"
+        ],
+        "risks": [
+          "Improper Sanitization",
+          "Data Loss",
+          "Media Theft or Exposure"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Media Protection Policy",
+      "evidence_hints": [
+        "Media access authorization and approval records",
+        "Media checkout and return tracking logs",
+        "Media access violation and investigation records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "MP.L2-3.8.3": {
+      "title": "Media Sanitization",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Media Sanitization Policy"
+        ],
+        "evidence": [
+          "Media Protection and Handling Records",
+          "Media Transport Authorization Records"
+        ],
+        "teams": [
+          "Data Protection",
+          "Media Management"
+        ],
+        "assets": [
+          "Removable Media",
+          "Media Storage Systems",
+          "Backup Systems"
+        ],
+        "subcontractors": [
+          "Media Destruction Services",
+          "Cloud Storage Providers"
+        ],
+        "risks": [
+          "Media Theft or Exposure",
+          "Improper Sanitization",
+          "Data Loss"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Media Protection Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Media Sanitization / Destruction Records",
+          "action": "attach",
+          "source": "artifacts.md#D19"
+        }
+      ],
+      "evidence_hints": [
+        "Media sanitization procedure and method documentation",
+        "Sanitization verification and destruction records",
+        "Media disposal chain of custody records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "MP.L2-3.8.4": {
+      "title": "Media Marking",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Media Protection Policy"
+        ],
+        "evidence": [
+          "Media Protection and Handling Records",
+          "Media Transport Authorization Records"
+        ],
+        "teams": [
+          "Data Protection",
+          "Media Management"
+        ],
+        "assets": [
+          "Removable Media",
+          "Media Storage Systems",
+          "Backup Systems"
+        ],
+        "subcontractors": [
+          "Media Destruction Services",
+          "Cloud Storage Providers"
+        ],
+        "risks": [
+          "Data Loss",
+          "Media Theft or Exposure",
+          "Improper Sanitization"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Media Protection Policy",
+      "evidence_hints": [
+        "Media marking standards and procedures",
+        "Media classification label inventory records",
+        "Marking compliance verification records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "MP.L2-3.8.5": {
+      "title": "Media Transport",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Media Protection Policy"
+        ],
+        "evidence": [
+          "Media Protection and Handling Records",
+          "Media Transport Authorization Records"
+        ],
+        "teams": [
+          "Data Protection",
+          "Media Management"
+        ],
+        "assets": [
+          "Removable Media",
+          "Media Storage Systems",
+          "Backup Systems"
+        ],
+        "subcontractors": [
+          "Media Destruction Services",
+          "Cloud Storage Providers"
+        ],
+        "risks": [
+          "Improper Sanitization",
+          "Data Loss",
+          "Media Theft or Exposure"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Media Protection Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Media Sanitization / Destruction Records",
+          "action": "attach",
+          "source": "artifacts.md#D19"
+        }
+      ],
+      "evidence_hints": [
+        "Media transport authorization and approval records",
+        "Transport container and packaging documentation",
+        "Chain of custody and tracking records for transported media",
+        "Courier authorization and verification records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "MP.L2-3.8.6": {
+      "title": "Implement Cryptographic Mechanisms to Protect the Confidentiality of CUI Stored on Digital Media During Transport",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Data Handling Policy"
+        ],
+        "evidence": [
+          "Encryption Configuration and Certificate Records",
+          "Media Transport Authorization Records"
+        ],
+        "teams": [
+          "Data Protection",
+          "Media Management"
+        ],
+        "assets": [
+          "Removable Media",
+          "Media Storage Systems",
+          "Backup Systems"
+        ],
+        "subcontractors": [
+          "Media Destruction Services",
+          "Cloud Storage Providers"
+        ],
+        "risks": [
+          "Media Theft or Exposure",
+          "Improper Sanitization",
+          "Data Loss"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Media Protection Policy",
+      "evidence_hints": [
+        "Media encryption key management records",
+        "Encrypted media transport verification records",
+        "Full-disk encryption deployment status reports"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "MP.L2-3.8.7": {
+      "title": "Media Use",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Media Protection Policy"
+        ],
+        "evidence": [
+          "Portable Storage Device Configuration",
+          "Media Transport Authorization Records"
+        ],
+        "teams": [
+          "Data Protection",
+          "Media Management"
+        ],
+        "assets": [
+          "Removable Media",
+          "Media Storage Systems",
+          "Backup Systems"
+        ],
+        "subcontractors": [
+          "Media Destruction Services",
+          "Cloud Storage Providers"
+        ],
+        "risks": [
+          "Data Loss",
+          "Media Theft or Exposure",
+          "Improper Sanitization"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Media Protection Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Removable Media Controls",
+          "action": "attach",
+          "source": "artifacts.md#D20"
+        }
+      ],
+      "evidence_hints": [
+        "Media usage policy and procedure documentation",
+        "Media handling and protection records",
+        "Media use violation and investigation records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "MP.L2-3.8.8": {
+      "title": "Prohibit the Use of Portable Storage Devices When Such Devices Have No Identifiable Owner",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Data Handling Policy"
+        ],
+        "evidence": [
+          "Portable Storage Device Configuration",
+          "Media Transport Authorization Records"
+        ],
+        "teams": [
+          "Data Protection",
+          "Media Management"
+        ],
+        "assets": [
+          "Removable Media",
+          "Media Storage Systems",
+          "Backup Systems"
+        ],
+        "subcontractors": [
+          "Media Destruction Services",
+          "Cloud Storage Providers"
+        ],
+        "risks": [
+          "Improper Sanitization",
+          "Data Loss",
+          "Media Theft or Exposure"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Media Protection Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Removable Media Controls",
+          "action": "attach",
+          "source": "artifacts.md#D20"
+        }
+      ],
+      "evidence_hints": [
+        "Portable storage device inventory and ownership records",
+        "Unidentifiable device detection and remediation reports",
+        "Portable storage device registration and approval records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "MP.L2-3.8.9": {
+      "title": "System Backup – Cryptographic Protection",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Backup and Recovery Policy"
+        ],
+        "evidence": [
+          "Encryption Configuration and Certificate Records",
+          "Media Transport Authorization Records"
+        ],
+        "teams": [
+          "Data Protection",
+          "Media Management"
+        ],
+        "assets": [
+          "Removable Media",
+          "Media Storage Systems",
+          "Backup Systems"
+        ],
+        "subcontractors": [
+          "Media Destruction Services",
+          "Cloud Storage Providers"
+        ],
+        "risks": [
+          "Media Theft or Exposure",
+          "Improper Sanitization",
+          "Data Loss"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Media Protection Policy",
+      "evidence_hints": [
+        "System backup configuration and schedule records",
+        "Backup encryption and integrity verification records",
+        "Backup restoration testing and validation records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    }
+  }
+}

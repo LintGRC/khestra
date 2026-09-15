@@ -1,0 +1,201 @@
+{
+  "family": "IR",
+  "name": "Incident Response",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Incident Reporting Policy",
+      "Incident Response Policy"
+    ],
+    "evidence_types": [
+      "Change Management Records",
+      "Incident Handling Records",
+      "Incident Response Plan and Test Documentation",
+      "Incident Response Plan and Test Records"
+    ],
+    "teams": [
+      "Incident Response Team",
+      "Security Operations"
+    ],
+    "asset_types": [
+      "SIEM Platforms",
+      "Ticket Systems",
+      "Security Operations Tools"
+    ],
+    "subcontractor_types": [
+      "Managed Security Service Provider",
+      "Forensic Service Providers"
+    ],
+    "risk_types": [
+      "Delayed Incident Response",
+      "Incident Escalation",
+      "Unreported Breach"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "IR.L2-3.6.1": {
+      "title": "Incident Handling",
+      "objectives": [
+        "An incident-handling capability that is consistent with the incident response plan is implemented",
+        "The incident handling capability includes preparation",
+        "The incident handling capability includes detection and analysis",
+        "The incident handling capability includes containment",
+        "The incident handling capability includes eradication",
+        "The incident handling capability includes recovery"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Incident Response Policy"
+        ],
+        "evidence": [
+          "Incident Response Plan and Test Records",
+          "Incident Handling Records"
+        ],
+        "teams": [
+          "Incident Response Team",
+          "Security Operations"
+        ],
+        "assets": [
+          "SIEM Platforms",
+          "Ticket Systems",
+          "Security Operations Tools"
+        ],
+        "subcontractors": [
+          "Managed Security Service Provider",
+          "Forensic Service Providers"
+        ],
+        "risks": [
+          "Delayed Incident Response",
+          "Incident Escalation",
+          "Unreported Breach"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "IR.L2-3.6.2": {
+      "title": "Incident Monitoring, Reporting, and Response Assistance",
+      "objectives": [
+        "System security incidents are tracked",
+        "System security incidents are documented",
+        "Suspected incidents are reported to the organizational incident response capability within annually (tabletop exercise minimum; full operational test where feasible)",
+        "Incident information is reported to the ISSO/ISSM and designated IT recovery personnel (roles named in the Contingency Plan)",
+        "An incident response support resource that offers advice and assistance to system users on handling and reporting incidents is provided"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Incident Reporting Policy"
+        ],
+        "evidence": [
+          "Incident Response Plan and Test Documentation",
+          "Incident Handling Records"
+        ],
+        "teams": [
+          "Incident Response Team",
+          "Security Operations"
+        ],
+        "assets": [
+          "SIEM Platforms",
+          "Ticket Systems",
+          "Security Operations Tools"
+        ],
+        "subcontractors": [
+          "Managed Security Service Provider",
+          "Forensic Service Providers"
+        ],
+        "risks": [
+          "Unreported Breach",
+          "Delayed Incident Response",
+          "Incident Escalation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "IR.L2-3.6.3": {
+      "title": "Incident Response Testing",
+      "objectives": [
+        "The effectiveness of the incident response capability is tested annually or following significant system changes, personnel changes, or actual activation of the plan"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Incident Response Policy"
+        ],
+        "evidence": [
+          "Change Management Records",
+          "Incident Handling Records"
+        ],
+        "teams": [
+          "Incident Response Team",
+          "Security Operations"
+        ],
+        "assets": [
+          "SIEM Platforms",
+          "Ticket Systems",
+          "Security Operations Tools"
+        ],
+        "subcontractors": [
+          "Managed Security Service Provider",
+          "Forensic Service Providers"
+        ],
+        "risks": [
+          "Incident Escalation",
+          "Unreported Breach",
+          "Delayed Incident Response"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    }
+  }
+}

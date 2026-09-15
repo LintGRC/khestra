@@ -1,0 +1,498 @@
+{
+  "family": "AU",
+  "name": "Audit and Accountability",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Audit and Accountability Policy",
+      "Event Logging Policy"
+    ],
+    "evidence_types": [
+      "Audit Log Configuration and Records",
+      "Audit Log Failure Response Records",
+      "Audit Log Records and Configuration",
+      "Audit Review Records",
+      "Audit Review and Analysis Reports",
+      "Time Synchronization Configuration"
+    ],
+    "teams": [
+      "Security Operations",
+      "Audit Management"
+    ],
+    "asset_types": [
+      "Audit Log Systems",
+      "SIEM Platforms",
+      "Log Collection Servers"
+    ],
+    "subcontractor_types": [
+      "SIEM Providers",
+      "Cloud Service Providers"
+    ],
+    "risk_types": [
+      "Audit Failure",
+      "Undetected Security Breach",
+      "Log Tampering"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "AU.L2-3.3.1": {
+      "title": "Event Logging",
+      "objectives": [
+        "The following event types are specified for logging within the system: account logon/logoff, account management, object access to CUI, policy changes, privilege use, process tracking, system events, failed access attempts, and use of privileged functions",
+        "The event types selected for logging are reviewed date/time, event type, user/process identity, source (IP or device), outcome (success/failure), and affected object",
+        "The event types selected for logging are updated date/time, event type, user/process identity, source (IP or device), outcome (success/failure), and affected object"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Audit and Accountability Policy"
+        ],
+        "evidence": [
+          "Audit Log Configuration and Records",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Audit Failure",
+          "Undetected Security Breach",
+          "Log Tampering"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AU.L2-3.3.2": {
+      "title": "Audit Record Content",
+      "objectives": [
+        "Audit records contain information that establishes what type of event occurred",
+        "Audit records contain information that establishes when the event occurred",
+        "Audit records contain information that establishes where the event occurred",
+        "Audit records contain information that establishes the source of the event",
+        "Audit records contain information that establishes the outcome of the event",
+        "Audit records contain information that establishes the identity of the individuals, subjects, objects, or entities associated with the event",
+        "Additional information for audit records is provided, as needed"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Event Logging Policy"
+        ],
+        "evidence": [
+          "Audit Log Records and Configuration",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Log Tampering",
+          "Audit Failure",
+          "Undetected Security Breach"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AU.L2-3.3.3": {
+      "title": "Audit Record Generation",
+      "objectives": [
+        "Audit records for the selected event types and audit record content specified in 03.03.01 and 03.03.02 are generated",
+        "Audit records are retained for a time period consistent with the records retention policy"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Audit and Accountability Policy"
+        ],
+        "evidence": [
+          "Audit Log Records and Configuration",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Undetected Security Breach",
+          "Log Tampering",
+          "Audit Failure"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AU.L2-3.3.4": {
+      "title": "Response to Audit Logging Process Failures",
+      "objectives": [
+        "Organizational personnel or roles are alerted in the event of an audit logging process failure within weekly for routine review, with automated daily alerting for security-relevant events",
+        "The following additional actions are taken: the ISSO or designated Security Operations Center (SOC) personnel"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Event Logging Policy"
+        ],
+        "evidence": [
+          "Audit Log Failure Response Records",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Audit Failure",
+          "Undetected Security Breach",
+          "Log Tampering"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AU.L2-3.3.5": {
+      "title": "Audit Record Review, Analysis, and Reporting",
+      "objectives": [
+        "System audit records are reviewed and analyzed minimum 1 year total, with at least 90 days immediately accessible onlinefor indications and the potential impact of inappropriate or unusual activity",
+        "Findings are reported to organizational personnel or roles",
+        "Audit records across different repositories are analyzed to gain organization-wide situational awareness",
+        "Audit records across different repositories are correlated to gain organization-wide situational awareness"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Audit and Accountability Policy"
+        ],
+        "evidence": [
+          "Audit Review Records",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Log Tampering",
+          "Audit Failure",
+          "Undetected Security Breach"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AU.L2-3.3.6": {
+      "title": "Audit Record Reduction and Report Generation",
+      "objectives": [
+        "An audit record reduction and report generation capability that supports audit record review is implemented",
+        "An audit record reduction and report generation capability that supports audit record analysis is implemented",
+        "An audit record reduction and report generation capability that supports audit record reporting requirements is implemented",
+        "An audit record reduction and report generation capability that supports after-the-fact investigations of incidents is implemented",
+        "The original content of audit records is preserved",
+        "The original time ordering of audit records is preserved"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Event Logging Policy"
+        ],
+        "evidence": [
+          "Audit Log Records and Configuration",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Undetected Security Breach",
+          "Log Tampering",
+          "Audit Failure"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AU.L2-3.3.7": {
+      "title": "Time Stamps",
+      "objectives": [
+        "Internal system clocks are used to generate time stamps for audit records",
+        "Time stamps are recorded for audit records that use Coordinated Universal Time (UTC), have a fixed local time offset from UTC, or include the local time offset as part of the time stamp",
+        "Time stamps are recorded for audit records that meet 1-second granularity, synchronized to an authoritative time source (NTP from a DoD-approved Stratum 2 server)"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Audit and Accountability Policy"
+        ],
+        "evidence": [
+          "Time Synchronization Configuration",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Audit Failure",
+          "Undetected Security Breach",
+          "Log Tampering"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AU.L2-3.3.8": {
+      "title": "Protection of Audit Information",
+      "objectives": [
+        "Access to management of audit logging functionality is authorized to only a subset of privileged users or roles",
+        "Audit information is protected from unauthorized access, modification, and deletion",
+        "Audit logging tools are protected from unauthorized access, modification, and deletion"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Event Logging Policy"
+        ],
+        "evidence": [
+          "Audit Log Records and Configuration",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Log Tampering",
+          "Audit Failure",
+          "Undetected Security Breach"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "AU.L2-3.3.9": {
+      "title": "Provide a System Capability That Compares and Synchronizes Internal System Clocks",
+      "objectives": [
+        "Provide a system capability that compares and synchronizes internal system clocks with an authoritative source to generate time stamps for audit records."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Audit and Accountability Policy"
+        ],
+        "evidence": [
+          "Time Synchronization Configuration",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Undetected Security Breach",
+          "Log Tampering",
+          "Audit Failure"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    }
+  }
+}

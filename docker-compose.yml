@@ -1,0 +1,186 @@
+# Khestra — free tier (Docker Compose)
+#
+# Usage:
+#   cp deploy/env.production.example .env   # set DOMAIN, admin password, etc.
+#   docker compose up --build -d
+#
+# Services: CMMC (8081), SOC 2 (8082), AI Governance (8083),
+# ISO 27001 (8085), Global/Core (8086), Caddy (80/443).
+# Automated evidence collectors are not part of this repository.
+services:
+  cmmc-api:
+    build:
+      context: .
+      dockerfile: apps/cmmc/Dockerfile
+    restart: unless-stopped
+    environment:
+      DATA_DIR: /data
+      SHARED_AUTH_DIR: /shared/auth
+      AUTH_DB_PATH: /shared/auth/auth.db
+      COMPLIANCE_CALENDAR_DB_PATH: /shared/auth/compliance_calendar.db
+      POLICIES_DB_PATH: /shared/auth/policies.db
+      EVIDENCE_DB_PATH: /shared/auth/evidence.db
+      EVIDENCE_FILES_DIR: /shared/auth/evidence_files
+      RISKS_DB_PATH: /shared/auth/risks.db
+      VENDOR_DB_PATH: /shared/auth/vendors.db
+      ASSETS_DB_PATH: /shared/auth/assets.db
+      INCIDENTS_DB_PATH: /shared/auth/incidents.db
+      REVIEWS_DB_PATH: /shared/auth/reviews.db
+      PERSONNEL_DB_PATH: /shared/auth/personnel.db
+      AUDIT_LOG_DB_PATH: /shared/auth/audit_log.db
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - cmmc_data:/data
+      - cmmc_data:/apps/data
+      - shared_auth:/shared/auth
+    expose:
+      - "8081"
+
+  soc2-api:
+    build:
+      context: .
+      dockerfile: apps/soc2/Dockerfile
+    restart: unless-stopped
+    environment:
+      DATA_DIR: /apps/soc2/soc2_data
+      SHARED_AUTH_DIR: /shared/auth
+      AUTH_DB_PATH: /shared/auth/auth.db
+      COMPLIANCE_CALENDAR_DB_PATH: /shared/auth/compliance_calendar.db
+      POLICIES_DB_PATH: /shared/auth/policies.db
+      EVIDENCE_DB_PATH: /shared/auth/evidence.db
+      EVIDENCE_FILES_DIR: /shared/auth/evidence_files
+      RISKS_DB_PATH: /shared/auth/risks.db
+      VENDOR_DB_PATH: /shared/auth/vendors.db
+      ASSETS_DB_PATH: /shared/auth/assets.db
+      INCIDENTS_DB_PATH: /shared/auth/incidents.db
+      REVIEWS_DB_PATH: /shared/auth/reviews.db
+      PERSONNEL_DB_PATH: /shared/auth/personnel.db
+      AUDIT_LOG_DB_PATH: /shared/auth/audit_log.db
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - soc2_data:/data
+      - soc2_data:/apps/soc2/soc2_data
+      - shared_auth:/shared/auth
+    expose:
+      - "8082"
+
+  aigov-api:
+    build:
+      context: .
+      dockerfile: apps/aigovernance/Dockerfile
+    restart: unless-stopped
+    environment:
+      DATA_DIR: /apps/aigovernance/data
+      SHARED_AUTH_DIR: /shared/auth
+      POLICIES_DB_PATH: /shared/auth/policies.db
+      EVIDENCE_DB_PATH: /shared/auth/evidence.db
+      EVIDENCE_FILES_DIR: /shared/auth/evidence_files
+      RISKS_DB_PATH: /shared/auth/risks.db
+      VENDOR_DB_PATH: /shared/auth/vendors.db
+      ASSETS_DB_PATH: /shared/auth/assets.db
+      INCIDENTS_DB_PATH: /shared/auth/incidents.db
+      REVIEWS_DB_PATH: /shared/auth/reviews.db
+      PERSONNEL_DB_PATH: /shared/auth/personnel.db
+      AUDIT_LOG_DB_PATH: /shared/auth/audit_log.db
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - aigov_data:/apps/aigovernance/data
+      - shared_auth:/shared/auth
+    expose:
+      - "8083"
+
+  iso27001-api:
+    build:
+      context: .
+      dockerfile: apps/iso27001/Dockerfile
+    restart: unless-stopped
+    environment:
+      DATA_DIR: /data
+      SHARED_AUTH_DIR: /shared/auth
+      POLICIES_DB_PATH: /shared/auth/policies.db
+      EVIDENCE_DB_PATH: /shared/auth/evidence.db
+      EVIDENCE_FILES_DIR: /shared/auth/evidence_files
+      RISKS_DB_PATH: /shared/auth/risks.db
+      VENDOR_DB_PATH: /shared/auth/vendors.db
+      ASSETS_DB_PATH: /shared/auth/assets.db
+      INCIDENTS_DB_PATH: /shared/auth/incidents.db
+      REVIEWS_DB_PATH: /shared/auth/reviews.db
+      PERSONNEL_DB_PATH: /shared/auth/personnel.db
+      AUDIT_LOG_DB_PATH: /shared/auth/audit_log.db
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - iso27001_data:/data
+      - iso27001_data:/apps/iso27001/data
+      - shared_auth:/shared/auth
+    expose:
+      - "8085"
+
+  global-api:
+    build:
+      context: .
+      dockerfile: apps/core/Dockerfile
+    restart: unless-stopped
+    environment:
+      DATA_DIR: /data
+      SHARED_AUTH_DIR: /shared/auth
+      AUTH_DB_PATH: /shared/auth/auth.db
+      COMPLIANCE_CALENDAR_DB_PATH: /shared/auth/compliance_calendar.db
+      POLICIES_DB_PATH: /shared/auth/policies.db
+      EVIDENCE_DB_PATH: /shared/auth/evidence.db
+      EVIDENCE_FILES_DIR: /shared/auth/evidence_files
+      RISKS_DB_PATH: /shared/auth/risks.db
+      VENDOR_DB_PATH: /shared/auth/vendors.db
+      ASSETS_DB_PATH: /shared/auth/assets.db
+      INCIDENTS_DB_PATH: /shared/auth/incidents.db
+      REVIEWS_DB_PATH: /shared/auth/reviews.db
+      PERSONNEL_DB_PATH: /shared/auth/personnel.db
+      AUDIT_LOG_DB_PATH: /shared/auth/audit_log.db
+      CORE_DATA_DIR: /data
+      CORE_PLATFORM_ROOT: /apps/cmmc
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - core_data:/data
+      - shared_auth:/shared/auth
+    expose:
+      - "8086"
+
+  caddy:
+    build:
+      context: .
+      dockerfile: Dockerfile.caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - global-api
+      - cmmc-api
+      - soc2-api
+      - aigov-api
+      - iso27001-api
+
+volumes:
+  cmmc_data:
+  soc2_data:
+  aigov_data:
+  iso27001_data:
+  core_data:
+  shared_auth:
+  caddy_data:
+  caddy_config:

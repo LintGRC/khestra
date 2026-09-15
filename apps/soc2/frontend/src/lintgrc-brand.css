@@ -1,0 +1,169 @@
+/**
+ * LintGRC brand — default when <html data-brand="lintgrc">.
+ * Switch to Classic in Workspace → Appearance → Color style.
+ */
+
+[data-brand="lintgrc"][data-theme="light"] {
+  --bg: #f0f7fa;
+  --surface: #ffffff;
+  --border: #dfe7ec;
+  --border-subtle: #e8f0f4;
+  --text: #0f1b22;
+  --muted: #5f7280;
+  --primary: #1a6b8e;
+  --primary-soft: #e3eff5;
+  --accent: #2aa39a;
+  --success: #047857;
+  --success-soft: #d1fae5;
+  --success-border: #6ee7b7;
+  --warning: #b45309;
+  --warning-soft: #fef9c3;
+  --warning-border: #fde047;
+  --danger: #dc2626;
+  --danger-soft: #fee2e2;
+  --danger-border: #fca5a5;
+  --info-soft: #e3eff5;
+  --info-border: #b8d4e3;
+  --sidebar: #1a3a5c;
+  --sidebar-text: #b8cdd9;
+  --shadow: 0 1px 2px rgba(20, 40, 60, 0.04), 0 4px 12px rgba(20, 40, 60, 0.05);
+  --input-bg: #ffffff;
+  --cta-navy: #234a6e;
+  --cta-navy-deep: #1a3a5c;
+}
+
+[data-brand="lintgrc"][data-theme="dark"] {
+  --bg: #0a1218;
+  --surface: #111c24;
+  --border: #243540;
+  --border-subtle: #1a2830;
+  --text: #e8f0f4;
+  --muted: #8fa3b0;
+  --primary: #5eb4d4;
+  --primary-soft: #152a35;
+  --accent: #3dbdb4;
+  --success: #34d399;
+  --success-soft: #0f2a22;
+  --success-border: #047857;
+  --warning: #fbbf24;
+  --warning-soft: #2a2010;
+  --warning-border: #92400e;
+  --danger: #f87171;
+  --danger-soft: #2a1515;
+  --danger-border: #991b1b;
+  --info-soft: #152a35;
+  --info-border: #2a5060;
+  --sidebar: #071018;
+  --sidebar-text: #8fa3b0;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --input-bg: #0a1218;
+  --cta-navy: #234a6e;
+  --cta-navy-deep: #1a3a5c;
+}
+
+[data-brand="lintgrc"] .topbar {
+  background: linear-gradient(180deg, #e8f3f7 0%, #f0f7fa 100%);
+  border-bottom-color: var(--border);
+}
+
+[data-brand="lintgrc"][data-theme="dark"] .topbar {
+  background: var(--surface);
+}
+
+[data-brand="lintgrc"] .sidebar-brand {
+  width: calc(100% + 1rem);
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+[data-brand="lintgrc"] .brand-name {
+  font-size: 1.35rem;
+  letter-spacing: 0.06em;
+}
+
+[data-brand="lintgrc"] .readiness-checklist-panel .panel-header strong,
+[data-brand="lintgrc"] .readiness-checklist-panel .checklist li strong {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+[data-brand="lintgrc"] .control-id-text,
+[data-brand="lintgrc"] .sprs-weight-badge,
+[data-brand="lintgrc"] th {
+  font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+
+[data-brand="lintgrc"] .nav-link.active {
+  border-left-color: var(--accent);
+}
+
+[data-brand="lintgrc"] .hero-card {
+  background: linear-gradient(135deg, var(--cta-navy) 0%, var(--cta-navy-deep) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: none;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(15, 42, 66, 0.12);
+}
+
+[data-brand="lintgrc"] .hero-card-primary,
+[data-brand="lintgrc"] .hero-card-success {
+  border-left: none;
+}
+
+[data-brand="lintgrc"] .hero-card-eyebrow {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+[data-brand="lintgrc"] .hero-card-title {
+  color: #fff;
+  font-weight: 600;
+}
+
+[data-brand="lintgrc"] .hero-card-subtitle,
+[data-brand="lintgrc"] .hero-card .muted {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-brand="lintgrc"] .hero-card .badge {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+[data-brand="lintgrc"] .hero-card .btn-primary {
+  background: #fff;
+  color: var(--cta-navy-deep);
+  font-weight: 600;
+}
+
+[data-brand="lintgrc"] .hero-card .btn-primary:hover:not(:disabled) {
+  filter: none;
+  opacity: 0.94;
+}
+
+[data-brand="lintgrc"] .sprs-chip {
+  background: var(--primary-soft);
+  color: var(--primary);
+  border-color: #b8d4e3;
+}
+
+[data-brand="lintgrc"] .wizard-step-tab.active {
+  border-bottom-color: var(--accent);
+}
+
+[data-brand="lintgrc"] .wizard-progress-fill,
+[data-brand="lintgrc"] .metric-bar-fill,
+[data-brand="lintgrc"] .hbar-fill {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+[data-brand="lintgrc"] .content {
+  background-color: var(--bg);
+  background-image: radial-gradient(rgba(26, 107, 142, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+[data-brand="lintgrc"][data-theme="dark"] .content {
+  background-image: radial-gradient(rgba(94, 180, 212, 0.03) 1px, transparent 1px);
+}

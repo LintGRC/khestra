@@ -1,0 +1,588 @@
+{
+  "family": "IA",
+  "name": "Identification and Authentication",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Credential Management Policy",
+      "Identification and Authentication Policy"
+    ],
+    "evidence_types": [
+      "Account Inactivity Configuration",
+      "Authentication Policy Documentation",
+      "Authentication System and Identity Records",
+      "MFA Implementation Records",
+      "Password Encryption Configuration",
+      "Privileged Account Management Records",
+      "Temporary Password Configuration"
+    ],
+    "teams": [
+      "Identity Management",
+      "Authentication Services"
+    ],
+    "asset_types": [
+      "Identity Platforms",
+      "Authentication Systems",
+      "User Directories"
+    ],
+    "subcontractor_types": [
+      "Identity Provider",
+      "Authentication Service Vendors"
+    ],
+    "risk_types": [
+      "Credential Theft",
+      "Authentication Bypass",
+      "Identity Spoofing"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "IA.L2-3.5.1": {
+      "title": "User Identification and Authentication",
+      "objectives": [
+        "System users are uniquely identified",
+        "System users are authenticated",
+        "Processes acting on behalf of users are associated with uniquely identified and authenticated system users",
+        "Users are reauthenticated when unique username per individual user; device identifiers (hostname, MAC address, or certificate); service accounts identified by function with no shared credentials"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Identification and Authentication Policy"
+        ],
+        "evidence": [
+          "Authentication System and Identity Records",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Credential Theft",
+          "Authentication Bypass",
+          "Identity Spoofing"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "IA.L2-3.5.2": {
+      "title": "Device Identification and Authentication",
+      "objectives": [
+        "Multi-factor authentication (MFA) for all users; PIV/CAC preferred; MFA mandatory for privileged users and all remote accessare authenticated before establishing a system connection",
+        "Multi-factor authentication (MFA) for all users; PIV/CAC preferred; MFA mandatory for privileged users and all remote accessare uniquely identified before establishing a system connection"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Credential Management Policy"
+        ],
+        "evidence": [
+          "MFA Implementation Records",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Identity Spoofing",
+          "Credential Theft",
+          "Authentication Bypass"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "IA.L2-3.5.3": {
+      "title": "Multi-Factor Authentication",
+      "objectives": [
+        "Multi-factor authentication for access to privileged accounts is implemented",
+        "Multi-factor authentication for access to non-privileged accounts is implemented"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Identification and Authentication Policy"
+        ],
+        "evidence": [
+          "Privileged Account Management Records",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Authentication Bypass",
+          "Identity Spoofing",
+          "Credential Theft"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "IA.L2-3.5.4": {
+      "title": "Replay-Resistant Authentication",
+      "objectives": [
+        "Replay-resistant authentication mechanisms for access to privileged accounts are implemented",
+        "Replay-resistant authentication mechanisms for access to non-privileged accounts are implemented"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Credential Management Policy"
+        ],
+        "evidence": [
+          "Privileged Account Management Records",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Credential Theft",
+          "Authentication Bypass",
+          "Identity Spoofing"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "IA.L2-3.5.5": {
+      "title": "Identifier Management",
+      "objectives": [
+        "Authorization is received from organizational personnel or roles to assign an individual, group, role, service, or device identifier",
+        "An identifier that identifies an individual, group, role, service, or device is selected",
+        "An identifier that identifies an individual, group, role, service, or device is assigned",
+        "The reuse of identifiers for temporary passwords must meet complexity requirements, be unique per user, expire on first use, and never be transmitted in cleartextis prevented",
+        "Individual identifiers are managed by uniquely identifying each individual as 1 day minimum password age"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Identification and Authentication Policy"
+        ],
+        "evidence": [
+          "Temporary Password Configuration",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Identity Spoofing",
+          "Credential Theft",
+          "Authentication Bypass"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "IA.L2-3.5.6": {
+      "title": "Disable Identifier After a Defined Period of Inactivity",
+      "objectives": [
+        "Disable identifiers after a defined period of inactivity."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Credential Management Policy"
+        ],
+        "evidence": [
+          "Account Inactivity Configuration",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Authentication Bypass",
+          "Identity Spoofing",
+          "Credential Theft"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "IA.L2-3.5.7": {
+      "title": "Password Management",
+      "objectives": [
+        "A list of commonly used, expected, or compromised passwords is maintained",
+        "A list of commonly used, expected, or compromised passwords is updated 15 characters minimum",
+        "A list of commonly used, expected, or compromised passwords is updated when organizational passwords are suspected to have been compromised",
+        "Passwords are verified not to be found on the list of commonly used, expected, or compromised passwords when they are created or updated by users",
+        "Passwords are only transmitted over cryptographically protected channels",
+        "Passwords are stored in a cryptographically protected form",
+        "A new password is selected upon first use after account recovery",
+        "The following composition and complexity rules for passwords are enforced: characters from at least 3 of 4 categories (uppercase, lowercase, numbers, special characters); no dictionary words; 24-password history enforced; maximum 60-day password age"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Identification and Authentication Policy"
+        ],
+        "evidence": [
+          "Authentication System and Identity Records",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Credential Theft",
+          "Authentication Bypass",
+          "Identity Spoofing"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "IA.L2-3.5.8": {
+      "title": "Implement Replay-Resistant Authentication Mechanisms for Network Access to Non-Privileged Accounts",
+      "objectives": [
+        "Implement replay-resistant authentication mechanisms for network access to non-privileged accounts."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Credential Management Policy"
+        ],
+        "evidence": [
+          "Privileged Account Management Records",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Identity Spoofing",
+          "Credential Theft",
+          "Authentication Bypass"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "IA.L2-3.5.9": {
+      "title": "Allow Temporary Password Use for System Logons with an Immediate Change to a Permanent Password",
+      "objectives": [
+        "Allow temporary password use for system logons with an immediate change to a permanent password."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Identification and Authentication Policy"
+        ],
+        "evidence": [
+          "Temporary Password Configuration",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Authentication Bypass",
+          "Identity Spoofing",
+          "Credential Theft"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "IA.L2-3.5.10": {
+      "title": "Store and Transmit Only Cryptographically-Protected Passwords",
+      "objectives": [
+        "Store and transmit only cryptographically-protected passwords."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Credential Management Policy"
+        ],
+        "evidence": [
+          "Password Encryption Configuration",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Credential Theft",
+          "Authentication Bypass",
+          "Identity Spoofing"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "IA.L2-3.5.11": {
+      "title": "Authentication Feedback",
+      "objectives": [
+        "Feedback of authentication information during the authentication process is obscured"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Identification and Authentication Policy"
+        ],
+        "evidence": [
+          "Authentication System and Identity Records",
+          "Authentication Policy Documentation"
+        ],
+        "teams": [
+          "Identity Management",
+          "Authentication Services"
+        ],
+        "assets": [
+          "Identity Platforms",
+          "Authentication Systems",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Authentication Service Vendors"
+        ],
+        "risks": [
+          "Identity Spoofing",
+          "Credential Theft",
+          "Authentication Bypass"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    }
+  }
+}

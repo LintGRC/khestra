@@ -1,0 +1,23 @@
+export type PersonItem = {
+  id: string;
+  name: string;
+  email: string;
+  role: string;
+  department: string;
+  status: string;
+  mfa_status: string;
+  last_login: string;
+  is_privileged: boolean;
+  frameworks: string[];
+  org_id: string;
+  workspace_id: string;
+  created_at: string;
+  updated_at: string;
+  external_id: string;
+  phone: string;
+  location: string;
+  manager: string;
+  employee_id: string;
+  provider: string;
+  raw_attributes: Record<string, unknown>;
+};

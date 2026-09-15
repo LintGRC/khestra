@@ -1,0 +1,89 @@
+# Production Caddyfile for Khestra platform
+# Strip framework prefixes the same way Vite does in local:
+#   /api/cmmc/health        → /api/health        (cmmc-api)
+#   /api/soc2/health        → /api/health        (soc2-api)
+#   /api/ai-governance/foo  → /api/foo           (aigov-api)
+#   /api/iso27001/foo       → /api/foo           (iso27001-api)
+{$DOMAIN} {
+    root * /srv/ui
+
+    encode gzip
+
+    # Cache headers: Vite-hashed assets = 1 year immutable; SPA shell = 60s at CDN
+    @asset_files path /assets/*
+    header @asset_files Cache-Control "public, max-age=31536000, immutable"
+
+    @spa_shell {
+        not path /api/*
+        not path /assets/*
+    }
+    header @spa_shell Cache-Control "public, max-age=60"
+
+    # Vite-hashed static assets
+    handle /assets/* {
+        file_server
+    }
+
+    # Neutral Core namespace — global collector/evidence infrastructure,
+    # served by the standalone global-api service.
+    handle_path /api/core/* {
+        rewrite * /api{path}
+        reverse_proxy global-api:8086
+    }
+
+    # Evidence Hub (shared vault) is served by the Core service too.
+    handle /api/evidence-hub* {
+        reverse_proxy global-api:8086
+    }
+
+    # Manual posture (free tier) is computed by the Global service from
+    # approved evidence in the Hub; the collectors edition serves the richer
+    # per-framework collector posture.
+    handle /api/posture* {
+        reverse_proxy global-api:8086
+    }
+
+    handle_path /api/cmmc/* {
+        rewrite * /api{path}
+        reverse_proxy cmmc-api:8081
+    }
+
+    handle_path /api/soc2/* {
+        rewrite * /api{path}
+        reverse_proxy soc2-api:8082
+    }
+
+    handle_path /api/ai-governance/* {
+        rewrite * /api{path}
+        reverse_proxy aigov-api:8083
+    }
+
+    handle_path /api/iso27001/* {
+        rewrite * /api{path}
+        reverse_proxy iso27001-api:8085
+    }
+
+    # Global workspace services (merged into the Core/global service).
+    handle /api/settings* {
+        reverse_proxy global-api:8086
+    }
+
+    handle /api/personnel* {
+        reverse_proxy global-api:8086
+    }
+
+    handle /api/trust-center* {
+        reverse_proxy global-api:8086
+    }
+
+    # Unprefixed /api/* (health probes, legacy) → CMMC
+    handle /api/* {
+        reverse_proxy cmmc-api:8081
+    }
+
+    # SPA routing
+    handle {
+        try_files {path} /index.html
+        file_server
+    }
+}

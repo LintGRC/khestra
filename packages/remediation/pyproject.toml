@@ -1,0 +1,11 @@
+[project]
+name = "khestra-remediation"
+version = "0.1.0"
+description = "Shared Remediation Hub — cross-framework task/POA&M/corrective-action engine"
+license = { text = "Proprietary" }
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["remediation", "remediation.*"]

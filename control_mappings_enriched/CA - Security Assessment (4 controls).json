@@ -1,0 +1,352 @@
+{
+  "family": "CA",
+  "name": "Security Assessment",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Continuous Monitoring Policy",
+      "Plan of Action and Milestones Policy",
+      "Security Assessment Policy",
+      "System Security Plan Policy"
+    ],
+    "evidence_types": [
+      "Continuous Monitoring Records",
+      "Plan of Action and Milestones",
+      "Security Assessment and Monitoring Records",
+      "System Security Plan",
+      "System Security Plan Documentation"
+    ],
+    "teams": [
+      "Compliance Team",
+      "Security Assessment"
+    ],
+    "asset_types": [
+      "Security Assessment Tools",
+      "Compliance Management Systems"
+    ],
+    "subcontractor_types": [
+      "C3PAO Assessors",
+      "External Audit Firms"
+    ],
+    "risk_types": [
+      "Security Control Failure",
+      "Compliance Gap",
+      "Inadequate Assessment"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "CA.L2-3.12.1": {
+      "title": "Security Assessment",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Security Assessment Policy"
+        ],
+        "evidence": [
+          "Security Assessment and Monitoring Records",
+          "System Security Plan"
+        ],
+        "teams": [
+          "Compliance Team",
+          "Security Assessment"
+        ],
+        "assets": [
+          "Security Assessment Tools",
+          "Compliance Management Systems"
+        ],
+        "subcontractors": [
+          "C3PAO Assessors",
+          "External Audit Firms"
+        ],
+        "risks": [
+          "Security Control Failure",
+          "Compliance Gap",
+          "Inadequate Assessment"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Security Assessment Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Security Assessment Results",
+          "action": "attach",
+          "source": "artifacts.md#D26"
+        },
+        {
+          "name": "Penetration Test Reports",
+          "action": "attach",
+          "source": "artifacts.md#D33"
+        }
+      ],
+      "evidence_hints": [
+        "Assessment methodology and procedure documentation",
+        "Assessment scope and boundary definition records",
+        "Independent assessment team qualification records",
+        "Penetration test rules of engagement"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Risk Register",
+        "Audits"
+      ]
+    },
+    "CA.L2-3.12.2": {
+      "title": "Plan of Action and Milestones",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Plan of Action and Milestones Policy"
+        ],
+        "evidence": [
+          "POA&M Monitoring and Remediation Records"
+        ],
+        "teams": [
+          "Compliance Team",
+          "Security Assessment"
+        ],
+        "assets": [
+          "Security Assessment Tools",
+          "Compliance Management Systems"
+        ],
+        "subcontractors": [
+          "C3PAO Assessors",
+          "External Audit Firms"
+        ],
+        "risks": [
+          "Inadequate Assessment",
+          "Security Control Failure",
+          "Compliance Gap"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Security Assessment Policy",
+      "evidence_hints": [
+        "POA&M remediation timeline and milestone tracking records",
+        "Risk acceptance and exception approval forms",
+        "Remediation completion verification evidence",
+        "POA&M aging and overdue item reports"
+      ],
+      "operational_plans": [
+        {
+          "name": "Plan of Action & Milestones (POA&M)",
+          "action": "embed",
+          "source": "artifacts.md#B2"
+        }
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "POA&M",
+        "Policies",
+        "SPRS Score",
+        "Audits"
+      ]
+    },
+    "CA.L2-3.12.3": {
+      "title": "Continuous Monitoring",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Continuous Monitoring Policy"
+        ],
+        "evidence": [
+          "Continuous Monitoring Records",
+          "System Security Plan"
+        ],
+        "teams": [
+          "Compliance Team",
+          "Security Assessment"
+        ],
+        "assets": [
+          "Security Assessment Tools",
+          "Compliance Management Systems"
+        ],
+        "subcontractors": [
+          "C3PAO Assessors",
+          "External Audit Firms"
+        ],
+        "risks": [
+          "Compliance Gap",
+          "Inadequate Assessment",
+          "Security Control Failure"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Security Assessment Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Continuous Monitoring Reports",
+          "action": "attach",
+          "source": "artifacts.md#D27"
+        }
+      ],
+      "evidence_hints": [
+        "Continuous monitoring strategy documentation",
+        "Monitoring tool configuration and calibration records",
+        "Monitoring dashboard and alerting configuration",
+        "Vulnerability scan schedule and frequency records"
+      ],
+      "contractual_documents": [
+        {
+          "name": "Vendor CMMC Flow-Down Clauses",
+          "action": "structured",
+          "source": "artifacts.md#E1"
+        },
+        {
+          "name": "Vendor CMMC Certificates / SPRS Scores",
+          "action": "structured",
+          "source": "artifacts.md#E2"
+        },
+        {
+          "name": "Customer Responsibility Matrix (CRM)",
+          "action": "attach",
+          "source": "artifacts.md#E3"
+        },
+        {
+          "name": "Interconnection Security Agreements / ATC",
+          "action": "attach",
+          "source": "artifacts.md#E4"
+        }
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Vendors / Subcontractors",
+        "Audits"
+      ]
+    },
+    "CA.L2-3.12.4": {
+      "title": "Develop, Document, and Periodically Update System Security Plans",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System Security Plan Policy"
+        ],
+        "evidence": [
+          "System Security Plan Documentation",
+          "System Security Plan"
+        ],
+        "teams": [
+          "Compliance Team",
+          "Security Assessment"
+        ],
+        "assets": [
+          "Security Assessment Tools",
+          "Compliance Management Systems"
+        ],
+        "subcontractors": [
+          "C3PAO Assessors",
+          "External Audit Firms"
+        ],
+        "risks": [
+          "Security Control Failure",
+          "Compliance Gap",
+          "Inadequate Assessment"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Security Assessment Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Org Chart",
+          "action": "reference",
+          "source": "artifacts.md#D1"
+        }
+      ],
+      "evidence_hints": [
+        "System architecture and authorization boundary diagrams",
+        "System component and asset inventory records",
+        "SSP review and update approval records",
+        "Information types and categorization documentation"
+      ],
+      "operational_plans": [
+        {
+          "name": "System Security Plan (SSP)",
+          "action": "embed",
+          "source": "artifacts.md#B1"
+        },
+        {
+          "name": "CUI Boundary Description",
+          "action": "reference",
+          "source": "artifacts.md#B6"
+        }
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "SSP Generation",
+        "Audits"
+      ]
+    }
+  }
+}

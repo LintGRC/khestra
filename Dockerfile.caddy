@@ -1,0 +1,31 @@
+# Multi-stage: build platform UI + serve with Caddy
+# Build context: khestra/ (repo root)
+
+# Stage 1: Build platform frontend
+FROM node:20-alpine AS ui-builder
+WORKDIR /build
+
+# Dependencies are declared in the repo-root package.json (same manifest as
+# apps/platform/frontend) so TypeScript resolves modules from any subdirectory
+# (shared/frontend/, apps/cmmc/, apps/soc2/ all import react, react-router-dom etc.)
+COPY package.json package-lock.json ./
+RUN npm ci
+
+# Copy all source files
+COPY shared/frontend/ shared/frontend/
+COPY apps/cmmc/frontend/src/ apps/cmmc/frontend/src/
+COPY apps/cmmc/frontend/public/ apps/cmmc/frontend/public/
+COPY apps/soc2/frontend/src/ apps/soc2/frontend/src/
+COPY apps/aigovernance/frontend/src/ apps/aigovernance/frontend/src/
+COPY apps/iso27001/frontend/src/ apps/iso27001/frontend/src/
+COPY apps/platform/frontend/src/ apps/platform/frontend/src/
+COPY apps/platform/frontend/tsconfig.json apps/platform/frontend/
+COPY apps/platform/frontend/vite.config.ts apps/platform/frontend/
+COPY apps/platform/frontend/index.html apps/platform/frontend/
+
+RUN cd apps/platform/frontend && /build/node_modules/.bin/tsc -b && /build/node_modules/.bin/vite build
+
+# Stage 2: Caddy with built UI
+FROM caddy:2-alpine
+COPY --from=ui-builder /build/apps/platform/frontend/dist /srv/ui
+COPY deploy/Caddyfile.prod /etc/caddy/Caddyfile

@@ -1,0 +1,187 @@
+{
+  "family": "PS",
+  "name": "Personnel Security",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Background Screening Policy",
+      "Personnel Security Policy"
+    ],
+    "evidence_types": [
+      "Background Check Documentation",
+      "Personnel Screening Records",
+      "Personnel Termination Records"
+    ],
+    "teams": [
+      "Human Resources",
+      "Security Office"
+    ],
+    "asset_types": [
+      "HR Systems",
+      "Personnel Records Systems"
+    ],
+    "subcontractor_types": [
+      "Background Check Services",
+      "Staffing Agencies"
+    ],
+    "risk_types": [
+      "Insider Threat",
+      "Unauthorized Personnel Access",
+      "Background Check Failure"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "PS.L2-3.9.1": {
+      "title": "Personnel Screening",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Personnel Security Policy"
+        ],
+        "evidence": [
+          "Personnel Screening Records",
+          "Background Check Documentation"
+        ],
+        "teams": [
+          "Human Resources",
+          "Security Office"
+        ],
+        "assets": [
+          "HR Systems",
+          "Personnel Records Systems"
+        ],
+        "subcontractors": [
+          "Background Check Services",
+          "Staffing Agencies"
+        ],
+        "risks": [
+          "Insider Threat",
+          "Unauthorized Personnel Access",
+          "Background Check Failure"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Personnel Security Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Org Chart",
+          "action": "reference",
+          "source": "artifacts.md#D1"
+        },
+        {
+          "name": "RACI / Role Matrix",
+          "action": "reference",
+          "source": "artifacts.md#D2"
+        },
+        {
+          "name": "Personnel Screening Records",
+          "action": "attach",
+          "source": "artifacts.md#D6"
+        }
+      ],
+      "evidence_hints": [
+        "Background investigation initiation and status records",
+        "Security clearance verification and tracking records",
+        "Reinvestigation schedule and compliance records",
+        "Pre-employment screening procedure documents"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "PS.L2-3.9.2": {
+      "title": "Personnel Termination and Transfer",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Background Screening Policy"
+        ],
+        "evidence": [
+          "Personnel Termination Records",
+          "Background Check Documentation"
+        ],
+        "teams": [
+          "Human Resources",
+          "Security Office"
+        ],
+        "assets": [
+          "HR Systems",
+          "Personnel Records Systems"
+        ],
+        "subcontractors": [
+          "Background Check Services",
+          "Staffing Agencies"
+        ],
+        "risks": [
+          "Background Check Failure",
+          "Insider Threat",
+          "Unauthorized Personnel Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Personnel Security Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Personnel Screening Records",
+          "action": "attach",
+          "source": "artifacts.md#D6"
+        }
+      ],
+      "evidence_hints": [
+        "Personnel termination and exit process records",
+        "Access revocation and credential recovery records",
+        "Exit interview documentation and checklists",
+        "Transfer notification and access adjustment records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    }
+  }
+}

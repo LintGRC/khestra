@@ -1,0 +1,505 @@
+{
+  "family": "CM",
+  "name": "Configuration Management",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Change Management Policy",
+      "Configuration Management Policy"
+    ],
+    "evidence_types": [
+      "Change Access Restriction Documentation",
+      "Change Management Records",
+      "Configuration Audit Reports",
+      "Configuration Baseline Documentation",
+      "Ports, Protocols, and Services Inventory",
+      "Software Inventory and Monitoring Records"
+    ],
+    "teams": [
+      "Configuration Management",
+      "System Administrators"
+    ],
+    "asset_types": [
+      "Servers",
+      "Workstations",
+      "Network Devices"
+    ],
+    "subcontractor_types": [
+      "Cloud Providers",
+      "Managed Service Providers"
+    ],
+    "risk_types": [
+      "Configuration Drift",
+      "Unauthorized System Changes",
+      "Security Misconfiguration"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "CM.L2-3.4.1": {
+      "title": "Baseline Configuration",
+      "objectives": [
+        "A current baseline configuration of the system is developed",
+        "A current baseline configuration of the system is maintained under configuration control",
+        "The baseline configuration of the system is updated annually or following significant system changes, security incidents, or new vulnerability disclosures",
+        "The baseline configuration of the system is reviewed when system components are installed or modified",
+        "The baseline configuration of the system is updated when system components are installed or modified",
+        "The baseline configuration of the system is reviewed annually or following significant system changes, security incidents, or new vulnerability disclosures"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Configuration Management Policy"
+        ],
+        "evidence": [
+          "Configuration Baseline Documentation",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Configuration Drift",
+          "Unauthorized System Changes",
+          "Security Misconfiguration"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "CM.L2-3.4.2": {
+      "title": "Configuration Settings",
+      "objectives": [
+        "The following configuration settings for the system that reflect the most restrictive mode consistent with operational requirements are established and documented: the Change Control Board (CCB) or designated Configuration Manager with ISSM concurrence",
+        "Any deviations from established configuration settings are identified and documented",
+        "Any deviations from established configuration settings are approved",
+        "The following configuration settings for the system are implemented: the Change Control Board (CCB) or designated Configuration Manager with ISSM concurrence"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Change Management Policy"
+        ],
+        "evidence": [
+          "Change Management Records",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Security Misconfiguration",
+          "Configuration Drift",
+          "Unauthorized System Changes"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "CM.L2-3.4.3": {
+      "title": "Configuration Change Control",
+      "objectives": [
+        "The types of changes to the system that are configuration-controlled are defined",
+        "Proposed configuration-controlled changes to the system are reviewed with explicit consideration for security impacts",
+        "Proposed configuration-controlled changes to the system are approved or disapproved with explicit consideration for security impacts",
+        "Activities associated with configuration-controlled changes to the system are monitored",
+        "Activities associated with configuration-controlled changes to the system are reviewed",
+        "Approved configuration-controlled changes to the system are implemented",
+        "Approved configuration-controlled changes to the system are documented"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Configuration Management Policy"
+        ],
+        "evidence": [
+          "Change Management Records",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Unauthorized System Changes",
+          "Security Misconfiguration",
+          "Configuration Drift"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "CM.L2-3.4.4": {
+      "title": "Impact Analyses",
+      "objectives": [
+        "The security requirements for the system continue to be satisfied after the system changes have been implemented",
+        "Changes to the system are analyzed to determine potential security impacts prior to change implementation"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Change Management Policy"
+        ],
+        "evidence": [
+          "Change Management Records",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Configuration Drift",
+          "Unauthorized System Changes",
+          "Security Misconfiguration"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "CM.L2-3.4.5": {
+      "title": "Access Restrictions for Change",
+      "objectives": [
+        "Physical access restrictions associated with changes to the system are defined and documented",
+        "Physical access restrictions associated with changes to the system are approved",
+        "Physical access restrictions associated with changes to the system are enforced",
+        "Logical access restrictions associated with changes to the system are defined and documented",
+        "Logical access restrictions associated with changes to the system are approved",
+        "Logical access restrictions associated with changes to the system are enforced"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Configuration Management Policy"
+        ],
+        "evidence": [
+          "Change Access Restriction Documentation",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Security Misconfiguration",
+          "Configuration Drift",
+          "Unauthorized System Changes"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "CM.L2-3.4.6": {
+      "title": "Least Functionality",
+      "objectives": [
+        "The use of the following functions is prohibited or restricted: peer-to-peer file sharing, unauthorized remote access tools, cryptocurrency mining software, unapproved cloud sync clients",
+        "The use of the following ports is prohibited or restricted: Telnet, FTP (plaintext), SNMPv1/v2, rsh/rlogin, and TFTP (unless operationally required)",
+        "The use of the following protocols is prohibited or restricted: all ports and protocols not explicitly required and documented in the SSP (default-deny with allow-list)",
+        "The use of the following connections is prohibited or restricted: USB storage auto-run, Bluetooth (if not required for operations), and direct memory access from external interfaces",
+        "The use of the following services is prohibited or restricted: personal email clients, social media applications, and other applications not required for mission functions",
+        "The system is reviewed annually or following significant system changesto identify unnecessary or nonsecure functions, ports, protocols, connections, and services",
+        "Unnecessary or nonsecure functions, ports, protocols, connections, and services are disabled or removed",
+        "The system is configured to provide only mission-essential capabilities"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Configuration Management Policy"
+        ],
+        "evidence": [
+          "Ports, Protocols, and Services Inventory",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Unauthorized System Changes",
+          "Security Misconfiguration",
+          "Configuration Drift"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "CM.L2-3.4.7": {
+      "title": "Restrict, Disable, or Prevent the Use of Nonessential Programs, Functions, Ports, Protocols, and Services",
+      "objectives": [
+        "Restrict, disable, or prevent the use of nonessential programs, functions, ports, protocols, and services."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Configuration Management Policy"
+        ],
+        "evidence": [
+          "Ports, Protocols, and Services Inventory",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Configuration Drift",
+          "Unauthorized System Changes",
+          "Security Misconfiguration"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "CM.L2-3.4.8": {
+      "title": "Authorized Software \u2013 Allow by Exception",
+      "objectives": [
+        "Software programs authorized to execute on the system are identified",
+        "A deny-all, allow-by-exception policy for the execution of authorized software programs on the system is implemented",
+        "The list of authorized software programs is reviewed and updated organization-approved applications defined in the application allowlist"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Change Management Policy"
+        ],
+        "evidence": [
+          "Configuration Baseline Documentation",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Security Misconfiguration",
+          "Configuration Drift",
+          "Unauthorized System Changes"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "CM.L2-3.4.9": {
+      "title": "Control and Monitor User-Installed Software",
+      "objectives": [
+        "Control and monitor user-installed software."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Configuration Management Policy"
+        ],
+        "evidence": [
+          "Software Inventory and Monitoring Records",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Unauthorized System Changes",
+          "Security Misconfiguration",
+          "Configuration Drift"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    }
+  }
+}

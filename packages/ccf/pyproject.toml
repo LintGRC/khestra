@@ -1,0 +1,14 @@
+[project]
+name = "khestra-controls"
+version = "0.1.0"
+description = "Common Control Framework (CCF) — cross-framework control mapping for Khestra GRC"
+license = { text = "Proprietary" }
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["controls", "controls.*"]

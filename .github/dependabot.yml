@@ -1,0 +1,30 @@
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: /apps/cmmc
+    schedule:
+      interval: weekly
+  - package-ecosystem: pip
+    directory: /apps/soc2
+    schedule:
+      interval: weekly
+  - package-ecosystem: pip
+    directory: /apps/iso27001
+    schedule:
+      interval: weekly
+  - package-ecosystem: pip
+    directory: /apps/aigovernance
+    schedule:
+      interval: weekly
+  - package-ecosystem: pip
+    directory: /apps/core
+    schedule:
+      interval: weekly
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

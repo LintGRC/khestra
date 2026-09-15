@@ -1,0 +1,196 @@
+.policy-editor {
+  border: 1px solid var(--border, #d0d5dd);
+  border-radius: 8px;
+  background: var(--surface, #fff);
+}
+
+.policy-editor-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid var(--border, #d0d5dd);
+  background: var(--bg, #f9fafb);
+  border-radius: 8px 8px 0 0;
+}
+
+.toolbar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.toolbar-row-ai {
+  margin-top: 0.3rem;
+  padding-top: 0.3rem;
+  border-top: 1px solid var(--border-subtle, #eaeef2);
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  background: var(--surface, #fff);
+  border: 1px solid var(--border, #d0d5dd);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transition: box-shadow 0.15s;
+  overflow: hidden;
+}
+
+.toolbar-row-ai:focus-within {
+  box-shadow: 0 0 0 2px var(--primary-soft, #dbeafe), 0 1px 3px rgba(0,0,0,0.06);
+  border-color: var(--primary, #2563eb);
+}
+
+.toolbar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 6px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text, #1a1a2e);
+  font-size: 0.78rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.toolbar-btn:hover {
+  background: var(--border-subtle, #eaeef2);
+}
+
+.toolbar-btn[data-active] {
+  background: var(--primary-soft, #dbeafe);
+  border-color: var(--primary, #2563eb);
+  color: var(--primary, #2563eb);
+}
+
+.toolbar-sep {
+  width: 1px;
+  height: 20px;
+  background: var(--border, #d0d5dd);
+  margin: 0 0.15rem;
+}
+
+.toolbar-select {
+  font-size: 0.78rem;
+  padding: 2px 6px;
+  border: 1px solid var(--border, #d0d5dd);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text, #1a1a2e);
+  cursor: pointer;
+  font-family: inherit;
+  height: 28px;
+}
+
+.toolbar-ai-input {
+  font-size: 0.78rem;
+  padding: 6px 12px;
+  border: none;
+  background: transparent;
+  color: var(--text, #1a1a2e);
+  font-family: inherit;
+  flex: 1;
+  resize: none;
+  line-height: 1.4;
+  max-height: 150px;
+  min-height: 36px;
+  outline: none;
+}
+
+.toolbar-ai-input:focus {
+  outline: none;
+}
+
+.toolbar-ai-input::placeholder {
+  color: var(--muted, #9ca3af);
+  font-style: italic;
+}
+
+.toolbar-btn-ai {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  padding: 0;
+  border: none;
+  background: var(--primary, #2563eb);
+  color: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: opacity 0.15s;
+}
+
+.toolbar-btn-ai:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.toolbar-btn-ai:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: none;
+}
+
+.policy-editor-content {
+  padding: 0.75rem 1rem;
+  min-height: 300px;
+  max-height: 600px;
+  overflow-y: auto;
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+.policy-editor-content .ProseMirror {
+  outline: none;
+  min-height: inherit;
+}
+
+.policy-editor-content .ProseMirror p {
+  margin: 0 0 0.5rem;
+}
+
+.policy-editor-content .ProseMirror h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.policy-editor-content .ProseMirror h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 1rem 0 0.35rem;
+}
+
+.policy-editor-content .ProseMirror ul,
+.policy-editor-content .ProseMirror ol {
+  padding-left: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+.policy-editor-content .ProseMirror li {
+  margin-bottom: 0.2rem;
+}
+
+.policy-editor-content .ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: var(--muted, #9ca3af);
+  pointer-events: none;
+  height: 0;
+}
+
+.policy-variable-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 4px;
+  background: var(--info-soft, #eff6ff);
+  border: 1px solid var(--info-border, #bfdbfe);
+  border-radius: 3px;
+  font-size: 0.8rem;
+  color: var(--primary, #2563eb);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  cursor: default;
+  user-select: all;
+}

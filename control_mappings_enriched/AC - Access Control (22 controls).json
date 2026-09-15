@@ -1,0 +1,1409 @@
+{
+  "family": "AC",
+  "name": "Access Control",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Access Control Policy",
+      "Account Management Policy",
+      "Encryption Policy",
+      "External System Use Policy",
+      "Information Flow Control Policy",
+      "Mobile Device Policy",
+      "Network Security Policy",
+      "Remote Access Policy",
+      "Wireless Access Policy"
+    ],
+    "evidence_types": [
+      "Access Control Lists and Authorization Records",
+      "Access Control Policy and Enforcement Documentation",
+      "Account Inactivity Configuration",
+      "Account Lockout Configuration",
+      "Account Review Records",
+      "Audit Log Records and Configuration",
+      "Device Lock and Session Configuration",
+      "Encryption Configuration and Certificate Records",
+      "External System Connection Authorization",
+      "Information Flow Control Documentation",
+      "Mobile Device Management Configuration",
+      "Network Access Control Configuration",
+      "Privileged Access Review Records",
+      "Privileged Account Management Records",
+      "Public Content Review Records",
+      "Remote Execution Authorization Records",
+      "Separation of Duties Documentation",
+      "System Use Notification Banner Configuration",
+      "Wireless Security Configuration"
+    ],
+    "teams": [
+      "Identity and Access Management",
+      "Security Operations"
+    ],
+    "asset_types": [
+      "Identity Systems",
+      "Authentication Servers",
+      "User Directories"
+    ],
+    "subcontractor_types": [
+      "Identity Provider",
+      "Cloud Service Providers"
+    ],
+    "risk_types": [
+      "Unauthorized Access",
+      "Privilege Escalation",
+      "Account Compromise"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "AC.L2-3.1.1": {
+      "title": "Account Management",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Account Management Policy"
+        ],
+        "evidence": [
+          "Account Inactivity Configuration",
+          "Account Review Records"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Authentication Methods / MFA",
+          "action": "attach",
+          "source": "artifacts.md#D11"
+        }
+      ],
+      "evidence_hints": [
+        "Account provisioning and deprovisioning workflow records",
+        "Access review meeting minutes and approval records",
+        "Role-to-account mapping matrix"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.2": {
+      "title": "Access Enforcement",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Access Control Lists and Authorization Records"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Account Compromise",
+          "Unauthorized Access",
+          "Privilege Escalation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Access Control / Account Reviews",
+          "action": "attach",
+          "source": "artifacts.md#D7"
+        },
+        {
+          "name": "Privileged Access Reviews",
+          "action": "attach",
+          "source": "artifacts.md#D8"
+        }
+      ],
+      "evidence_hints": [
+        "Access control matrix or permission set documentation",
+        "Group policy enforcement reports",
+        "Authorization boundary enforcement records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.3": {
+      "title": "Information Flow Enforcement",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Information Flow Control Policy"
+        ],
+        "evidence": [
+          "Information Flow Control Documentation"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Privilege Escalation",
+          "Account Compromise",
+          "Unauthorized Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_hints": [
+        "Network architecture diagrams showing information flow paths",
+        "Data flow diagrams with CUI flow annotations",
+        "Firewall rule audit records and ACL review records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.4": {
+      "title": "Separation of Duties",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Separation of Duties Documentation"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_hints": [
+        "Separation of duties matrix and role conflict analysis",
+        "Role definition documentation",
+        "SOD violation detection and remediation records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.5": {
+      "title": "Least Privilege",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Audit Log Records and Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Account Compromise",
+          "Unauthorized Access",
+          "Privilege Escalation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_artifacts": [
+        {
+          "name": "RACI / Role Matrix",
+          "action": "reference",
+          "source": "artifacts.md#D2"
+        },
+        {
+          "name": "Access Control / Account Reviews",
+          "action": "attach",
+          "source": "artifacts.md#D7"
+        }
+      ],
+      "evidence_hints": [
+        "Privileged access justification and approval forms",
+        "Entitlement review and recertification records",
+        "Elevated privilege usage audit logs"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.6": {
+      "title": "Least Privilege – Privileged Accounts",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Privileged Account Management Records",
+          "Account Review Records"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Privilege Escalation",
+          "Account Compromise",
+          "Unauthorized Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_hints": [
+        "Standard user entitlement baseline documentation",
+        "Non-privileged account usage monitoring reports",
+        "Privileged account exception justification records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.7": {
+      "title": "Least Privilege – Privileged Functions",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Privileged Access Review Records"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Privileged Access Reviews",
+          "action": "attach",
+          "source": "artifacts.md#D8"
+        }
+      ],
+      "evidence_hints": [
+        "Jump server or bastion host configuration records",
+        "Privileged session monitoring and recording exports",
+        "Privileged command audit and review records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.8": {
+      "title": "Unsuccessful Logon Attempts",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Account Lockout Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Account Compromise",
+          "Unauthorized Access",
+          "Privilege Escalation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_hints": [
+        "Account lockout threshold GPO or configuration exports",
+        "Failed logon alert and notification configuration records",
+        "Repeated lockout investigation and resolution records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.9": {
+      "title": "System Use Notification",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "System Use Notification Banner Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Privilege Escalation",
+          "Account Compromise",
+          "Unauthorized Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_hints": [
+        "Login screen banner screenshot evidence",
+        "System use notification acknowledgement records",
+        "Acceptable use policy acknowledgement records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.10": {
+      "title": "Device Lock",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Device Lock and Session Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_hints": [
+        "Screen saver and session lock GPO configuration exports",
+        "Device lock enforcement verification screenshots",
+        "Inactivity timeout configuration records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.11": {
+      "title": "Session Termination",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Access Control Policy"
+        ],
+        "evidence": [
+          "Access Control Policy and Enforcement Documentation"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Account Compromise",
+          "Unauthorized Access",
+          "Privilege Escalation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_hints": [
+        "Session idle timeout configuration exports",
+        "Remote session timeout enforcement records",
+        "Concurrent session limit configuration records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.12": {
+      "title": "Remote Access",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Remote Access Policy"
+        ],
+        "evidence": [
+          "Network Access Control Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Privilege Escalation",
+          "Account Compromise",
+          "Unauthorized Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Access Control / Account Reviews",
+          "action": "attach",
+          "source": "artifacts.md#D7"
+        }
+      ],
+      "evidence_hints": [
+        "VPN gateway configuration exports",
+        "Remote desktop gateway configuration records",
+        "Remote access session monitoring logs"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.13": {
+      "title": "Employ Cryptographic Mechanisms to Protect the Confidentiality of Remote Access Sessions",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Encryption Policy"
+        ],
+        "evidence": [
+          "Encryption Configuration and Certificate Records"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_hints": [
+        "VPN encryption algorithm configuration exports",
+        "TLS/SSL certificate deployment records",
+        "Remote access cryptographic protocol audit records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.14": {
+      "title": "Route Remote Access via Managed Access Control Points",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Network Security Policy"
+        ],
+        "evidence": [
+          "Network Access Control Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Account Compromise",
+          "Unauthorized Access",
+          "Privilege Escalation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_hints": [
+        "Remote access routing topology diagrams",
+        "VPN split-tunnel configuration records",
+        "Managed access control point documentation"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.15": {
+      "title": "Authorize Remote Execution of Privileged Commands and Remote Access to Security-Relevant Information",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Remote Access Policy"
+        ],
+        "evidence": [
+          "Remote Execution Authorization Records"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Privilege Escalation",
+          "Account Compromise",
+          "Unauthorized Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_hints": [
+        "Remote privileged execution approval records",
+        "PAM session recording and audit records",
+        "Restricted shell or command whitelist configurations"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.16": {
+      "title": "Wireless Access",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Wireless Access Policy"
+        ],
+        "evidence": [
+          "Wireless Security Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Wireless Access Authorizations",
+          "action": "attach",
+          "source": "artifacts.md#D9"
+        }
+      ],
+      "evidence_hints": [
+        "Wireless network authorization and approval records",
+        "Wireless network inventory and configuration exports",
+        "WLAN site survey and coverage documentation"
+      ],
+      "operational_plans": [
+        {
+          "name": "Rules of Behavior / Acceptable Use",
+          "action": "reference",
+          "source": "artifacts.md#B5"
+        }
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.17": {
+      "title": "Protect Wireless Access Using Authentication and Encryption",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Wireless Access Policy"
+        ],
+        "evidence": [
+          "Wireless Security Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Account Compromise",
+          "Unauthorized Access",
+          "Privilege Escalation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Wireless Access Authorizations",
+          "action": "attach",
+          "source": "artifacts.md#D9"
+        }
+      ],
+      "evidence_hints": [
+        "WPA3/802.1X authentication configuration exports",
+        "Wireless controller security configuration records",
+        "Wireless client isolation configuration verification"
+      ],
+      "operational_plans": [
+        {
+          "name": "Rules of Behavior / Acceptable Use",
+          "action": "reference",
+          "source": "artifacts.md#B5"
+        }
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.18": {
+      "title": "Access Control for Mobile Devices",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Mobile Device Policy"
+        ],
+        "evidence": [
+          "Mobile Device Management Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Privilege Escalation",
+          "Account Compromise",
+          "Unauthorized Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Mobile Device Authorizations",
+          "action": "attach",
+          "source": "artifacts.md#D10"
+        }
+      ],
+      "evidence_hints": [
+        "MDM platform configuration exports",
+        "Mobile device inventory and enrollment records",
+        "BYOD policy acknowledgement records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.19": {
+      "title": "Encrypt CUI on Mobile Devices and Mobile Computing Platforms",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Encryption Policy"
+        ],
+        "evidence": [
+          "Mobile Device Management Configuration"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Mobile Device Authorizations",
+          "action": "attach",
+          "source": "artifacts.md#D10"
+        }
+      ],
+      "evidence_hints": [
+        "Mobile device encryption compliance reports",
+        "MDM encryption policy enforcement records",
+        "Mobile device encryption verification screenshots"
+      ],
+      "operational_plans": [
+        {
+          "name": "CUI Boundary Description",
+          "action": "reference",
+          "source": "artifacts.md#B6"
+        }
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.20": {
+      "title": "Use of External Systems",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "External System Use Policy"
+        ],
+        "evidence": [
+          "External System Connection Authorization"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Account Compromise",
+          "Unauthorized Access",
+          "Privilege Escalation"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_hints": [
+        "Interconnection security agreement (ISA) documentation",
+        "External system connection topology diagrams",
+        "Third-party connection approval and review records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.21": {
+      "title": "Limit Use of Portable Storage Devices on External Systems",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "External System Use Policy"
+        ],
+        "evidence": [
+          "External System Connection Authorization"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Privilege Escalation",
+          "Account Compromise",
+          "Unauthorized Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_hints": [
+        "USB device control and restriction configuration exports",
+        "DLP endpoint configuration and monitoring records",
+        "Portable storage device inventory and authorization records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel"
+      ]
+    },
+    "AC.L2-3.1.22": {
+      "title": "Publicly Accessible Content",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "External System Use Policy"
+        ],
+        "evidence": [
+          "Public Content Review Records"
+        ],
+        "teams": [
+          "Identity and Access Management",
+          "Security Operations"
+        ],
+        "assets": [
+          "Identity Systems",
+          "Authentication Servers",
+          "User Directories"
+        ],
+        "subcontractors": [
+          "Identity Provider",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Unauthorized Access",
+          "Privilege Escalation",
+          "Account Compromise"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Access Control Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Network Diagram",
+          "action": "embed",
+          "source": "artifacts.md#D3"
+        }
+      ],
+      "evidence_hints": [
+        "Public-facing content inventory records",
+        "Pre-publication review and approval records",
+        "Web content governance and oversight documentation"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Team / Personnel",
+        "Training"
+      ]
+    }
+  }
+}

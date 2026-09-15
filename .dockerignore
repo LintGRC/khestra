@@ -1,0 +1,24 @@
+# Build context hygiene: keep VCS data, local state, and secrets out of
+# Docker build contexts.
+.git
+.github
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/node_modules
+**/dist
+**/.venv
+**/venv
+**/data
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/.pytest_cache
+**/.mypy_cache
+**/*.egg-info
+**/.env
+**/.env.*
+!.env.example
+**/*.log
+**/.DS_Store
+docs/*.pdf

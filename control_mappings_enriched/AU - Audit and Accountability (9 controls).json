@@ -1,0 +1,615 @@
+{
+  "family": "AU",
+  "name": "Audit and Accountability",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Audit and Accountability Policy",
+      "Event Logging Policy"
+    ],
+    "evidence_types": [
+      "Audit Log Configuration and Records",
+      "Audit Log Failure Response Records",
+      "Audit Log Records and Configuration",
+      "Audit Review Records",
+      "Audit Review and Analysis Reports",
+      "Time Synchronization Configuration"
+    ],
+    "teams": [
+      "Security Operations",
+      "Audit Management"
+    ],
+    "asset_types": [
+      "Audit Log Systems",
+      "SIEM Platforms",
+      "Log Collection Servers"
+    ],
+    "subcontractor_types": [
+      "SIEM Providers",
+      "Cloud Service Providers"
+    ],
+    "risk_types": [
+      "Audit Failure",
+      "Undetected Security Breach",
+      "Log Tampering"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "AU.L2-3.3.1": {
+      "title": "Event Logging",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Audit and Accountability Policy"
+        ],
+        "evidence": [
+          "Audit Log Configuration and Records",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Audit Failure",
+          "Undetected Security Breach",
+          "Log Tampering"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Audit and Accountability Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Audit Logs (system-generated)",
+          "action": "attach",
+          "source": "artifacts.md#D12"
+        }
+      ],
+      "evidence_hints": [
+        "Audit policy configuration exports from all systems",
+        "Auditable event type inventory and mapping documentation",
+        "Audit configuration change management records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Audits"
+      ]
+    },
+    "AU.L2-3.3.2": {
+      "title": "Audit Record Content",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Event Logging Policy"
+        ],
+        "evidence": [
+          "Audit Log Records and Configuration",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Log Tampering",
+          "Audit Failure",
+          "Undetected Security Breach"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Audit and Accountability Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Audit Log Review Records",
+          "action": "attach",
+          "source": "artifacts.md#D13"
+        }
+      ],
+      "evidence_hints": [
+        "Audit record content specification documents",
+        "Log format and field documentation per system",
+        "Content completeness verification reports"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Audits"
+      ]
+    },
+    "AU.L2-3.3.3": {
+      "title": "Audit Record Generation",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Audit and Accountability Policy"
+        ],
+        "evidence": [
+          "Audit Log Records and Configuration",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Undetected Security Breach",
+          "Log Tampering",
+          "Audit Failure"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Audit and Accountability Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Audit Log Review Records",
+          "action": "attach",
+          "source": "artifacts.md#D13"
+        }
+      ],
+      "evidence_hints": [
+        "Audit log generation configuration exports",
+        "Event log policy and forwarding configuration",
+        "Log source inventory and onboarding records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Audits"
+      ]
+    },
+    "AU.L2-3.3.4": {
+      "title": "Response to Audit Logging Process Failures",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Event Logging Policy"
+        ],
+        "evidence": [
+          "Audit Log Failure Response Records",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Audit Failure",
+          "Undetected Security Breach",
+          "Log Tampering"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Audit and Accountability Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Audit Logs (system-generated)",
+          "action": "attach",
+          "source": "artifacts.md#D12"
+        }
+      ],
+      "evidence_hints": [
+        "Audit processing failure alert configuration",
+        "Log pipeline health monitoring and dashboards",
+        "Failover and redundancy configuration documentation"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Audits"
+      ]
+    },
+    "AU.L2-3.3.5": {
+      "title": "Audit Record Review, Analysis, and Reporting",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Audit and Accountability Policy"
+        ],
+        "evidence": [
+          "Audit Review Records",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Log Tampering",
+          "Audit Failure",
+          "Undetected Security Breach"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Audit and Accountability Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Audit Log Review Records",
+          "action": "attach",
+          "source": "artifacts.md#D13"
+        }
+      ],
+      "evidence_hints": [
+        "Audit record review schedule and procedure documents",
+        "Review findings and remediation tracking records",
+        "Automated review and analysis configuration records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Audits"
+      ]
+    },
+    "AU.L2-3.3.6": {
+      "title": "Audit Record Reduction and Report Generation",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Event Logging Policy"
+        ],
+        "evidence": [
+          "Audit Log Records and Configuration",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Undetected Security Breach",
+          "Log Tampering",
+          "Audit Failure"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Audit and Accountability Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Time Synchronization Configuration",
+          "action": "attach",
+          "source": "artifacts.md#D14"
+        }
+      ],
+      "evidence_hints": [
+        "Audit log filtering and aggregation rule sets",
+        "Automated report generation configuration records",
+        "Report generation schedule and distribution records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Audits"
+      ]
+    },
+    "AU.L2-3.3.7": {
+      "title": "Time Stamps",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Audit and Accountability Policy"
+        ],
+        "evidence": [
+          "Time Synchronization Configuration",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Audit Failure",
+          "Undetected Security Breach",
+          "Log Tampering"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Audit and Accountability Policy",
+      "evidence_hints": [
+        "NTP server hierarchy and configuration documentation",
+        "Time source authentication configuration records",
+        "Time stamp granularity verification records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Audits"
+      ]
+    },
+    "AU.L2-3.3.8": {
+      "title": "Protection of Audit Information",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Event Logging Policy"
+        ],
+        "evidence": [
+          "Audit Log Records and Configuration",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Log Tampering",
+          "Audit Failure",
+          "Undetected Security Breach"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Audit and Accountability Policy",
+      "evidence_hints": [
+        "Log integrity verification configuration records",
+        "WORM storage or immutable log configuration documentation",
+        "Audit log access control and authorization records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Audits"
+      ]
+    },
+    "AU.L2-3.3.9": {
+      "title": "Provide a System Capability That Compares and Synchronizes Internal System Clocks",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Audit and Accountability Policy"
+        ],
+        "evidence": [
+          "Time Synchronization Configuration",
+          "Audit Review and Analysis Reports"
+        ],
+        "teams": [
+          "Security Operations",
+          "Audit Management"
+        ],
+        "assets": [
+          "Audit Log Systems",
+          "SIEM Platforms",
+          "Log Collection Servers"
+        ],
+        "subcontractors": [
+          "SIEM Providers",
+          "Cloud Service Providers"
+        ],
+        "risks": [
+          "Undetected Security Breach",
+          "Log Tampering",
+          "Audit Failure"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Audit and Accountability Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Audit Log Review Records",
+          "action": "attach",
+          "source": "artifacts.md#D13"
+        }
+      ],
+      "evidence_hints": [
+        "System clock synchronization monitoring reports",
+        "Time drift and correction event logs",
+        "Clock source redundancy and failover records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Audits"
+      ]
+    }
+  }
+}

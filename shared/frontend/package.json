@@ -1,0 +1,13 @@
+{
+  "name": "@khestra/shared-frontend",
+  "private": true,
+  "type": "module",
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0",
+    "react-router-dom": "^7.18.1"
+  }
+}

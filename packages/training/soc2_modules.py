@@ -1,0 +1,175 @@
+"""SOC 2-specific training module content — call seed_soc2_modules() at startup."""
+
+from __future__ import annotations
+
+SOC2_MODULES = [
+    {
+        "title": "SOC 2 Fundamentals",
+        "description": "Understand the AICPA Trust Services Criteria, the five trust service categories, and what a SOC 2 Type II audit assesses.",
+        "content_md": "".join([
+            "# SOC 2 Fundamentals\n\n",
+            "## What is SOC 2?\n\n",
+            "SOC 2 (System and Organization Controls 2) is an auditing framework developed by the AICPA. ",
+            "It evaluates an organization's controls relevant to five Trust Services Criteria: ",
+            "Security, Availability, Processing Integrity, Confidentiality, and Privacy.\n\n",
+            "## Trust Services Criteria\n\n",
+            "- **Security (CC1-CC9):** The system is protected against unauthorized access.\n",
+            "- **Availability (A1):** The system is available for operation and use as committed.\n",
+            "- **Processing Integrity (PI1):** System processing is complete, valid, accurate, timely, and authorized.\n",
+            "- **Confidentiality (C1):** Information designated as confidential is protected.\n",
+            "- **Privacy (P1):** Personal information is collected, used, retained, disclosed, and disposed of in conformity with commitments.\n\n",
+            "## Type I vs Type II\n\n",
+            "- **Type I:** Reports on the fairness of the description and suitability of design of controls at a point in time.\n",
+            "- **Type II:** Reports on the fairness of the description and suitability of design AND operating effectiveness over a period (typically 6-12 months).\n\n",
+            "## Your Role\n\n",
+            "Every team member contributes to SOC 2 compliance by following policies, completing training, ",
+            "reporting incidents, and maintaining evidence of control operation.",
+        ]),
+        "framework": "SOC2",
+        "quiz_questions": [
+            {"q": "What are the five Trust Services Criteria?", "options": ["Security, Availability, Processing Integrity, Confidentiality, Privacy", "Safety, Access, Privacy, Integrity, Confidentiality", "Security, Access, Processing, Confidentiality, Privacy", "Safety, Availability, Processing, Integrity, Privacy"], "correct": 0},
+            {"q": "How does SOC 2 Type II differ from Type I?", "options": ["Type II tests operating effectiveness over time; Type I is a point-in-time design assessment", "Type II is for service organizations; Type I is for auditors", "Type II covers all five criteria; Type I covers only Security", "There is no difference"], "correct": 0},
+            {"q": "Which trust service category is always mandatory?", "options": ["Security", "Availability", "Confidentiality", "Privacy"], "correct": 0},
+        ],
+    },
+    {
+        "title": "Evidence Collection Best Practices",
+        "description": "Learn what constitutes valid audit evidence and how to collect, name, and upload artifacts correctly.",
+        "content_md": "".join([
+            "# Evidence Collection Best Practices\n\n",
+            "## What Makes Good Evidence?\n\n",
+            "Audit evidence must be:\n\n",
+            "- **Sufficient:** Enough to demonstrate the control is operating effectively\n",
+            "- **Reliable:** From a trustworthy source (system logs > screenshots > manual attestations)\n",
+            "- **Relevant:** Directly related to the control being tested\n",
+            "- **Timely:** Collected within the audit period\n\n",
+            "## Types of Evidence\n\n",
+            "- **Configuration exports:** JSON/CSV from cloud providers (most reliable)\n",
+            "- **Screenshots:** Include URL bar and timestamp for context\n",
+            "- **System logs:** Export with time range covering the audit period\n",
+            "- **Policy documents:** Signed/approved versions with effective dates\n",
+            "- **Training records:** Completion certificates with dates and user names\n\n",
+            "## Naming Convention\n\n",
+            "Use descriptive filenames: `CC6.1_access_review_2025-01-15.pdf`\n\n",
+            "Avoid: `screenshot1.png`, `final.docx`, `evidence.pdf`",
+        ]),
+        "framework": "SOC2",
+        "quiz_questions": [
+            {"q": "What are the four characteristics of good audit evidence?", "options": ["Sufficient, Reliable, Relevant, Timely", "Sufficient, Recent, Relevant, Traceable", "Signed, Dated, Approved, Filed", "Complete, Accurate, Timely, Authorized"], "correct": 0},
+            {"q": "Which type of evidence is considered most reliable?", "options": ["System configuration exports", "Screenshots", "Manual attestations", "Email confirmations"], "correct": 0},
+            {"q": "What should a good screenshot include?", "options": ["URL bar and timestamp", "Just the relevant portion", "Company logo", "User signature"], "correct": 0},
+        ],
+    },
+    {
+        "title": "Understanding TSC Criteria",
+        "description": "A walkthrough of each Trust Services Criteria category with examples of what auditors look for.",
+        "content_md": "".join([
+            "# Understanding TSC Criteria\n\n",
+            "## Common Criteria (CC1-CC9) — Security\n\n",
+            "The Security category covers controls related to:\n\n",
+            "- **CC1:** Control Environment — Tone at the top, integrity, ethical values\n",
+            "- **CC2:** Communication and Information — Policy communication, reporting channels\n",
+            "- **CC3:** Risk Assessment — Risk identification and analysis\n",
+            "- **CC4:** Monitoring Activities — Ongoing evaluations and deficiency remediation\n",
+            "- **CC5:** Control Activities — Policies, procedures, and control deployment\n",
+            "- **CC6:** Logical and Physical Access — Authentication, authorization, access reviews\n",
+            "- **CC7:** System Operations — Monitoring, incident response, threat management\n",
+            "- **CC8:** Change Management — Change authorization, testing, and approvals\n",
+            "- **CC9:** Risk Mitigation — Vendor management and business continuity\n\n",
+            "## Availability (A1)\n\n",
+            "Capacity management, environmental protections, equipment maintenance, and recovery planning.\n\n",
+            "## Confidentiality (C1)\n\n",
+            "Data classification, encryption, access restrictions, and secure disposal.\n\n",
+            "## Processing Integrity (PI1)\n\n",
+            "Input/output validation, error handling, segregation of duties, and timely processing.\n\n",
+            "## Privacy (P1)\n\n",
+            "Notice, choice, consent, use limitation, access, disclosure, and quality.",
+        ]),
+        "framework": "SOC2",
+        "quiz_questions": [
+            {"q": "Which criteria set covers incident response?", "options": ["CC7 — System Operations", "CC6 — Logical Access", "CC8 — Change Management", "CC9 — Risk Mitigation"], "correct": 0},
+            {"q": "Which criteria addresses vendor management?", "options": ["CC9 — Risk Mitigation", "CC5 — Control Activities", "CC3 — Risk Assessment", "CC1 — Control Environment"], "correct": 0},
+            {"q": "Availability (A1) covers which of the following?", "options": ["Capacity management and recovery planning", "Data encryption and access controls", "Input validation and segregation of duties", "Privacy notice and consent"], "correct": 0},
+        ],
+    },
+    {
+        "title": "Incident Response for SOC 2",
+        "description": "Understand how incidents impact SOC 2 compliance and how to respond effectively.",
+        "content_md": "".join([
+            "# Incident Response for SOC 2\n\n",
+            "## Why Incidents Matter for SOC 2\n\n",
+            "SOC 2 auditors evaluate how you detect, respond to, and learn from security incidents (CC7.3, CC7.4). ",
+            "A well-documented incident response process demonstrates operating effectiveness.\n\n",
+            "## Key Requirements\n\n",
+            "- **Detection:** Monitoring systems must identify potential incidents (CC7.2)\n",
+            "- **Response:** Defined procedures for containment, analysis, and remediation (CC7.4)\n",
+            "- **Communication:** Internal escalation and external notification (CC2.3, CC7.5)\n",
+            "- **Recovery:** System restoration and data recovery (CC7.5)\n",
+            "- **Learning:** Post-incident reviews and corrective actions (CC4.1)\n\n",
+            "## What to Document\n\n",
+            "For every incident, record:\n\n",
+            "1. Detection method and timestamp\n",
+            "2. Initial severity assessment\n",
+            "3. Containment actions taken\n",
+            "4. Root cause analysis\n",
+            "5. Remediation steps and completion date\n",
+            "6. Post-incident review findings\n\n",
+            "## Impact on Readiness\n\n",
+            "Active incidents will flag affected controls in the readiness dashboard. ",
+            "Resolve incidents promptly to maintain a healthy compliance posture.",
+        ]),
+        "framework": "SOC2",
+        "quiz_questions": [
+            {"q": "Which criteria addresses incident response procedures?", "options": ["CC7.4", "CC6.1", "CC8.1", "CC9.1"], "correct": 0},
+            {"q": "What should be documented for every incident?", "options": ["Detection method, containment actions, root cause, and remediation", "Only the final resolution", "The affected system name only", "The incident responder's name only"], "correct": 0},
+            {"q": "How do active incidents affect readiness?", "options": ["They flag affected controls in the readiness dashboard", "They have no impact on readiness scoring", "They automatically close the control", "They generate an exception automatically"], "correct": 0},
+        ],
+    },
+    {
+        "title": "Policy Compliance Requirements",
+        "description": "Understand the policies required for SOC 2 and how to ensure compliance.",
+        "content_md": "".join([
+            "# Policy Compliance Requirements\n\n",
+            "## Required Policies for SOC 2\n\n",
+            "SOC 2 does not mandate specific policy names but expects documented standards in these areas:\n\n",
+            "- **Access Control:** Authentication, authorization, and access reviews\n",
+            "- **Change Management:** Authorized, tested, approved changes\n",
+            "- **Incident Response:** Detection, response, and recovery procedures\n",
+            "- **Risk Assessment:** Risk identification and treatment\n",
+            "- **Vendor Management:** Due diligence and ongoing monitoring\n",
+            "- **Data Classification:** Labeling and handling of sensitive information\n",
+            "- **Business Continuity:** Backup, recovery, and continuity planning\n\n",
+            "## Policy Lifecycle\n\n",
+            "1. **Draft:** Create policy content from templates or from scratch\n",
+            "2. **Review:** Share with stakeholders for feedback\n",
+            "3. **Approved:** Obtain management sign-off\n",
+            "4. **Published:** Communicate to all relevant personnel\n",
+            "5. **Review:** Annual review to ensure continued relevance\n\n",
+            "## Evidence of Compliance\n\n",
+            "For each policy, maintain:\n\n",
+            "- Signed/approved version with date\n",
+            "- Training/acknowledgment records\n",
+            "- Review history with dates and reviewers\n",
+            "- Exception tracking for any deviations",
+        ]),
+        "framework": "SOC2",
+        "quiz_questions": [
+            {"q": "What is the first step in the policy lifecycle?", "options": ["Draft", "Review", "Approve", "Publish"], "correct": 0},
+            {"q": "How often should policies typically be reviewed?", "options": ["Annually", "Monthly", "Quarterly", "Every 2 years"], "correct": 0},
+            {"q": "Which of the following is NOT a required SOC 2 policy area?", "options": ["Marketing guidelines", "Access Control", "Change Management", "Incident Response"], "correct": 0},
+        ],
+    },
+]
+
+
+def seed_soc2_modules():
+    """Create SOC 2 training modules if they don't exist."""
+    from .store import list_modules, create_module
+
+    existing = {m["title"] for m in list_modules()}
+    for mod in SOC2_MODULES:
+        if mod["title"] not in existing:
+            try:
+                create_module(title=mod["title"], description=mod["description"], content_md=mod["content_md"], quiz_questions=mod.get("quiz_questions", []))
+            except Exception:
+                pass

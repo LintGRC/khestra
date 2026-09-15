@@ -1,0 +1,602 @@
+{
+  "family": "CM",
+  "name": "Configuration Management",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Change Management Policy",
+      "Configuration Management Policy"
+    ],
+    "evidence_types": [
+      "Change Access Restriction Documentation",
+      "Change Management Records",
+      "Configuration Audit Reports",
+      "Configuration Baseline Documentation",
+      "Ports, Protocols, and Services Inventory",
+      "Software Inventory and Monitoring Records"
+    ],
+    "teams": [
+      "Configuration Management",
+      "System Administrators"
+    ],
+    "asset_types": [
+      "Servers",
+      "Workstations",
+      "Network Devices"
+    ],
+    "subcontractor_types": [
+      "Cloud Providers",
+      "Managed Service Providers"
+    ],
+    "risk_types": [
+      "Configuration Drift",
+      "Unauthorized System Changes",
+      "Security Misconfiguration"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "CM.L2-3.4.1": {
+      "title": "Baseline Configuration",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Configuration Management Policy"
+        ],
+        "evidence": [
+          "Configuration Baseline Documentation",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Configuration Drift",
+          "Unauthorized System Changes",
+          "Security Misconfiguration"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Configuration Management Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Configuration Baseline Standards",
+          "action": "attach",
+          "source": "artifacts.md#D15"
+        }
+      ],
+      "evidence_hints": [
+        "Gold image or baseline configuration templates",
+        "Configuration baseline approval and version records",
+        "Hardening standard compliance verification reports"
+      ],
+      "operational_plans": [
+        {
+          "name": "Baseline Configuration Standards",
+          "action": "attach",
+          "source": "artifacts.md#B4"
+        }
+      ],
+      "structured_objects": [
+        "Asset Inventory",
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Incidents"
+      ]
+    },
+    "CM.L2-3.4.2": {
+      "title": "Configuration Settings",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Change Management Policy"
+        ],
+        "evidence": [
+          "Change Management Records",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Security Misconfiguration",
+          "Configuration Drift",
+          "Unauthorized System Changes"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Configuration Management Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Configuration Baseline Standards",
+          "action": "attach",
+          "source": "artifacts.md#D15"
+        }
+      ],
+      "evidence_hints": [
+        "Security configuration checklist and standard documents",
+        "Configuration settings deployment records per system",
+        "Automated configuration compliance scan reports"
+      ],
+      "operational_plans": [
+        {
+          "name": "Baseline Configuration Standards",
+          "action": "attach",
+          "source": "artifacts.md#B4"
+        }
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "CM.L2-3.4.3": {
+      "title": "Configuration Change Control",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Configuration Management Policy"
+        ],
+        "evidence": [
+          "Change Management Records",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Unauthorized System Changes",
+          "Security Misconfiguration",
+          "Configuration Drift"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Configuration Management Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Configuration Change Records",
+          "action": "attach",
+          "source": "artifacts.md#D16"
+        }
+      ],
+      "evidence_hints": [
+        "Change advisory board meeting minutes and records",
+        "Emergency change authorization and approval records",
+        "Change request lifecycle tracking and closure records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "CM.L2-3.4.4": {
+      "title": "Impact Analyses",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Change Management Policy"
+        ],
+        "evidence": [
+          "Change Management Records",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Configuration Drift",
+          "Unauthorized System Changes",
+          "Security Misconfiguration"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Configuration Management Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Configuration Change Records",
+          "action": "attach",
+          "source": "artifacts.md#D16"
+        }
+      ],
+      "evidence_hints": [
+        "Security impact analysis template and completed examples",
+        "Change security review and signoff records",
+        "Post-change security validation records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "CM.L2-3.4.5": {
+      "title": "Access Restrictions for Change",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Configuration Management Policy"
+        ],
+        "evidence": [
+          "Change Access Restriction Documentation",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Security Misconfiguration",
+          "Configuration Drift",
+          "Unauthorized System Changes"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Configuration Management Policy",
+      "evidence_hints": [
+        "Physical and logical access restriction configuration",
+        "Change authorization approval workflow records",
+        "Segregation of duties enforcement for change access"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "CM.L2-3.4.6": {
+      "title": "Least Functionality",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Configuration Management Policy"
+        ],
+        "evidence": [
+          "Ports, Protocols, and Services Inventory",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Unauthorized System Changes",
+          "Security Misconfiguration",
+          "Configuration Drift"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Configuration Management Policy",
+      "evidence_hints": [
+        "Service and feature disablement verification records",
+        "Installed software and service inventory exports",
+        "Functionality justification and approval records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "CM.L2-3.4.7": {
+      "title": "Restrict, Disable, or Prevent the Use of Nonessential Programs, Functions, Ports, Protocols, and Services",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Configuration Management Policy"
+        ],
+        "evidence": [
+          "Ports, Protocols, and Services Inventory",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Configuration Drift",
+          "Unauthorized System Changes",
+          "Security Misconfiguration"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Configuration Management Policy",
+      "evidence_hints": [
+        "Port protocol and service disablement records",
+        "Firewall rule justification and review records",
+        "Service dependency mapping documentation"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "CM.L2-3.4.8": {
+      "title": "Authorized Software – Allow by Exception",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Change Management Policy"
+        ],
+        "evidence": [
+          "Configuration Baseline Documentation",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Security Misconfiguration",
+          "Configuration Drift",
+          "Unauthorized System Changes"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Configuration Management Policy",
+      "evidence_hints": [
+        "Approved software catalog and download source records",
+        "Authorized software inventory and approval records",
+        "Software exception tracking and review records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "CM.L2-3.4.9": {
+      "title": "Control and Monitor User-Installed Software",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Configuration Management Policy"
+        ],
+        "evidence": [
+          "Software Inventory and Monitoring Records",
+          "Configuration Audit Reports"
+        ],
+        "teams": [
+          "Configuration Management",
+          "System Administrators"
+        ],
+        "assets": [
+          "Servers",
+          "Workstations",
+          "Network Devices"
+        ],
+        "subcontractors": [
+          "Cloud Providers",
+          "Managed Service Providers"
+        ],
+        "risks": [
+          "Unauthorized System Changes",
+          "Security Misconfiguration",
+          "Configuration Drift"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Configuration Management Policy",
+      "evidence_hints": [
+        "Software inventory and discovery scan reports",
+        "Unauthorized software detection and remediation records",
+        "Software license compliance and audit records"
+      ],
+      "structured_objects": [
+        "Asset Inventory",
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Khestra">
+  <defs>
+    <linearGradient id="bg" x1="16" y1="0" x2="16" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f8fcfd" />
+      <stop offset="1" stop-color="#e4f6f3" />
+    </linearGradient>
+    <linearGradient id="bar" x1="16" y1="5" x2="16" y2="27" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2aa39a" />
+      <stop offset="1" stop-color="#1a6b8e" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="0.8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="url(#bg)" />
+  <rect x="12.5" y="5" width="7" height="22" rx="2" fill="url(#bar)" filter="url(#glow)" />
+</svg>

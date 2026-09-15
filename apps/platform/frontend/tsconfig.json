@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "types": ["vite/client"],
+    "paths": {
+      "@shared/*": ["../../../shared/frontend/*"],
+      "@cmmc/*": ["../../cmmc/frontend/src/*"],
+      "@soc2/*": ["../../soc2/frontend/src/*"],
+      "@aigov/*": ["../../aigovernance/frontend/src/*"],
+      "@iso27001/*": ["../../iso27001/frontend/src/*"]
+    }
+  },
+  "include": ["src", "../../cmmc/frontend/src/vite-env.d.ts"]
+}

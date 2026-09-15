@@ -1,0 +1,98 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  leak-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Open-core leak check
+        run: python tests/leak_check.py
+
+  ui-build:
+    # Mirrors Dockerfile.caddy: UI dependencies are declared at the repo root
+    # so TypeScript resolves modules from any subdirectory.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install UI dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Typecheck and build UI
+        working-directory: apps/platform/frontend
+        run: |
+          npx tsc -b
+          npx vite build
+
+  python-tests:
+    # Accuracy/catalog-parity, RBAC, SPRS, and audit-chain suites. These run
+    # without the closed collectors package.
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          for app in cmmc soc2 iso27001 aigovernance core; do
+            (cd "apps/$app" && pip install -r requirements.txt)
+          done
+          pip install pytest httpx
+      - name: App test suites
+        run: |
+          for app in cmmc soc2 iso27001 aigovernance; do
+            echo "=== $app ==="
+            (cd "apps/$app" && python -m pytest -q)
+          done
+      - name: Package test suites
+        run: |
+          cd packages
+          python -m pytest */tests -q
+
+  dependency-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Audit Python dependencies
+        run: |
+          pip install -q pip-audit
+          for app in cmmc soc2 iso27001 aigovernance core; do
+            echo "=== $app ==="
+            grep -v '^-e' "apps/$app/requirements.txt" > "/tmp/req-$app.txt"
+            pip-audit -r "/tmp/req-$app.txt"
+          done
+      - name: Audit UI dependencies
+        run: |
+          npm ci --no-audit --no-fund
+          npm audit --audit-level=high
+
+  docker-build:
+    # Certifies that the self-host stack actually builds (the README's
+    # primary path). A missing COPY source or broken requirement fails here.
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate compose configuration
+        run: docker compose config -q
+      - name: Build all images
+        run: docker compose build

@@ -1,0 +1,199 @@
+{
+  "family": "RA",
+  "name": "Risk Assessment",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Risk Assessment Policy",
+      "Vulnerability Management Policy"
+    ],
+    "evidence_types": [
+      "Risk Assessment Reports",
+      "Risk Register Documentation",
+      "Risk and Vulnerability Assessment Reports",
+      "Vulnerability Remediation Records"
+    ],
+    "teams": [
+      "Risk Management",
+      "Vulnerability Management"
+    ],
+    "asset_types": [
+      "Vulnerability Scanners",
+      "Risk Register",
+      "Asset Inventory"
+    ],
+    "subcontractor_types": [
+      "Penetration Testing Firms",
+      "Vulnerability Scanning Services"
+    ],
+    "risk_types": [
+      "Unmitigated Vulnerability",
+      "Unknown Security Risk",
+      "Incomplete Risk Assessment"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "RA.L2-3.11.1": {
+      "title": "Risk Assessment",
+      "objectives": [
+        "The risk (including supply chain risk) of unauthorized disclosure resulting from the processing, storage, or transmission of CUI is assessed",
+        "Risk assessments are updated annually or following significant changes to the system, threat environment, or organizational mission"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Risk Assessment Policy"
+        ],
+        "evidence": [
+          "Risk Assessment Reports",
+          "Risk Register Documentation"
+        ],
+        "teams": [
+          "Risk Management",
+          "Vulnerability Management"
+        ],
+        "assets": [
+          "Vulnerability Scanners",
+          "Risk Register",
+          "Asset Inventory"
+        ],
+        "subcontractors": [
+          "Penetration Testing Firms",
+          "Vulnerability Scanning Services"
+        ],
+        "risks": [
+          "Unmitigated Vulnerability",
+          "Unknown Security Risk",
+          "Incomplete Risk Assessment"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "RA.L2-3.11.2": {
+      "title": "Vulnerability Monitoring and Scanning",
+      "objectives": [
+        "The system is monitored for vulnerabilities at least monthly (weekly where tooling permits)",
+        "The system is scanned for vulnerabilities within 72 hours of a new critical CVE being publicly disclosed or when directed by CISA/USCYBERCOM",
+        "System vulnerabilities are remediated within within 15 days of discovery for critical vulnerabilities (CVSS 9.0\u201310.0)",
+        "The system is monitored for vulnerabilities when new vulnerabilities that affect the system are identified",
+        "The system is scanned for vulnerabilities when new vulnerabilities that affect the system are identified",
+        "System vulnerabilities to be scanned are updated within 30 days of discovery for high vulnerabilities (CVSS 7.0\u20138.9)",
+        "System vulnerabilities to be scanned are updated when new vulnerabilities are identified and reported"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Vulnerability Management Policy"
+        ],
+        "evidence": [
+          "Risk and Vulnerability Assessment Reports",
+          "Risk Register Documentation"
+        ],
+        "teams": [
+          "Risk Management",
+          "Vulnerability Management"
+        ],
+        "assets": [
+          "Vulnerability Scanners",
+          "Risk Register",
+          "Asset Inventory"
+        ],
+        "subcontractors": [
+          "Penetration Testing Firms",
+          "Vulnerability Scanning Services"
+        ],
+        "risks": [
+          "Incomplete Risk Assessment",
+          "Unmitigated Vulnerability",
+          "Unknown Security Risk"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "RA.L2-3.11.3": {
+      "title": "Remediate Vulnerabilities in Accordance with Risk Assessments",
+      "objectives": [
+        "Remediate vulnerabilities in accordance with risk assessments."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Risk Assessment Policy"
+        ],
+        "evidence": [
+          "Vulnerability Remediation Records",
+          "Risk Register Documentation"
+        ],
+        "teams": [
+          "Risk Management",
+          "Vulnerability Management"
+        ],
+        "assets": [
+          "Vulnerability Scanners",
+          "Risk Register",
+          "Asset Inventory"
+        ],
+        "subcontractors": [
+          "Penetration Testing Firms",
+          "Vulnerability Scanning Services"
+        ],
+        "risks": [
+          "Unknown Security Risk",
+          "Incomplete Risk Assessment",
+          "Unmitigated Vulnerability"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    }
+  }
+}

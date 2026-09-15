@@ -1,0 +1,170 @@
+.policy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.policy-header-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.policy-header-meta .badge {
+  font-size: 0.72rem;
+}
+
+.policy-table-wrap {
+  overflow-x: auto;
+}
+
+.policy-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.policy-table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.policy-table td {
+  padding: 0.85rem 1rem;
+}
+
+.policy-table th:last-child {
+  text-align: right;
+  width: 160px;
+}
+
+.policy-table tbody tr {
+  cursor: pointer;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.policy-name {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.policy-name-desc {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 280px;
+}
+
+.policy-controls {
+  display: flex;
+  gap: 0.2rem;
+  flex-wrap: wrap;
+}
+
+.policy-controls .badge {
+  font-size: 0.68rem;
+}
+
+.policy-detail-controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.policy-detail-controls .badge {
+  font-size: 0.8rem;
+}
+
+.policy-actions {
+  display: flex;
+  gap: 0.15rem;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+
+.policy-actions select,
+.policy-actions a,
+.policy-actions button {
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--surface);
+  cursor: pointer;
+  color: var(--text);
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1.4;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.policy-actions select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.policy-actions a:hover,
+.policy-actions button:hover:not(:disabled) {
+  background: var(--border-subtle);
+}
+
+.policy-actions .delete-btn {
+  color: var(--danger);
+}
+
+.policy-actions select {
+  max-width: 85px;
+}
+
+.policy-back-btn {
+  margin-bottom: 0.5rem;
+}
+
+.policy-monospace {
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
+.policy-ack-row {
+  font-size: 0.85rem;
+}
+
+.policy-empty-cell {
+  font-size: 0.7rem;
+}
+
+.policy-attest-cell {
+  padding: 0.85rem 0.5rem;
+  font-size: 0.78rem;
+}
+
+.policy-attest-count {
+  font-weight: 500;
+}
+
+.policy-attest-date {
+  color: var(--muted);
+  font-size: 0.65rem;
+}
+
+.policy-date-cell {
+  font-size: 0.75rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.form-row label {
+  flex: 1;
+}

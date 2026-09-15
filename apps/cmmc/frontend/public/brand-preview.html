@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khestra wordmark previews</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        background: #f0f7fa;
+        color: #0f1b22;
+        line-height: 1.5;
+      }
+      .page-header {
+        padding: 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        margin: 0 0 0.35rem;
+        font-size: 1.5rem;
+      }
+      .page-header p {
+        margin: 0;
+        color: #5f7280;
+        font-size: 0.95rem;
+      }
+      .preview-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        padding: 1rem 2rem 3rem;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .preview-card {
+        flex: 1 1 300px;
+        max-width: 360px;
+        background: #fff;
+        border: 1px solid #dfe7ec;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .preview-card-wide {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+      .preview-card-label {
+        padding: 0.65rem 1rem;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #5f7280;
+        border-bottom: 1px solid #dfe7ec;
+        background: #fafcfd;
+      }
+      .preview-card-note {
+        padding: 0.65rem 1rem;
+        font-size: 0.8rem;
+        color: #5f7280;
+        border-top: 1px solid #dfe7ec;
+        margin: 0;
+      }
+      .sidebar {
+        background: #1a3a5c;
+        padding: 1.25rem 1rem 1.5rem;
+        min-height: 120px;
+      }
+      .sidebar-dark {
+        background: #071018;
+      }
+      .brand-slot {
+        padding: 0 0.5rem 0.75rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        margin-bottom: 0.5rem;
+      }
+      .nav {
+        padding: 0.35rem 0.5rem;
+        font-size: 0.85rem;
+        color: #b8cdd9;
+      }
+      .nav-on {
+        color: #fff;
+        border-left: 2px solid #2aa39a;
+        padding-left: calc(0.5rem - 2px);
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+      }
+      .mark {
+        width: 5px;
+        height: 22px;
+        border-radius: 2px;
+        background: linear-gradient(180deg, #2aa39a, #1a6b8e);
+        flex-shrink: 0;
+      }
+      .name-serif {
+        font-family: Georgia, serif;
+        font-size: 1.15rem;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: #fff;
+      }
+      .name-sans {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .tagline {
+        font-size: 0.62rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #b8cdd9;
+      }
+      .rule {
+        width: 22px;
+        height: 2px;
+        background: #2aa39a;
+        margin-bottom: 8px;
+      }
+      .kh {
+        color: #2aa39a;
+      }
+      .dot {
+        color: #2aa39a;
+      }
+      .mono {
+        width: 26px;
+        height: 26px;
+        border-radius: 6px;
+        background: linear-gradient(145deg, #2aa39a, #1a6b8e);
+        color: #fff;
+        font-family: Georgia, serif;
+        font-weight: 600;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .grad-name {
+        font-family: Georgia, serif;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #2aa39a;
+      }
+      .caps {
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #fff;
+      }
+      .sub {
+        margin-top: 6px;
+        font-size: 0.62rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #2aa39a;
+      }
+      .chrome {
+        display: flex;
+        min-height: 140px;
+      }
+      .chrome-side {
+        width: 220px;
+        flex-shrink: 0;
+      }
+      .chrome-main {
+        flex: 1;
+        background: #f0f7fa;
+      }
+      .topbar {
+        padding: 0.75rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(180deg, #e8f3f7, #f0f7fa);
+        border-top: 1px solid #dfe7ec;
+        font-size: 0.88rem;
+      }
+      .topbar-tag {
+        font-size: 0.72rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #5f7280;
+      }
+    </style>
+  </head>
+  <body style="margin:0;background:#f0f7fa;">
+
+    <header class="page-header">
+      <h1>Wordmark previews</h1>
+      <p>Open this .html file directly — do not paste into preview. Sidebar navy #1a3a5c, accent #2aa39a.</p>
+    </header>
+
+    <main class="preview-grid">
+
+      <section class="preview-card">
+        <div class="preview-card-label">A — Split K + tagline</div>
+        <div class="sidebar" style="background:#1a3a5c;">
+          <div class="brand-slot">
+            <div class="rule"></div>
+            <div class="name-serif"><span class="kh">K</span>hestra</div>
+            <div class="tagline">Continuous compliance</div>
+          </div>
+          <div class="nav nav-on">Dashboard</div>
+          <div class="nav">Controls</div>
+        </div>
+        <p class="preview-card-note">Tagline in sidebar feels crowded.</p>
+      </section>
+
+      <section class="preview-card">
+        <div class="preview-card-label">B — Teal bar + serif (in app)</div>
+        <div class="sidebar" style="background:#1a3a5c;">
+          <div class="brand-slot">
+            <div class="row">
+              <div class="mark"></div>
+              <div class="name-serif">Khestra</div>
+            </div>
+          </div>
+          <div class="nav nav-on">Dashboard</div>
+          <div class="nav">Controls</div>
+        </div>
+        <p class="preview-card-note">Name only. Clean nav label.</p>
+      </section>
+
+      <section class="preview-card">
+        <div class="preview-card-label">C — Sans + teal dot</div>
+        <div class="sidebar" style="background:#1a3a5c;">
+          <div class="brand-slot">
+            <div class="name-sans">Khestra<span class="dot">.</span></div>
+          </div>
+          <div class="nav nav-on">Dashboard</div>
+          <div class="nav">Controls</div>
+        </div>
+        <p class="preview-card-note">Vanta / Drata lane.</p>
+      </section>
+
+      <section class="preview-card">
+        <div class="preview-card-label">D — Monogram K</div>
+        <div class="sidebar" style="background:#1a3a5c;">
+          <div class="brand-slot">
+            <div class="row">
+              <div class="mono">K</div>
+              <div class="name-sans">hestra</div>
+            </div>
+          </div>
+          <div class="nav nav-on">Dashboard</div>
+          <div class="nav">Controls</div>
+        </div>
+        <p class="preview-card-note">App-icon friendly.</p>
+      </section>
+
+      <section class="preview-card">
+        <div class="preview-card-label">E — Gradient word (dark sidebar)</div>
+        <div class="sidebar sidebar-dark" style="background:#071018;">
+          <div class="brand-slot">
+            <div class="grad-name">Khestra</div>
+          </div>
+          <div class="nav nav-on">Dashboard</div>
+          <div class="nav">Controls</div>
+        </div>
+        <p class="preview-card-note">Teal tint on dark mode sidebar.</p>
+      </section>
+
+      <section class="preview-card preview-card-wide">
+        <div class="preview-card-label">F — Name in sidebar, tagline in topbar</div>
+        <div class="chrome">
+          <div class="chrome-side sidebar" style="background:#1a3a5c;">
+            <div class="brand-slot">
+              <div class="name-serif">Khestra</div>
+            </div>
+            <div class="nav nav-on">Dashboard</div>
+          </div>
+          <div class="chrome-main">
+            <div class="topbar">
+              <span>Apex Defense Systems</span>
+              <span class="topbar-tag">Continuous compliance</span>
+            </div>
+          </div>
+        </div>
+        <p class="preview-card-note">Tagline in header, not sidebar.</p>
+      </section>
+
+      <section class="preview-card">
+        <div class="preview-card-label">G — Veridian alt</div>
+        <div class="sidebar" style="background:#1a3a5c;">
+          <div class="brand-slot">
+            <div class="row">
+              <div class="mark"></div>
+              <div class="name-serif">Veridian</div>
+            </div>
+          </div>
+          <div class="nav nav-on">Dashboard</div>
+          <div class="nav">Controls</div>
+        </div>
+        <p class="preview-card-note">Same lockup — compare name fit.</p>
+      </section>
+
+      <section class="preview-card">
+        <div class="preview-card-label">H — Tracked caps</div>
+        <div class="sidebar" style="background:#1a3a5c;">
+          <div class="brand-slot">
+            <div class="caps">Khestra</div>
+            <div class="sub">Compliance</div>
+          </div>
+          <div class="nav nav-on">Dashboard</div>
+          <div class="nav">Controls</div>
+        </div>
+        <p class="preview-card-note">Enterprise / defense tone.</p>
+      </section>
+
+    </main>
+  </body>
+</html>

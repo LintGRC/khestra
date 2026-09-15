@@ -1,0 +1,82 @@
+.filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.filter-search {
+  position: relative;
+  flex: 1;
+  min-width: 180px;
+  max-width: 320px;
+}
+.filter-search svg {
+  position: absolute;
+  left: 0.55rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  pointer-events: none;
+}
+.filter-search input {
+  width: 100%;
+  padding: 0.4rem 0.65rem 0.4rem 1.75rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--input-bg);
+  color: var(--text);
+  outline: none;
+}
+.filter-search input:focus {
+  border-color: var(--primary);
+}
+
+.filter-select {
+  min-width: 140px;
+  max-width: 220px;
+}
+
+.filter-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.filter-btn-group {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+.filter-badge {
+  margin-left: 0.3rem;
+  font-size: 0.65rem;
+  opacity: 0.7;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.filter-checkbox input {
+  margin: 0;
+}
+
+.filter-count {
+  font-size: 0.78rem;
+  color: var(--muted);
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+[data-theme="dark"] .filter-search input {
+  background: var(--input-bg);
+  border-color: var(--border);
+}

@@ -1,0 +1,422 @@
+{
+  "family": "PE",
+  "name": "Physical Protection",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Facility Access Policy",
+      "Physical Protection Policy"
+    ],
+    "evidence_types": [
+      "Audit Log Records and Configuration",
+      "Data-at-Rest Encryption Configuration",
+      "Facility Security Plan",
+      "Personnel Termination Records",
+      "Physical Access Device Configuration",
+      "Physical Access Logs and Security Configuration",
+      "Visitor Access Records"
+    ],
+    "teams": [
+      "Physical Security",
+      "Facilities Management"
+    ],
+    "asset_types": [
+      "Physical Facilities",
+      "Access Control Systems",
+      "Surveillance Systems"
+    ],
+    "subcontractor_types": [
+      "Facility Management",
+      "Physical Security Contractors"
+    ],
+    "risk_types": [
+      "Unauthorized Physical Access",
+      "Environmental Damage",
+      "Theft of Equipment"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "PE.L2-3.10.1": {
+      "title": "Physical Access Authorizations",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Physical Protection Policy"
+        ],
+        "evidence": [
+          "Physical Access Logs and Security Configuration",
+          "Facility Security Plan"
+        ],
+        "teams": [
+          "Physical Security",
+          "Facilities Management"
+        ],
+        "assets": [
+          "Physical Facilities",
+          "Access Control Systems",
+          "Surveillance Systems"
+        ],
+        "subcontractors": [
+          "Facility Management",
+          "Physical Security Contractors"
+        ],
+        "risks": [
+          "Unauthorized Physical Access",
+          "Environmental Damage",
+          "Theft of Equipment"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Physical Protection Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Physical Access Logs",
+          "action": "attach",
+          "source": "artifacts.md#D21"
+        }
+      ],
+      "evidence_hints": [
+        "Physical access authorization and approval records",
+        "Badge/credential issuance and lifecycle records",
+        "Physical access role and zone mapping documentation"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Incidents"
+      ]
+    },
+    "PE.L2-3.10.2": {
+      "title": "Monitoring Physical Access",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Facility Access Policy"
+        ],
+        "evidence": [
+          "Personnel Termination Records",
+          "Facility Security Plan"
+        ],
+        "teams": [
+          "Physical Security",
+          "Facilities Management"
+        ],
+        "assets": [
+          "Physical Facilities",
+          "Access Control Systems",
+          "Surveillance Systems"
+        ],
+        "subcontractors": [
+          "Facility Management",
+          "Physical Security Contractors"
+        ],
+        "risks": [
+          "Theft of Equipment",
+          "Unauthorized Physical Access",
+          "Environmental Damage"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Physical Protection Policy",
+      "evidence_hints": [
+        "Physical access monitoring configuration records",
+        "CCTV and surveillance system configuration records",
+        "Security monitoring station and alarm system records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    },
+    "PE.L2-3.10.3": {
+      "title": "Escort Visitors and Monitor Visitor Activity",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Physical Protection Policy"
+        ],
+        "evidence": [
+          "Visitor Access Records",
+          "Facility Security Plan"
+        ],
+        "teams": [
+          "Physical Security",
+          "Facilities Management"
+        ],
+        "assets": [
+          "Physical Facilities",
+          "Access Control Systems",
+          "Surveillance Systems"
+        ],
+        "subcontractors": [
+          "Facility Management",
+          "Physical Security Contractors"
+        ],
+        "risks": [
+          "Environmental Damage",
+          "Theft of Equipment",
+          "Unauthorized Physical Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Physical Protection Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Visitor Records",
+          "action": "attach",
+          "source": "artifacts.md#D22"
+        }
+      ],
+      "evidence_hints": [
+        "Visitor registration and sign-in log records",
+        "Visitor escort and monitoring procedure documents",
+        "Visitor badge issuance and return tracking records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Incidents"
+      ]
+    },
+    "PE.L2-3.10.4": {
+      "title": "Maintain Audit Logs of Physical Access",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Facility Access Policy"
+        ],
+        "evidence": [
+          "Audit Log Records and Configuration",
+          "Facility Security Plan"
+        ],
+        "teams": [
+          "Physical Security",
+          "Facilities Management"
+        ],
+        "assets": [
+          "Physical Facilities",
+          "Access Control Systems",
+          "Surveillance Systems"
+        ],
+        "subcontractors": [
+          "Facility Management",
+          "Physical Security Contractors"
+        ],
+        "risks": [
+          "Unauthorized Physical Access",
+          "Environmental Damage",
+          "Theft of Equipment"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Physical Protection Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Physical Access Logs",
+          "action": "attach",
+          "source": "artifacts.md#D21"
+        }
+      ],
+      "evidence_hints": [
+        "Physical access log review and analysis records",
+        "Access anomaly investigation and resolution records",
+        "Log retention and archival configuration records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Audits"
+      ]
+    },
+    "PE.L2-3.10.5": {
+      "title": "Control and Manage Physical Access Devices",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Physical Protection Policy"
+        ],
+        "evidence": [
+          "Physical Access Device Configuration",
+          "Facility Security Plan"
+        ],
+        "teams": [
+          "Physical Security",
+          "Facilities Management"
+        ],
+        "assets": [
+          "Physical Facilities",
+          "Access Control Systems",
+          "Surveillance Systems"
+        ],
+        "subcontractors": [
+          "Facility Management",
+          "Physical Security Contractors"
+        ],
+        "risks": [
+          "Theft of Equipment",
+          "Unauthorized Physical Access",
+          "Environmental Damage"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Physical Protection Policy",
+      "evidence_artifacts": [
+        {
+          "name": "Physical Access Device Inventory",
+          "action": "attach",
+          "source": "artifacts.md#D23"
+        }
+      ],
+      "evidence_hints": [
+        "Physical access device inventory and management records",
+        "Key control and management system documentation",
+        "Badge/card reader configuration and maintenance records"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies",
+        "Incidents"
+      ]
+    },
+    "PE.L2-3.10.6": {
+      "title": "Alternate Work Site",
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Facility Access Policy"
+        ],
+        "evidence": [
+          "Data-at-Rest Encryption Configuration",
+          "Facility Security Plan"
+        ],
+        "teams": [
+          "Physical Security",
+          "Facilities Management"
+        ],
+        "assets": [
+          "Physical Facilities",
+          "Access Control Systems",
+          "Surveillance Systems"
+        ],
+        "subcontractors": [
+          "Facility Management",
+          "Physical Security Contractors"
+        ],
+        "risks": [
+          "Environmental Damage",
+          "Theft of Equipment",
+          "Unauthorized Physical Access"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      },
+      "policy": "Physical Protection Policy",
+      "evidence_hints": [
+        "Alternate work site security configuration records",
+        "Telework security assessment and authorization",
+        "Remote work location security policy acknowledgement"
+      ],
+      "structured_objects": [
+        "Control Narratives",
+        "Evidence Hub",
+        "Exceptions",
+        "Policies"
+      ]
+    }
+  }
+}

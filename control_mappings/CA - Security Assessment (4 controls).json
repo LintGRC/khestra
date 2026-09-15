@@ -1,0 +1,243 @@
+{
+  "family": "CA",
+  "name": "Security Assessment",
+  "level": "L2",
+  "template": {
+    "mandatory": [
+      "narrative",
+      "team",
+      "policy"
+    ],
+    "recommended": [
+      "evidence"
+    ],
+    "policy_types": [
+      "Continuous Monitoring Policy",
+      "Plan of Action and Milestones Policy",
+      "Security Assessment Policy",
+      "System Security Plan Policy"
+    ],
+    "evidence_types": [
+      "Continuous Monitoring Records",
+      "Plan of Action and Milestones",
+      "Security Assessment and Monitoring Records",
+      "System Security Plan",
+      "System Security Plan Documentation"
+    ],
+    "teams": [
+      "Compliance Team",
+      "Security Assessment"
+    ],
+    "asset_types": [
+      "Security Assessment Tools",
+      "Compliance Management Systems"
+    ],
+    "subcontractor_types": [
+      "C3PAO Assessors",
+      "External Audit Firms"
+    ],
+    "risk_types": [
+      "Security Control Failure",
+      "Compliance Gap",
+      "Inadequate Assessment"
+    ],
+    "conditional": {
+      "if_status_not_met": [
+        "POAM",
+        "Finding Memo"
+      ]
+    }
+  },
+  "controls": {
+    "CA.L2-3.12.1": {
+      "title": "Security Assessment",
+      "objectives": [
+        "The security requirements for the system and its environment of operation are assessed annually for internal assessments; every 3 years for formal C3PAO assessment (CMMC Level 2 certification cycle)to determine if the requirements have been satisfied"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Security Assessment Policy"
+        ],
+        "evidence": [
+          "Security Assessment and Monitoring Records",
+          "System Security Plan"
+        ],
+        "teams": [
+          "Compliance Team",
+          "Security Assessment"
+        ],
+        "assets": [
+          "Security Assessment Tools",
+          "Compliance Management Systems"
+        ],
+        "subcontractors": [
+          "C3PAO Assessors",
+          "External Audit Firms"
+        ],
+        "risks": [
+          "Security Control Failure",
+          "Compliance Gap",
+          "Inadequate Assessment"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "CA.L2-3.12.2": {
+      "title": "Plan of Action and Milestones",
+      "objectives": [
+        "A plan of action and milestones for the system is developed to document the planned remediation actions for correcting weaknesses or deficiencies noted during security assessments",
+        "A plan of action and milestones for the system is developed to reduce or eliminate known system vulnerabilities",
+        "The existing plan of action and milestones is updated based on the findings from security assessments",
+        "The existing plan of action and milestones is updated based on the findings from continuous monitoring activities",
+        "The existing plan of action and milestones is updated based on the findings from audits or reviews"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Plan of Action and Milestones Policy"
+        ],
+        "evidence": [
+          "POA&M Monitoring and Remediation Records"
+        ],
+        "teams": [
+          "Compliance Team",
+          "Security Assessment"
+        ],
+        "assets": [
+          "Security Assessment Tools",
+          "Compliance Management Systems"
+        ],
+        "subcontractors": [
+          "C3PAO Assessors",
+          "External Audit Firms"
+        ],
+        "risks": [
+          "Inadequate Assessment",
+          "Security Control Failure",
+          "Compliance Gap"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "CA.L2-3.12.3": {
+      "title": "Continuous Monitoring",
+      "objectives": [
+        "A system-level continuous monitoring strategy is developed",
+        "A system-level continuous monitoring strategy is implemented",
+        "Ongoing monitoring is included in the continuous monitoring strategy",
+        "Security assessments are included in the continuous monitoring strategy"
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "Continuous Monitoring Policy"
+        ],
+        "evidence": [
+          "Continuous Monitoring Records",
+          "System Security Plan"
+        ],
+        "teams": [
+          "Compliance Team",
+          "Security Assessment"
+        ],
+        "assets": [
+          "Security Assessment Tools",
+          "Compliance Management Systems"
+        ],
+        "subcontractors": [
+          "C3PAO Assessors",
+          "External Audit Firms"
+        ],
+        "risks": [
+          "Compliance Gap",
+          "Inadequate Assessment",
+          "Security Control Failure"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    },
+    "CA.L2-3.12.4": {
+      "title": "Develop, Document, and Periodically Update System Security Plans",
+      "objectives": [
+        "Develop, document, and periodically update system security plans that describe system boundaries, system environments of operation, how security requirements are implemented, and the relationships with or connections to other systems."
+      ],
+      "requirements": {
+        "mandatory": [
+          "narrative",
+          "team",
+          "policy"
+        ],
+        "recommended": [
+          "evidence"
+        ],
+        "policies": [
+          "System Security Plan Policy"
+        ],
+        "evidence": [
+          "System Security Plan Documentation",
+          "System Security Plan"
+        ],
+        "teams": [
+          "Compliance Team",
+          "Security Assessment"
+        ],
+        "assets": [
+          "Security Assessment Tools",
+          "Compliance Management Systems"
+        ],
+        "subcontractors": [
+          "C3PAO Assessors",
+          "External Audit Firms"
+        ],
+        "risks": [
+          "Security Control Failure",
+          "Compliance Gap",
+          "Inadequate Assessment"
+        ],
+        "conditional": {
+          "if_status_not_met": [
+            "POAM",
+            "Finding Memo"
+          ]
+        }
+      }
+    }
+  }
+}
