@@ -1,0 +1,38 @@
+name: Bug report
+description: Something is broken or produces the wrong result
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: A clear description, including any error text.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start the stack with `docker compose up --build -d`
+        2. ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      description: Output of `git rev-parse --short HEAD`
+    validations:
+      required: true
+  - type: dropdown
+    id: framework
+    attributes:
+      label: Framework
+      options: [CMMC, SOC 2, ISO 27001, AI Governance, Core/Global, UI, Not framework-specific]
